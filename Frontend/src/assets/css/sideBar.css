@@ -1,0 +1,118 @@
+/* Estilo del sidebar */
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background-color: #ffb700; */
+    padding-top: 10px;
+    transition: width 0.3s;
+}
+
+/* Espacio superior para el botón */
+.sidebar .sidebar-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+/* Estilo del contenido cuando el sidebar está colapsado */
+.content {
+    margin-left: 250px;
+    transition: margin-left 0.3s;
+}
+
+/* Estilo del sidebar colapsado */
+.sidebar.collapsed {
+    width: 60px; /* Mantiene el ancho para mostrar los iconos */
+}
+
+/* Estilo del contenido cuando el sidebar está colapsado */
+.content.collapsed {
+    margin-left: 60px;
+}
+
+/* Estilo para los enlaces del sidebar */
+.sidebar .nav-link {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #fc8f00;
+}
+
+/* Sangría constante para los elementos hijos */
+.sidebar .nav .collapse .nav-link {
+    padding-left: 40px; /* Tabulación constante para los hijos */
+}
+
+/* Iconos */
+.sidebar .nav-item > .nav-link i {
+    margin-right: 10px;
+}
+
+/* Iconos de los hijos */
+.sidebar .nav-item .collapse .nav-link i {
+    font-size: 0.9rem; /* Tamaño del icono de los hijos */
+    margin-right: 8px;
+}
+
+/* Estilo del icono de menú hamburguesa */
+.hamburger-icon {
+    display: inline-block;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.hamburger-icon span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    margin-bottom: 5px;
+    transition: 0.4s;
+}
+
+/* Ocultar texto cuando el sidebar está colapsado */
+.sidebar.collapsed .nav-link span.text {
+    display: none;
+}
+
+/* Alinear iconos a la izquierda */
+.sidebar .nav-link i {
+    margin-right: 10px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030; /* Asegura que el navbar esté por encima de otros elementos */
+}
+
+/* Ajustes del sidebar */
+.sidebar {
+    margin-top: 56px; /* Espacio para el navbar */
+    height: calc(100vh - 56px); /* Ajusta la altura del sidebar para tener en cuenta el navbar */
+}
+
+/* Ajuste del contenedor principal */
+.content {
+    margin-left: 250px;
+    margin-top: 56px; /* Espacio para el navbar */
+    transition: margin-left 0.3s;
+}
+
+/* Estilo del sidebar colapsado */
+.sidebar.collapsed {
+    width: 60px; /* Mantiene el ancho para mostrar los iconos */
+}
+
+/* Estilo del contenido cuando el sidebar está colapsado */
+.content.collapsed {
+    margin-left: 60px;
+}
