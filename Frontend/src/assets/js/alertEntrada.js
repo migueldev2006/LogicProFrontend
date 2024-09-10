@@ -1,4 +1,5 @@
-const boton = document.getElementById('re');
+function showalert(){
+  const boton = document.getElementById('re');
 // Agrega un listener de eventos al botón
 boton.addEventListener('click', function() {
   // Muestra la alerta cuando se hace clic en el botón
@@ -8,3 +9,14 @@ boton.addEventListener('click', function() {
     icon: "success"
   });
 });
+
+
+// swal ("Registro exitoso!", "success")
+}
+
+
+
+
+
+
+
