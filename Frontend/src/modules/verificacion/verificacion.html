@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+  
+    <link rel="stylesheet" href="/Frontend/src/assets/css/formulario.css">
+    <link rel="stylesheet" href="/Frontend/src/assets/css/verificacion.css">
+    
+    <title>salidaBodega</title>
+</head>
+<body>
+      <div class="container">
+        <h2 style="text-align:center; margin-top:100px"> verificacion de  material formativo</h2>
+    </div>
+    
+
+   <!-- Modal -->
+   <div
+     class="modal fade"
+     id="staticBackdrop"
+     data-bs-backdrop="static"
+     data-bs-keyboard="false"
+     tabindex="-1"
+     aria-labelledby="staticBackdropLabel"
+     aria-hidden="true"
+   >
+     <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-header">
+           <h1
+             class="modal-title fs-5 text-center"
+             id="staticBackdropLabel"
+           >
+             Registro  de verificacion de material 
+           </h1>
+           <button
+             type="button"
+             class="btn-close"
+             data-bs-dismiss="modal"
+             aria-label="Close"
+           ></button>
+         </div>
+         <div class="modal-body" style="background-color: #f8f9fa">
+           <div
+             class="card"
+             style="width: 450px; background-color: #f8f9fa"
+           >
+             <div class="card-body">
+               <form action="">
+                 <div class="mb-4">
+                   <label class="form-label" for="nombre">Area</label>
+                   <input
+                     class="form-control"
+                     type="text"
+                     name="Area"
+                     id="Area"
+                   />
+                 </div>
+                 <div class="mb-4">
+                   <label class="form-label" for="sede">Titulado</label>
+                   <input
+                     class="form-control"
+                     type="text"
+                     name="Titulado"
+                     id="Titulado"
+                   />
+                 </div>
+            
+                 <div class="mb-4">
+                   <label class="form-label" for="municipio">ID ficha</label>
+                   <input
+                     class="form-control"
+                     type="text"
+                     name="ID ficha"
+                     id="ID ficha"
+                   />
+                 </div>
+                 <div class="mb-4">
+                   <label class="form-label" for="municipio">Material</label>
+                   <input
+                     class="form-control"
+                     type="text"
+                     name="Material"
+                     id="Material"
+                   />
+                 </div>
+                 <div class="mb-4">
+                   <label class="form-label" for="municipio">Cantidad</label>
+                   <input
+                     class="form-control"
+                     type="text"
+                     name="Cantidad"
+                     id="Cantidad"
+                   />
+                 </div>
+                 <div class="mb-4">
+                   <label class="form-label" for="municipio">Fecha de entrega</label>
+                   <input
+                     class="form-control"
+                     type="text"
+                     name="Fecha"
+                     id="Fecha"
+                   />
+                 </div>
+                 <div class="mb-4">
+                   <label class="form-label" for="municipio">hora de entrega</label>
+                   <input
+                   class="form-control"
+                   type="text"
+                   name="hora de entrega"
+                   id="hora de entrega"
+                 />
+
+                 </div>
+               </form>
+             </div>
+           </div>
+         </div>
+           
+   
+             <div class="botones-contenedor">
+                 <button type="button" class="btn btn-primary" id="verificacion">verificacion por medio de escaner</button>
+                 <!-- <input type="sudmit" class="form-control" onclick="return"> -->
+             </div>
+             <div class="botones-contenedor">
+               <button type="button" class="btn btn-primary" id="registrar">Registrar</button>
+               <!-- <input type="sudmit" class="form-control" onclick="return"> -->
+             </div>
+      
+       </div>
+     </div>
+   </div>
+<div class="p-5">
+ <table id="example" class="table table-striped" style="width:100%">
+     <thead>
+         <tr>
+             <th>Area</th>
+             <th>Titulado</th>
+             <th>encargado</th>
+             <th>ID ficha</th>
+             <th>Material</th>
+             <th>Cantidad</th>
+             <th>Fecha de entrega</th>
+             <th>hora de entrega</th>
+         </tr>
+     </thead>
+     
+ </table>
+ <div class="p-5 mt-2">
+  <button
+    type="button"
+    class="btn btn-primary offset-md-10"
+    data-bs-toggle="modal"
+    data-bs-target="#staticBackdrop"
+    style="width: 15%;"
+    
+  >
+    <i class="lni lni-plus" id="button"></i> Registrar
+  </button>
+</div>
+ 
+</div>
+    
+  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+    <script src="/Frontend/src/assets/js/varificacion.js"></script>
+
+  
+ 
+</body>
+</html>
