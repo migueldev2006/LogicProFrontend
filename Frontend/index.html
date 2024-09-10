@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coordisoft</title>
+    <title>LogicPro</title>
+    <link rel="icon" href="./public/login.png">
+    <!-- SweatAlert -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css">
     <!-- CSS de Bootstrap 5 -->
     <link
       href="./src/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
@@ -16,13 +19,18 @@
     />
     <!-- Estilos personalizados -->
     <link href="./src/assets/css/sideBar.css" rel="stylesheet" />
+    <!-- CSS de Simple DataTables -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/simple-datatables@9.1.0/dist/style.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Contenedor para el navbar -->
     <div id="navbarContainer"></div>
 
     <!-- Sidebar -->
-    <div class="sidebar bg-dark" id="sidebar">
+    <div class="sidebar" id="sidebar">
       <!-- Botón de menú hamburguesa -->
       <div class="sidebar-header">
         <div class="hamburger-icon" id="menu-toggle">
@@ -57,16 +65,16 @@
               <a
                 class="nav-link"
                 href="#"
-                onclick="loadModule('src/modules/administrador/index.html')"
+                onclick="loadModule('src/modules/administrador/centros.html')"
                 ><i class="bi bi-building"></i
-                ><span class="text">Sitios</span></a
+                ><span class="text">Centros</span></a
               >
             </li>
             <li>
               <a
                 class="nav-link"
                 href="#"
-                onclick="loadModule('src/modules/administrador/index.html')"
+                onclick="loadModule('src/modules/administrador/areas.html')"
                 ><i class="bi bi-diagram-3"></i
                 ><span class="text">Áreas</span></a
               >
@@ -75,24 +83,32 @@
               <a
                 class="nav-link"
                 href="#"
-                onclick="loadModule('src/modules/administrador/vainillo.html')"
+                onclick="loadModule('src/modules/administrador/programaFormacion.html')"
                 ><i class="bi bi-diagram-3"></i
-                ><span class="text">Vainillo</span></a
+                ><span class="text">Programa Formacion</span></a
               >
             </li>
             <li>
               <a
                 class="nav-link"
                 href="#"
-                onclick="loadModule('src/modules/administrador/index.html')"
-                ><i class="bi bi-geo"></i><span class="text">Centros</span></a
+                onclick="loadModule('src/modules/administrador/sitios.html')"
+                ><i class="bi bi-geo"></i><span class="text">Sitios</span></a
               >
             </li>
             <li>
               <a
                 class="nav-link"
                 href="#"
-                onclick="loadModule('src/modules/administrador/index.html')"
+                onclick="loadModule('src/modules/administrador/tipoDeSitios.html')"
+                ><i class="bi bi-geo"></i><span class="text">Tipo de Sitios</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-link"
+                href="#"
+                onclick="loadModule('src/modules/administrador/bodega.html')"
                 ><i class="bi bi-box-seam"></i
                 ><span class="text">Bodega</span></a
               >
@@ -172,10 +188,14 @@
         <!-- Aquí se cargará el contenido del módulo -->
       </div>
     </div>
-
+    <!-- SweatAlert -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <!-- JavaScript de Bootstrap 5 -->
     <script src="./src/assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript de Simple DataTables -->
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.1.0/dist/umd/simple-datatables.js"></script>
     <!-- Script personalizado -->
     <script src="./src/assets/js/sideBar.js"></script>
+    <script src="./src/assets/js/usuario.js"></script>
   </body>
 </html>
