@@ -5,7 +5,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    /* background-color: #ffb700; */
+    background-color: #00304D; 
     padding-top: 10px;
     transition: width 0.3s;
 }
@@ -41,7 +41,7 @@
 }
 
 .sidebar .nav-link:hover {
-    background-color: #fc8f00;
+    background-color: #007bff;
 }
 
 /* Sangría constante para los elementos hijos */
@@ -92,6 +92,7 @@
     top: 0;
     width: 100%;
     z-index: 1030; /* Asegura que el navbar esté por encima de otros elementos */
+    background-color: #D9D9D9;
 }
 
 /* Ajustes del sidebar */
@@ -103,7 +104,7 @@
 /* Ajuste del contenedor principal */
 .content {
     margin-left: 250px;
-    margin-top: 56px; /* Espacio para el navbar */
+    margin-top: 106px; /* Espacio para el navbar */
     transition: margin-left 0.3s;
 }
 
@@ -116,3 +117,4 @@
 .content.collapsed {
     margin-left: 60px;
 }
+

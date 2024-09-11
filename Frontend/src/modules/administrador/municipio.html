@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usuarios</title>
+    <!-- CSS de Bootstrap 5 -->
+    <link
+      href="../../../src/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>Municipios</h1>
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+      >
+        <i class="bi bi-plus-lg"></i>Municipio
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Registar Municipio
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <div>
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input
+                    type="text"
+                    name="nombre"
+                    id="nombre"
+                    class="form-control"
+                  />
+                </div>
+                <div>
+                  <label for="slcDepartamento" class="form-label">Departamento</label>
+                  <select id="slcDepartamento" name="slcDepartamento" class="form-select" aria-label="Default select example">
+                    <option selected>Selecciona una opcion</option>
+                    <option value="Huila">Huila</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="AlertMunicipio()"
+              >
+                Registrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <table id="example" class="table table-striped" style="width: 100%">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Departamento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>San agustin</td>
+            <td>Huila</td>
+          </tr>
+          <tr>
+            <td>Pitalito</td>
+            <td>Huila</td>
+          </tr>
+          <tr>
+            <td>Gigante</td>
+            <td>Huila</td>
+          <tr>
+            <td>Neiva</td>
+            <td>Huila</td>
+          </tr>
+          <tr>
+            <td>Garzon</td>
+            <td>Huila</td>
+          </tr>
+          <tr>
+            <td>Timana</td>
+            <td>Huila</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- <script src="./src/assets/js/centro.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usuarios</title>
+    <!-- CSS de Bootstrap 5 -->
+    <link
+      href="../../../src/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4">Programas de Formacion</h1>
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+      >
+      <i class="bi bi-plus-lg"></i>Programa
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Registar Programa
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div>
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" class="form-control">
+                    </div>
+                    <div>
+                        <label for="identificacion" class="form-label">ID ficha</label>
+                        <input type="text" name="identificacion" id="identificacion" class="form-control">
+                    </div>
+                    <div>
+                        <label for="slcArea" class="form-label">Area</label>
+                        <select id="slcArea" name="slcArea" class="form-select" aria-label="Default select example">
+                            <option selected>Selecciona una opcion</option>
+                            <option value="1"></option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                            <option value="4"></option>
+                          </select>
+                    </div>
+                    <div>
+                        <label for="slcSitioAsignado" class="form-label">Sitio Asignado</label>
+                        <select id="slcSitioAsignado" name="slcSitioAsignado" class="form-select" aria-label="Default select example">
+                            <option selected>Selecciona una opcion</option>
+                            <option value="1"></option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                            <option value="4"></option>
+                            <option value="5"></option>
+                            <option value="6"></option>
+                          </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary" onclick="alertProgramaFormacion()">Registrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <table id="example" class="table table-striped" style="width: 100%">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>ID ficha</th>
+            <th>Area</th>
+            <th>Sitio Asignado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ADSO</td>
+            <td>26572564</td>
+            <td>TIC</td>
+            <td>Y15</td>
+          </tr>
+          <tr>
+            <td>MULTIMEDIA</td>
+            <td>25645892</td>
+            <td>TIC</td>
+            <td>Y13</td>
+          </tr>
+          <tr>
+            <td>PAE</td>
+            <td>26574892</td>
+            <td>Agropecuario</td>
+            <td>Y10</td>
+          </tr>
+          <tr>
+            <td>MULTIMEDIA</td>
+            <td>25645812</td>
+            <td>TIC</td>
+            <td>Y13</td>
+          </tr>
+          <tr>
+            <td>PAE</td>
+            <td>26572217</td>
+            <td>Agropecuario</td>
+            <td>Y7</td>
+          </tr>
+          <tr>
+            <td>AMBIENTAL</td>
+            <td>25648952</td>
+            <td>Ambiental</td>
+            <td>Y19</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
