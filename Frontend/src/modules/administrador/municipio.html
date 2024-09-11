@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="container mt-5">
-      <h1>Usuarios</h1>
+      <h1>Municipios</h1>
       <!-- Button trigger modal -->
       <button
         type="button"
@@ -20,7 +20,7 @@
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
       >
-        <i class="bi bi-plus-lg"></i>Centro
+        <i class="bi bi-plus-lg"></i>Municipio
       </button>
 
       <!-- Modal -->
@@ -37,7 +37,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                Registar Centro
+                Registar Municipio
               </h1>
               <button
                 type="button"
@@ -58,22 +58,11 @@
                   />
                 </div>
                 <div>
-                  <label for="sede" class="form-label">Sede</label>
-                  <input
-                    type="text"
-                    name="sede"
-                    id="sede"
-                    class="form-control"
-                  />
-                </div>
-                <div>
-                  <label for="municipio" class="form-label">Municipio</label>
-                  <input
-                    type="text"
-                    name="municipio"
-                    id="municipio"
-                    class="form-control"
-                  />
+                  <label for="slcDepartamento" class="form-label">Departamento</label>
+                  <select id="slcDepartamento" name="slcDepartamento" class="form-select" aria-label="Default select example">
+                    <option selected>Selecciona una opcion</option>
+                    <option value="Huila">Huila</option>
+                  </select>
                 </div>
               </form>
             </div>
@@ -81,7 +70,7 @@
               <button
                 type="submit"
                 class="btn btn-primary"
-                onclick="Alert()"
+                onclick="AlertMunicipio()"
               >
                 Registrar
               </button>
@@ -93,39 +82,32 @@
         <thead>
           <tr>
             <th>Nombre</th>
-            <th>Sede</th>
-            <th>Municipio</th>
+            <th>Departamento</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
+            <td>San agustin</td>
+            <td>Huila</td>
           </tr>
           <tr>
-            <td>Garrett Winters</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
+            <td>Pitalito</td>
+            <td>Huila</td>
           </tr>
           <tr>
-            <td>Ashton Cox</td>
-            <td>Junior Technical Author</td>
-            <td>San Francisco</td>
+            <td>Gigante</td>
+            <td>Huila</td>
           <tr>
-            <td>Cedric Kelly</td>
-            <td>Senior Javascript Developer</td>
-            <td>Edinburgh</td>
+            <td>Neiva</td>
+            <td>Huila</td>
           </tr>
           <tr>
-            <td>Airi Satou</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
+            <td>Garzon</td>
+            <td>Huila</td>
           </tr>
           <tr>
-            <td>Brielle Williamson</td>
-            <td>Integration Specialist</td>
-            <td>New York</td>
+            <td>Timana</td>
+            <td>Huila</td>
           </tr>
         </tbody>
       </table>

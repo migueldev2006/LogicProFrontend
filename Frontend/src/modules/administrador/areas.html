@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="container mt-5">
-      <h1>Usuarios</h1>
+      <h1>Areas</h1>
       <!-- Button trigger modal -->
       <button
         type="button"
@@ -20,7 +20,7 @@
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
       >
-      <i class="bi bi-plus-lg"></i>Usuario
+        <i class="bi bi-plus-lg"></i>Area
       </button>
 
       <!-- Modal -->
@@ -37,7 +37,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                Registar Usuario
+                Registrar Area
               </h1>
               <button
                 type="button"
@@ -47,50 +47,68 @@
               ></button>
             </div>
             <div class="modal-body">
-                <form action="">
-                    <div>
-                        <label for="nombre" class="form-label">Nombre Completo</label>
-                        <input type="text" name="nombre" id="nombre" class="form-control">
-                    </div>
-                    <div>
-                        <label for="identificacion" class="form-label">Documento</label>
-                        <input type="text" name="identificacion" id="identificacion" class="form-control">
-                    </div>
-                    <div>
-                        <label for="correo" class="form-label">Correo Electronico</label>
-                        <input type="text" name="correo" id="correo" class="form-control">
-                    </div>
-                    <div>
-                        <label for="celular" class="form-label">Telefono</label>
-                        <input type="text" name="celular" id="celular" class="form-control">
-                    </div>
-                    <div>
-                        <label for="slcRol" class="form-label">Rol</label>
-                        <select id="slcRol" name="slcRol" class="form-select" aria-label="Default select example">
-                            <option selected>Selecciona una opcion</option>
-                            <option value="1">Instructor</option>
-                            <option value="2">Lider</option>
-                            <option value="3">Coordinador</option>
-                            <option value="4">Vocero</option>
-                            <option value="5">Vigilante</option>
-                          </select>
-                    </div>
-                    <div>
-                        <label for="slcCargo" class="form-label">Cargo</label>
-                        <select id="slcCargo" name="slcCargo" class="form-select" aria-label="Default select example">
-                            <option selected>Selecciona una opcion</option>
-                            <option value="1">Instructor</option>
-                            <option value="2">Lider</option>
-                            <option value="3">Coordinador</option>
-                            <option value="4">Aprendiz</option>
-                            <option value="5">Vigilante</option>
-                            <option value="6">Operario</option>
-                          </select>
-                    </div>
-                </form>
+              <form action="">
+                <div>
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input
+                    type="text"
+                    name="nombre"
+                    id="nombre"
+                    class="form-control"
+                  />
+                </div>
+                <div>
+                  <label for="identificacion" class="form-label">Lider</label>
+                  <input
+                    type="text"
+                    name="identificacion"
+                    id="identificacion"
+                    class="form-control"
+                  />
+                </div>
+                <div>
+                  <label for="slcRol" class="form-label">Sede</label>
+                  <select
+                    id="slcRol"
+                    name="slcRol"
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Selecciona una opcion</option>
+                    <option value="1">Instructor</option>
+                    <option value="2">Lider</option>
+                    <option value="3">Coordinador</option>
+                    <option value="4">Vocero</option>
+                    <option value="5">Vigilante</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="slcCargo" class="form-label">Cargo</label>
+                  <select
+                    id="slcCargo"
+                    name="slcCargo"
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Selecciona una opcion</option>
+                    <option value="1">Instructor</option>
+                    <option value="2">Lider</option>
+                    <option value="3">Coordinador</option>
+                    <option value="4">Aprendiz</option>
+                    <option value="5">Vigilante</option>
+                    <option value="6">Operario</option>
+                  </select>
+                </div>
+              </form>
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-primary" onclick="showAlert()">Registrar</button>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="alertArea()"
+              >
+                Registrar
+              </button>
             </div>
           </div>
         </div>
@@ -98,6 +116,7 @@
       <table id="example" class="table table-striped" style="width: 100%">
         <thead>
           <tr>
+            <th>Id</th>
             <th>Nombre Completo</th>
             <th>Documento</th>
             <th>Correo Electronico</th>
@@ -108,6 +127,7 @@
         </thead>
         <tbody>
           <tr>
+            <th>1</th>
             <td>Tiger Nixon</td>
             <td>System Architect</td>
             <td>Edinburgh</td>
@@ -116,6 +136,7 @@
             <td>$320,800</td>
           </tr>
           <tr>
+            <th>2</th>
             <td>Garrett Winters</td>
             <td>Accountant</td>
             <td>Tokyo</td>
@@ -124,6 +145,7 @@
             <td>$170,750</td>
           </tr>
           <tr>
+            <th>3</th>
             <td>Ashton Cox</td>
             <td>Junior Technical Author</td>
             <td>San Francisco</td>
@@ -132,6 +154,7 @@
             <td>$86,000</td>
           </tr>
           <tr>
+            <th>4</th>
             <td>Cedric Kelly</td>
             <td>Senior Javascript Developer</td>
             <td>Edinburgh</td>
@@ -140,6 +163,7 @@
             <td>$433,060</td>
           </tr>
           <tr>
+            <th>5</th>
             <td>Airi Satou</td>
             <td>Accountant</td>
             <td>Tokyo</td>
@@ -148,6 +172,7 @@
             <td>$162,700</td>
           </tr>
           <tr>
+            <th>6</th>
             <td>Brielle Williamson</td>
             <td>Integration Specialist</td>
             <td>New York</td>

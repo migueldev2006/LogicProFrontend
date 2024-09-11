@@ -46,6 +46,10 @@ function loadModule(modulePath) {
         // Inicializa después de que el contenido ha sido agregado al DOM
         setTimeout(initializeDataTable, 100);  // Espera para asegurarse de que el DOM esté listo
       }
+      if (modulePath.includes('municipio.html')) {
+        // Inicializa después de que el contenido ha sido agregado al DOM
+        setTimeout(initializeDataTable, 100);  // Espera para asegurarse de que el DOM esté listo
+      }
     })
     .catch((err) => console.warn("Algo salió mal al cargar el módulo.", err));
 }
@@ -56,6 +60,10 @@ function initializeDataTable() {
     searchable: true,
     fixedHeight: true,
     perPage: 5,
+    sortable: false,
+    columnDefs:'dt-body-center'
+      
+    
   });
 }
 

@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Usuarios</title>
-    <link rel="stylesheet" href="../../../src/assets/css/sideBar.css">
     <!-- CSS de Bootstrap 5 -->
     <link
       href="../../../src/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
@@ -21,7 +20,7 @@
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
       >
-      <i class="bi bi-plus-lg"></i>Usuario
+        <i class="bi bi-plus-lg"></i>Usuario
       </button>
 
       <!-- Modal -->
@@ -48,50 +47,90 @@
               ></button>
             </div>
             <div class="modal-body">
-                <form action="">
-                    <div>
-                        <label for="nombre" class="form-label">Nombre Completo</label>
-                        <input type="text" name="nombre" id="nombre" class="form-control">
-                    </div>
-                    <div>
-                        <label for="identificacion" class="form-label">Documento</label>
-                        <input type="text" name="identificacion" id="identificacion" class="form-control">
-                    </div>
-                    <div>
-                        <label for="correo" class="form-label">Correo Electronico</label>
-                        <input type="text" name="correo" id="correo" class="form-control">
-                    </div>
-                    <div>
-                        <label for="celular" class="form-label">Telefono</label>
-                        <input type="text" name="celular" id="celular" class="form-control">
-                    </div>
-                    <div>
-                        <label for="slcRol" class="form-label">Rol</label>
-                        <select id="slcRol" name="slcRol" class="form-select" aria-label="Default select example">
-                            <option selected>Selecciona una opcion</option>
-                            <option value="1">Instructor</option>
-                            <option value="2">Lider</option>
-                            <option value="3">Coordinador</option>
-                            <option value="4">Vocero</option>
-                            <option value="5">Vigilante</option>
-                          </select>
-                    </div>
-                    <div>
-                        <label for="slcCargo" class="form-label">Cargo</label>
-                        <select id="slcCargo" name="slcCargo" class="form-select" aria-label="Default select example">
-                            <option selected>Selecciona una opcion</option>
-                            <option value="1">Instructor</option>
-                            <option value="2">Lider</option>
-                            <option value="3">Coordinador</option>
-                            <option value="4">Aprendiz</option>
-                            <option value="5">Vigilante</option>
-                            <option value="6">Operario</option>
-                          </select>
-                    </div>
-                </form>
+              <form action="">
+                <div>
+                  <label for="nombre" class="form-label">Nombre Completo</label>
+                  <input
+                    type="text"
+                    name="nombre"
+                    id="nombre"
+                    class="form-control"
+                  />
+                </div>
+                <div>
+                  <label for="identificacion" class="form-label"
+                    >Documento</label
+                  >
+                  <input
+                    type="text"
+                    name="identificacion"
+                    id="identificacion"
+                    class="form-control"
+                  />
+                </div>
+                <div>
+                  <label for="correo" class="form-label"
+                    >Correo Electronico</label
+                  >
+                  <input
+                    type="text"
+                    name="correo"
+                    id="correo"
+                    class="form-control"
+                  />
+                </div>
+                <div>
+                  <label for="celular" class="form-label">Telefono</label>
+                  <input
+                    type="text"
+                    name="celular"
+                    id="celular"
+                    class="form-control"
+                  />
+                </div>
+                <div>
+                  <label for="slcRol" class="form-label">Rol</label>
+                  <select
+                    id="slcRol"
+                    name="slcRol"
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Selecciona una opcion</option>
+                    <option value="Instructor">Instructor</option>
+                    <option value="Lider">Lider</option>
+                    <option value="Coordinador">Coordinador</option>
+                    <option value="Vocero">Vocero</option>
+                    <option value="Vigilante">Vigilante</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="slcCargo" class="form-label">Cargo</label>
+                  <select
+                    id="slcCargo"
+                    name="slcCargo"
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Selecciona una opcion</option>
+                    <option value="Instructor">Instructor</option>
+                    <option value="Lider">Lider</option>
+                    <option value="Coordinador">Coordinador</option>
+                    <option value="Aprendiz">Aprendiz</option>
+                    <option value="Vigilante">Vigilante</option>
+                    <option value="Operario">Operario</option>
+                  </select>
+                </div>
+              </form>
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-primary" onclick="showAlert()">Registrar</button>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="showAlert()"
+              >
+                Registrar
+              </button>
             </div>
           </div>
         </div>
@@ -105,56 +144,63 @@
             <th>Telefono</th>
             <th>Rol</th>
             <th>Cargo</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
-            <td>61</td>
-            <td>2011-04-25</td>
-            <td>$320,800</td>
+            <td>Maike Melendez</td>
+            <td>25689520</td>
+            <td>mk@outlok.co</td>
+            <td>32014567895</td>
+            <td>Vocero</td>
+            <td>Aprendiz</td>
+            <th><button class="btn btn-danger">delete</button></th>
           </tr>
           <tr>
-            <td>Garrett Winters</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
-            <td>63</td>
-            <td>2011-07-25</td>
-            <td>$170,750</td>
+            <td>Diego Calderon</td>
+            <td>1256458</td>
+            <td>diego@gail.com</td>
+            <td>3502156980</td>
+            <td>Instructor</td>
+            <td>Lider</td>
+            <th><button class="btn btn-danger">delete</button></th>
           </tr>
           <tr>
-            <td>Ashton Cox</td>
-            <td>Junior Technical Author</td>
-            <td>San Francisco</td>
-            <td>66</td>
-            <td>2009-01-12</td>
-            <td>$86,000</td>
+            <td>Carlos Bravo</td>
+            <td>25648759</td>
+            <td>cabravo@gmail.com</td>
+            <td>312564892</td>
+            <td>Instructor</td>
+            <td>Instructor</td>
+            <th><button class="btn btn-danger">delete</button></th>
           </tr>
           <tr>
-            <td>Cedric Kelly</td>
-            <td>Senior Javascript Developer</td>
-            <td>Edinburgh</td>
-            <td>22</td>
-            <td>2012-03-29</td>
-            <td>$433,060</td>
+            <td>Jeralber Vargas</td>
+            <td>1081756230</td>
+            <td>Joro@gmail.com</td>
+            <td>320456879</td>
+            <td>Vocero</td>
+            <td>Aprendiz</td>
+            <th><button class="btn btn-danger">delete</button></th>
           </tr>
           <tr>
-            <td>Airi Satou</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
-            <td>33</td>
-            <td>2008-11-28</td>
-            <td>$162,700</td>
+            <td>Wilson Martinez</td>
+            <td>12145820</td>
+            <td>wilm@gmail.com</td>
+            <td>3152645223</td>
+            <td>Instructor</td>
+            <td>Instructor</td>
+            <th><button class="btn btn-danger">delete</button></th>
           </tr>
           <tr>
-            <td>Brielle Williamson</td>
-            <td>Integration Specialist</td>
-            <td>New York</td>
-            <td>61</td>
-            <td>2012-12-02</td>
-            <td>$372,000</td>
+            <td>Sebastian Ruiz</td>
+            <td>14235648</td>
+            <td>ruiz@gmail.com</td>
+            <td>3165897562</td>
+            <td>Instructor</td>
+            <td>Instructor</td>
+            <th><button class="btn btn-danger">delete</button></th>
           </tr>
         </tbody>
       </table>
