@@ -104,7 +104,7 @@
 /* Ajuste del contenedor principal */
 .content {
     margin-left: 250px;
-    margin-top: 56px; /* Espacio para el navbar */
+    margin-top: 106px; /* Espacio para el navbar */
     transition: margin-left 0.3s;
 }
 

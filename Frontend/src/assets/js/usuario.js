@@ -1,4 +1,4 @@
-function showAlert() {
+function alertUsuario() {
     let nombre = document.getElementById("nombre").value;
     let documento = document.getElementById("identificacion").value;
     let correo = document.getElementById("correo").value;
