@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../src/assets/css/formulario.css">
+       <link rel="stylesheet" href="/Frontend/src/assets/css/formulario.css">
+       
+   
+    <title>salidaBodega</title>
+</head>
+<body>
+      <div class="container mb-2">
+        <!-- agrgar style de boostrap  -->
+        <h2 style="text-align:center; margin-top:100px">Registro salida de material formativo</h2>
+      </div>
+      <!-- Button trigger modal -->
+  
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1
+                class="modal-title fs-5 text-center"
+                id="staticBackdropLabel"
+              >
+                Registro salida de material 
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" style="background-color: #f8f9fa">
+              <div
+                class="card"
+                style="width: 450px; background-color: #f8f9fa"
+              >
+                <div class="card-body">
+                  <form action="">
+                    <div class="mb-4">
+                      <label class="form-label" for="nombre">Area</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        name="Area"
+                        id="Area"
+                      />
+                    </div>
+                    <div class="mb-4">
+                      <label class="form-label" for="sede">Titulado</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        name="Titulado"
+                        id="Titulado"
+                      />
+                    </div>
+               
+                    <div class="mb-4">
+                      <label class="form-label" for="municipio">ID ficha</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        name="ID ficha"
+                        id="ID ficha"
+                      />
+                    </div>
+                    <div class="mb-4">
+                      <label class="form-label" for="municipio">Material</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        name="Material"
+                        id="Material"
+                      />
+                    </div>
+                    <div class="mb-4">
+                      <label class="form-label" for="municipio">Cantidad</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        name="Cantidad"
+                        id="Cantidad"
+                      />
+                    </div>
+                    <div class="mb-4">
+                      <label class="form-label" for="municipio">Fecha de entrega</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        name="Fecha"
+                        id="Fecha"
+                      />
+                    </div>
+                    <div class="mb-4">
+                      <label class="form-label" for="municipio">hora de entrega</label>
+                      <input
+                      class="form-control"
+                      type="text"
+                      name="hora de entrega"
+                      id="hora de entrega"
+                    />
+                     
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" id="salida" onclick=" salida()">Registrar</button>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+     
+      <div class="p-5">
+        <table id="example" class="table table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Area</th>
+                    <th>Titulado</th>
+                    <th>encargado</th>
+                    <th>ID ficha</th>
+                    <th>Material</th>
+                    <th>Cantidad</th>
+                    <th>Fecha de entrega</th>
+                    <th>hora de entrega</th>
+                    <th>material en  stock</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>tic</td>
+                    <td>adso</td>
+                    <td>marcos perdomo</td>
+                    <td>838383</td>
+                    <td>portatil hp</td>
+                    <td>12</td>
+                    <td>29/02/2024</td>
+                    <td>2:30 am</td>
+                    <td>2</td>
+      
+                </tr>
+                <tr>
+                    <td>tic</td>
+                    <td>adso</td>
+                    <td>weimar perdomo</td>
+                    <td>9201746</td>
+                    <td>tableta dell</td>
+                    <td>2</td>
+                    <td>29/05/2024</td>
+                    <td>3:30 am</td>
+                    <td>20</td>
+      
+                   
+                </tr>
+                <td>gastronomia</td>
+                    <td>cosina</td>
+                    <td>weilmer barrios</td>
+                    <td>92345789</td>
+                    <td>uniformes</td>
+                    <td>12</td>
+                    <td>29/05/2021</td>
+                    <td>8:30 am</td>
+                    <td>0</td>
+                <tr>
+                    
+                   
+                </tr>
+                
+                <tr>
+                  <td>tic</td>
+                  <td>adso</td>
+                  <td>marcos perdomo</td>
+                  <td>925647624</td>
+                  <td>diademas</td>
+                  <td>25</td>
+                  <td>2/05/2020</td>
+                  <td>11:30 am</td>
+                  <td>0</td>
+                   
+                </tr>
+                
+            </tbody>
+            
+        </table>
+        <div class="p-5 mt-2">
+         
+              <button
+                type="button"
+                class="btn btn-primary offset-md-10"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                style="width: 15%;"
+    
+              >
+                <div class="boton-registrar ">
+                  <i class="lni lni-plus" id="button"></i> Registrar
+                </button>
+           
+          </div>
+    </div>
+   
+</body>
+</html>

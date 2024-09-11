@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./public/login.png" />
+    <title>Recuperar Contraseña</title>
+    <link rel="stylesheet" href="./src/assets/bootstrap-5.3.3-dist/css/bootstrap.rtl.min.css">
+  </head>
+  <body
+    style="
+      background-color: #f8f9fa;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <div class="container">
+      <div
+        class="mx-auto card"
+        style="
+          width: 500px;
+          height: 500px;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <div
+          class="card-body"
+          style="background-color: #ffffff; color: #000000; font-size: 20px"
+        >
+          <div class="mb-3">
+            <img
+              src="./public/sena.png"
+              alt="Logo del SENA"
+              class="img-fluid"
+            />
+            <h5
+              class="d-inline-block ms-5"
+              style="font-size: 30px; color: #007bff"
+            >
+              RECUPERAR CONTRASEÑA
+            </h5>
+          </div>
+          <div>
+            <form action="./cambiarContrasena.html">
+              <div class="mb-4">
+                <label class="form-label" for="identificacion">Documento</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="identificacion"
+                  id="identificacion"
+                />
+              </div>
+              <div class="mb-5">
+                <label class="form-label" for="confirm"
+                  >Correo Electronico</label
+                >
+                <input
+                  class="form-control"
+                  type="text"
+                  name="email"
+                  id="confirm"
+                />
+              </div>
+              <div>
+                <a href="" style="text-decoration: none"
+                  ><button
+                    class="btn d-grid gap-2 col-6 mx-auto"
+                    style="background-color: #007bff; color: #ffffff"
+                    type="submit"
+                  >
+                    Recuperar Contraseña
+                  </button></a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./src/assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

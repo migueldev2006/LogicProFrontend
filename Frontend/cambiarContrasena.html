@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./public/login.png" />
+    <title>Recuperar Contraseña</title>
+    <link
+      rel="stylesheet"
+      href="./src/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body
+    style="
+      background-color: #f8f9fa;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    "
+  >
+    <div class="container">
+      <div
+        class="mx-auto card"
+        style="
+          width: 500px;
+          height: 500px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <div
+          class="card-body"
+          style="background-color: #fff; color: #000; font-size: 20px"
+        >
+          <div class="mb-3">
+            <img
+              class="img-fluid"
+              src="./public/sena.png"
+              alt="Logo del SENA"
+            />
+            <h5
+              class="d-inline-block ms-5"
+              style="font-size: 35px; color: #007bff"
+            >
+              CAMBIAR CONTRASEÑA
+            </h5>
+          </div>
+          <p class="text-center">Ingrese su nueva contraseña</p>
+          <form action="./login.html">
+            <div class="mb-4">
+              <label class="form-label" for="new">Contraseña Nueva</label>
+              <input
+                class="form-control"
+                type="password"
+                name="newPasword"
+                id="new"
+              />
+            </div>
+            <div class="mb-5">
+              <label class="form-label" for="confirm"
+                >Confirmar Contraseña</label
+              >
+              <input
+                class="form-control"
+                type="password"
+                name="confirmPasword"
+                id="confirm"
+              />
+            </div>
+            <div>
+              <a style="text-decoration: none" href=""
+                ><button
+                  class="btn d-grid gap-2 col-6 mx-auto"
+                  style="background-color: #007bff; color: #ffffff"
+                  type="submit"
+                  onclick="alert('Contraseña cambiada exitosamente')"
+                >
+                  Cambiar Contraseña
+                </button></a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./src/assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

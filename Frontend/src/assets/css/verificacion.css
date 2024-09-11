@@ -1,0 +1,12 @@
+.botones-contenedor {
+    display: flex; /* Establece la disposición en línea (horizontal) */
+    justify-content: space-between; /* Distribuye los botones de manera uniforme */
+    justify-content: center; /* Centra los botones horizontalmente */
+    
+  }
+  
+  .botones-contenedor button {
+    margin: 5px; /* Agrega un margen entre los botones */
+    
+  }
+

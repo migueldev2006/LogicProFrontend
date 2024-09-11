@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/img/login.png" />
+    <title>Inicio de Sesion</title>
+    <link
+      rel="stylesheet"
+      href="./src/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div style="display: flex">
+      <div
+        style="
+          display: flex;
+          background-color: #007bff;
+          width: 800px;
+          height: 100vh;
+          align-content: center;
+        "
+      >
+        <img src="./public/login.png" alt="LogicPro" />
+      </div>
+      <div
+        style="background-color: #f8f9fa; width: 800px; align-content: center"
+      >
+        <div class="col my-auto">
+          <div
+            class="mx-auto card"
+            style="
+              width: 400px;
+              background-color: #ffff;
+              color: #000000;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <div class="card-body">
+              <h5
+                class="text-center mb-4"
+                style="color: #007bff; font-size: x-large"
+              >
+                INICIO DE SESION
+              </h5>
+              <form class="mb-3" action="./index.html">
+                <div class="mb-4">
+                  <label class="form-label" for="id">Numero de Documento</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="Documento"
+                    id="id"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <label class="form-label" for="pasword">Contraseña</label>
+                  <input
+                    class="form-control"
+                    type="password"
+                    name="Contrasena"
+                    id="pasword"
+                    placeholder="****"
+                    required
+                  />
+                </div>
+                <a
+                  href="./recuperarContrasena.html"
+                  class="text-decoration-none recuperar-pasword"
+                  style="color: #000000"
+                  ><p class="text-center">He olvidado mi contraseña</p></a
+                >
+                <div class="d-grid gap-2 col-6 mx-auto">
+                  <button
+                    class="btn"
+                    style="background-color: #007bff; color: #ffff"
+                    type="submit"
+                  >
+                    Ingresar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./src/assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
