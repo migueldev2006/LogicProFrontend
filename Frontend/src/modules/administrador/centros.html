@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Usuarios</title>
+    <title>Centros</title>
     <!-- CSS de Bootstrap 5 -->
     <link
       href="../../../src/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
@@ -12,16 +12,18 @@
   </head>
   <body>
     <div class="container mt-5">
-      <h1>Usuarios</h1>
+      <h1 class="mb-4">Centros</h1>
       <!-- Button trigger modal -->
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#staticBackdrop"
-      >
-        <i class="bi bi-plus-lg"></i>Centro
-      </button>
+      <div>
+        <button
+          type="button"
+          class="btn btn-primary mb-4"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+        >
+          <i class="bi bi-plus-lg"></i>Centro
+        </button>
+      </div>
 
       <!-- Modal -->
       <div
@@ -37,7 +39,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                Registar Centro
+                Registrar Centro
               </h1>
               <button
                 type="button"
@@ -55,58 +57,32 @@
                     name="nombre"
                     id="nombre"
                     class="form-control"
-                  />
-                </div>
-                <div>
-                  <label for="sede" class="form-label">Sede</label>
-                  <input
-                    type="text"
-                    name="sede"
-                    id="sede"
-                    class="form-control"
-                  />
-                </div>
-                <div>
-                  <label for="municipio" class="form-label">Municipio</label>
-                  <input
-                    type="text"
-                    name="municipio"
-                    id="municipio"
-                    class="form-control"
+                    required
                   />
                 </div>
               </form>
             </div>
             <div class="modal-footer">
-              <button
-                type="submit"
-                class="btn btn-primary"
-                onclick="alertCentro()"
-              >
+              <button type="submit" class="btn btn-primary" onclick="alertaCentro()">
                 Registrar
               </button>
             </div>
           </div>
         </div>
       </div>
-      <table id="example" class="table table-striped" style="width: 100%">
+      <table
+        id="example"
+        class="table table-striped text-center"
+        style="width: 100%"
+      >
         <thead>
           <tr>
-            <th>Nombre</th>
-            <th>Sede</th>
-            <th>Municipio</th>
+            <th class="text-center">Nombre</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>CGDSS</td>
-            <td>Yamboro</td>
-            <td>Pitalito</td>
-          </tr>
-          <tr>
-            <td>CGDSS</td>
-            <td>Comercio y Servicios</td>
-            <td>Pitalito</td>
           </tr>
         </tbody>
       </table>

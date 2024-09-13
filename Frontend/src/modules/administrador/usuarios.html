@@ -12,17 +12,17 @@
   </head>
   <body>
     <div class="container mt-5">
-      <h1>Usuarios</h1>
+      <h1 class="mb-4">Usuarios</h1>
       <!-- Button trigger modal -->
       <div>
         <button
-        type="button"
-        class="btn btn-primary buttonn"
-        data-bs-toggle="modal"
-        data-bs-target="#staticBackdrop"
-      >
-        <i class="bi bi-plus-lg"></i>Usuario
-      </button>
+          type="button"
+          class="btn btn-primary mb-4"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+        >
+          <i class="bi bi-plus-lg"></i>Usuario
+        </button>
       </div>
       <!-- Modal -->
       <div
@@ -56,6 +56,7 @@
                     name="nombre"
                     id="nombre"
                     class="form-control"
+                    required
                   />
                 </div>
                 <div>
@@ -67,6 +68,7 @@
                     name="identificacion"
                     id="identificacion"
                     class="form-control"
+                    required
                   />
                 </div>
                 <div>
@@ -78,6 +80,7 @@
                     name="correo"
                     id="correo"
                     class="form-control"
+                    required
                   />
                 </div>
                 <div>
@@ -87,6 +90,7 @@
                     name="celular"
                     id="celular"
                     class="form-control"
+                    required
                   />
                 </div>
                 <div>
@@ -96,6 +100,7 @@
                     name="slcRol"
                     class="form-select"
                     aria-label="Default select example"
+                    required
                   >
                     <option selected>Selecciona una opcion</option>
                     <option value="Instructor">Instructor</option>
@@ -112,6 +117,7 @@
                     name="slcCargo"
                     class="form-select"
                     aria-label="Default select example"
+                    required
                   >
                     <option selected>Selecciona una opcion</option>
                     <option value="Instructor">Instructor</option>
@@ -125,27 +131,27 @@
               </form>
             </div>
             <div class="modal-footer">
-              <button
-                type="submit"
-                class="btn btn-primary"
-                onclick="alertUsuario()"
-              >
+              <button type="submit" class="btn btn-primary" onclick="alertaUsuario()">
                 Registrar
               </button>
             </div>
           </div>
         </div>
       </div>
-      <table id="example" class="table table-striped" style="width: 100%">
+      <table
+        id="example"
+        class="table table-striped text-center"
+        style="width: 100%"
+      >
         <thead>
           <tr>
-            <th>Nombre Completo</th>
-            <th>Documento</th>
-            <th>Correo Electronico</th>
-            <th>Telefono</th>
-            <th>Rol</th>
-            <th>Cargo</th>
-            <th></th>
+            <th class="text-center">Nombre Completo</th>
+            <th class="text-center">Documento</th>
+            <th class="text-center">Correo Electronico</th>
+            <th class="text-center">Telefono</th>
+            <th class="text-center">Rol</th>
+            <th class="text-center">Cargo</th>
+            <th class="text-center"></th>
           </tr>
         </thead>
         <tbody>
@@ -156,7 +162,14 @@
             <td>32014567895</td>
             <td>Vocero</td>
             <td>Aprendiz</td>
-            <th><button class="btn btn-danger">delete</button></th>
+            <th>
+              <button class="btn btn-primary">
+                <i class="lni lni-pencil-alt"></i>
+              </button>
+              <button class="btn btn-danger">
+                <i class="lni lni-trash-can"></i>
+              </button>
+            </th>
           </tr>
           <tr>
             <td>Diego Calderon</td>
@@ -165,7 +178,14 @@
             <td>3502156980</td>
             <td>Instructor</td>
             <td>Lider</td>
-            <th><button class="btn btn-danger">delete</button></th>
+            <th>
+              <button class="btn btn-primary">
+                <i class="lni lni-pencil-alt"></i>
+              </button>
+              <button class="btn btn-danger">
+                <i class="lni lni-trash-can"></i>
+              </button>
+            </th>
           </tr>
           <tr>
             <td>Carlos Bravo</td>
@@ -174,7 +194,14 @@
             <td>312564892</td>
             <td>Instructor</td>
             <td>Instructor</td>
-            <th><button class="btn btn-danger">delete</button></th>
+            <th>
+              <button class="btn btn-primary">
+                <i class="lni lni-pencil-alt"></i>
+              </button>
+              <button class="btn btn-danger">
+                <i class="lni lni-trash-can"></i>
+              </button>
+            </th>
           </tr>
           <tr>
             <td>Jeralber Vargas</td>
@@ -183,7 +210,14 @@
             <td>320456879</td>
             <td>Vocero</td>
             <td>Aprendiz</td>
-            <th><button class="btn btn-danger">delete</button></th>
+            <td>
+              <button class="btn btn-primary">
+                <i class="lni lni-pencil-alt"></i>
+              </button>
+              <button class="btn btn-danger">
+                <i class="lni lni-trash-can"></i>
+              </button>
+            </td>
           </tr>
           <tr>
             <td>Wilson Martinez</td>
@@ -192,7 +226,14 @@
             <td>3152645223</td>
             <td>Instructor</td>
             <td>Instructor</td>
-            <th><button class="btn btn-danger">delete</button></th>
+            <th>
+              <button class="btn btn-primary">
+                <i class="lni lni-pencil-alt"></i>
+              </button>
+              <button class="btn btn-danger">
+                <i class="lni lni-trash-can"></i>
+              </button>
+            </th>
           </tr>
           <tr>
             <td>Sebastian Ruiz</td>
@@ -201,7 +242,14 @@
             <td>3165897562</td>
             <td>Instructor</td>
             <td>Instructor</td>
-            <th><button class="btn btn-danger">delete</button></th>
+            <th>
+              <button class="btn btn-primary">
+                <i class="lni lni-pencil-alt"></i>
+              </button>
+              <button class="btn btn-danger">
+                <i class="lni lni-trash-can"></i>
+              </button>
+            </th>
           </tr>
         </tbody>
       </table>

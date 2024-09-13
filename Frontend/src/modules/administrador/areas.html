@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Usuarios</title>
+    <title>Areas</title>
     <!-- CSS de Bootstrap 5 -->
     <link
       href="../../../src/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
@@ -12,11 +12,11 @@
   </head>
   <body>
     <div class="container mt-5">
-      <h1>Areas</h1>
+      <h1 class="mb-4">Areas</h1>
       <!-- Button trigger modal -->
       <button
         type="button"
-        class="btn btn-primary"
+        class="btn btn-primary mb-4"
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
       >
@@ -55,15 +55,17 @@
                     name="nombre"
                     id="nombre"
                     class="form-control"
+                    required
                   />
                 </div>
                 <div>
-                  <label for="personaEncargada" class="form-label">Persona Encargada</label>
+                  <label for="lider" class="form-label">Lider</label>
                   <input
                     type="text"
-                    name="personaEncargada"
-                    id="personaEncargada"
+                    name="lider"
+                    id="lider"
                     class="form-control"
+                    required
                   />
                 </div>
                 <div>
@@ -73,68 +75,64 @@
                     name="slcSede"
                     class="form-select"
                     aria-label="Default select example"
+                    required
                   >
                     <option selected>Selecciona una opcion</option>
                     <option value="Yamboro">Yamboro</option>
-                    <option value="Comercio y Servicios">Comercio y Servicios</option>
+                    <option value="Comercio y Servicios">
+                      Comercio y Servicios
+                    </option>
                   </select>
                 </div>
               </form>
             </div>
             <div class="modal-footer">
-              <button
-                type="submit"
-                class="btn btn-primary"
-                onclick="alertArea()"
-              >
+              <button type="submit" class="btn btn-primary" onclick="alertaArea()">
                 Registrar
               </button>
             </div>
           </div>
         </div>
       </div>
-      <table id="example" class="table table-striped" style="width: 100%">
+      <table
+        id="example"
+        class="table table-striped text-center"
+        style="width: 100%"
+      >
         <thead>
           <tr>
-            <th>Id</th>
-            <th>Nombre Completo</th>
-            <th>Persona Encargada</th>
-            <th>Sede</th>
+            <th class="text-center">Nombre</th>
+            <th class="text-center">Lider</th>
+            <th class="text-center">Sede</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th>1</th>
             <td>TIC</td>
             <td>Silvia</td>
             <td>Yamboro</td>
           </tr>
           <tr>
-            <th>2</th>
             <td>Agropecuaria</td>
             <td>Pedro</td>
             <td>Yamboro</td>
           </tr>
           <tr>
-            <th>3</th>
             <td>Administracion</td>
             <td>Julia</td>
             <td>Comercio y Servicios</td>
           </tr>
           <tr>
-            <th>4</th>
             <td>Gastronomia</td>
             <td>Diego</td>
             <td>Yamboro</td>
           </tr>
           <tr>
-            <th>5</th>
             <td>Ambiental</td>
             <td>Magda</td>
             <td>Yamboro</td>
           </tr>
           <tr>
-            <th>6</th>
             <td>Turismo</td>
             <td>Carlos Arcos</td>
             <td>Yamboro</td>

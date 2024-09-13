@@ -20,35 +20,31 @@ function loadModule(modulePath) {
       // Inicializa DataTables si estamos cargando el módulo de usuarios
       if (modulePath.includes('usuarios.html')) {
         // Inicializa después de que el contenido ha sido agregado al DOM
-        setTimeout(initializeDataTable, 100);  // Espera para asegurarse de que el DOM esté listo
+        setTimeout(initializeDataTable, 100);
       }
       if (modulePath.includes('centros.html')) {
-        // Inicializa después de que el contenido ha sido agregado al DOM
-        setTimeout(initializeDataTable, 100);  // Espera para asegurarse de que el DOM esté listo
+        setTimeout(initializeDataTable, 100); 
+      }
+      if (modulePath.includes('sedes.html')) {
+        setTimeout(initializeDataTable, 100);  
       }
       if (modulePath.includes('programasFormacion.html')) {
-        // Inicializa después de que el contenido ha sido agregado al DOM
-        setTimeout(initializeDataTable, 100);  // Espera para asegurarse de que el DOM esté listo
+        setTimeout(initializeDataTable, 100);  
+      }
+      if (modulePath.includes('fichas.html')) {
+        setTimeout(initializeDataTable, 100);  
       }
       if (modulePath.includes('areas.html')) {
-        // Inicializa después de que el contenido ha sido agregado al DOM
-        setTimeout(initializeDataTable, 100);  // Espera para asegurarse de que el DOM esté listo
+        setTimeout(initializeDataTable, 100);  
       }
       if (modulePath.includes('sitios.html')) {
-        // Inicializa después de que el contenido ha sido agregado al DOM
-        setTimeout(initializeDataTable, 100);  // Espera para asegurarse de que el DOM esté listo
+        setTimeout(initializeDataTable, 100); 
       }
       if (modulePath.includes('tipoDeSitios.html')) {
-        // Inicializa después de que el contenido ha sido agregado al DOM
-        setTimeout(initializeDataTable, 100);  // Espera para asegurarse de que el DOM esté listo
-      }
-      if (modulePath.includes('bodega.html')) {
-        // Inicializa después de que el contenido ha sido agregado al DOM
-        setTimeout(initializeDataTable, 100);  // Espera para asegurarse de que el DOM esté listo
+        setTimeout(initializeDataTable, 100);  
       }
       if (modulePath.includes('municipio.html')) {
-        // Inicializa después de que el contenido ha sido agregado al DOM
-        setTimeout(initializeDataTable, 100);  // Espera para asegurarse de que el DOM esté listo
+        setTimeout(initializeDataTable, 100);  
       }
     })
     .catch((err) => console.warn("Algo salió mal al cargar el módulo.", err));
