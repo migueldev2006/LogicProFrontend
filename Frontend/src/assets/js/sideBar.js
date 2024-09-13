@@ -59,11 +59,8 @@ function initializeDataTable() {
   const dataTable = new simpleDatatables.DataTable("#example", {
     searchable: true,
     fixedHeight: true,
-    perPage: 5,
+    perPage: 4,
     sortable: false,
-    columnDefs:'dt-body-center'
-      
-    
   });
 }
 
