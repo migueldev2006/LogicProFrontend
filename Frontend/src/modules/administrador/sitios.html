@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sitios</title>
+    <!-- CSS de Bootstrap 5 -->
+    <link
+      href="../../../src/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4">Sitios</h1>
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary mb-4"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+      >
+        <i class="bi bi-plus-lg"></i>Sitio
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Nuevo Sitio
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <div>
+                  <label for="slcEncargado" class="form-label"
+                    >Persona Encargada</label
+                  >
+                  <select
+                    id="slcEncargado"
+                    name="slcEncargado"
+                    class="form-select"
+                    aria-label="Default select example"
+                    required
+                  >
+                    <option selected>Selecciona una opcion</option>
+                    <option value="1">Silvia</option>
+                    <option value="2">Diego</option>
+                    <option value="3">Wilson</option>
+                    <option value="4">Magda</option>
+                    <option value="5">Carlos</option>
+                    <option value="6">Janier</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="nombre" class="form-label">Nombre Sitio</label>
+                  <input
+                    type="text"
+                    name="nombre"
+                    id="nombre"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="slcTipoSitio" class="form-label"
+                    >Tipo de Sitio</label
+                  >
+                  <select
+                    id="slcTipoSitio"
+                    name="slcTipoSitio"
+                    class="form-select"
+                    aria-label="Default select example"
+                    required
+                  >
+                    <option selected>Selecciona una opcion</option>
+                    <option value="1">Ambiente</option>
+                    <option value="2">Laboratorio</option>
+                    <option value="3">Bodega</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="correo" class="form-label">Ubicacion</label>
+                  <input
+                    type="text"
+                    name="correo"
+                    id="correo"
+                    class="form-control"
+                    required
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="alertaSitios()"
+              >
+                Registrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <table
+        id="example"
+        class="table table-striped text-center"
+        style="width: 100%"
+      >
+        <thead>
+          <tr>
+            <th class="text-center">Persona Encargada</th>
+            <th class="text-center">Nombre del Sitio</th>
+            <th class="text-center">Tipo de Sitio</th>
+            <th class="text-center">Ubicacion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Carlos</td>
+            <td>Y12</td>
+            <td>Ambiente</td>
+            <td>Al lado del ambiente de multimedia</td>
+          </tr>
+          <tr>
+            <td>Magda</td>
+            <td>Y19</td>
+            <td>Laboratorio</td>
+            <td>Al lado de biblioteca</td>
+          </tr>
+          <tr>
+            <td>Wilson</td>
+            <td>Y14</td>
+            <td>Ambiente</td>
+            <td>En Biotic</td>
+          </tr>
+
+          <tr>
+            <td>Janier</td>
+            <td>Y20</td>
+            <td>Laboratorio</td>
+            <td>Al lado del laboratorio Y19</td>
+          </tr>
+          <tr>
+            <td>Diego</td>
+            <td>Y15</td>
+            <td>Ambiente</td>
+            <td>En Biotic</td>
+          </tr>
+          <tr>
+            <td>Silvia</td>
+            <td>Y13</td>
+            <td>Ambiente</td>
+            <td>En Biotic</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

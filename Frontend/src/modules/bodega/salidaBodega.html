@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../src/assets/css/formulario.css">
-       <link rel="stylesheet" href="/Frontend/src/assets/css/formulario.css">
+    <link rel="stylesheet" href="/Frontend/src/assets/css/formulario.css">
        
    
     <title>salidaBodega</title>
 </head>
 <body>
-      <div class="container mb-2">
+      <div class="container">
         <!-- agrgar style de boostrap  -->
         <h2 style="text-align:center; margin-top:100px">Registro salida de material formativo</h2>
       </div>
@@ -48,7 +47,7 @@
                 style="width: 450px; background-color: #f8f9fa"
               >
                 <div class="card-body">
-                  <form action="">
+                  <form id="formulario" action="">
                     <div class="mb-4">
                       <label class="form-label" for="nombre">Area</label>
                       <input
@@ -112,108 +111,75 @@
                       name="hora de entrega"
                       id="hora de entrega"
                     />
-                     
                     </div>
                   </form>
                 </div>
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary" id="salida" onclick=" salida()">Registrar</button>
+              <button type="button" class="btn btn-primary" id="re" onclick=" showalert()">Registrar</button>
             
             </div>
           </div>
         </div>
       </div>
-     
-      <div class="p-5">
-        <table id="example" class="table table-striped" style="width:100%">
-            <thead>
-                <tr>
-                    <th>Area</th>
-                    <th>Titulado</th>
-                    <th>encargado</th>
-                    <th>ID ficha</th>
-                    <th>Material</th>
-                    <th>Cantidad</th>
-                    <th>Fecha de entrega</th>
-                    <th>hora de entrega</th>
-                    <th>material en  stock</th>
-                    
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>tic</td>
-                    <td>adso</td>
-                    <td>marcos perdomo</td>
-                    <td>838383</td>
-                    <td>portatil hp</td>
-                    <td>12</td>
-                    <td>29/02/2024</td>
-                    <td>2:30 am</td>
-                    <td>2</td>
-      
-                </tr>
-                <tr>
-                    <td>tic</td>
-                    <td>adso</td>
-                    <td>weimar perdomo</td>
-                    <td>9201746</td>
-                    <td>tableta dell</td>
-                    <td>2</td>
-                    <td>29/05/2024</td>
-                    <td>3:30 am</td>
-                    <td>20</td>
-      
-                   
-                </tr>
-                <td>gastronomia</td>
-                    <td>cosina</td>
-                    <td>weilmer barrios</td>
-                    <td>92345789</td>
-                    <td>uniformes</td>
-                    <td>12</td>
-                    <td>29/05/2021</td>
-                    <td>8:30 am</td>
-                    <td>0</td>
-                <tr>
-                    
-                   
-                </tr>
-                
-                <tr>
-                  <td>tic</td>
-                  <td>adso</td>
-                  <td>marcos perdomo</td>
-                  <td>925647624</td>
-                  <td>diademas</td>
-                  <td>25</td>
-                  <td>2/05/2020</td>
-                  <td>11:30 am</td>
-                  <td>0</td>
-                   
-                </tr>
-                
-            </tbody>
-            
-        </table>
-        <div class="p-5 mt-2">
-         
-              <button
-                type="button"
-                class="btn btn-primary offset-md-10"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-                style="width: 15%;"
-    
-              >
-                <div class="boton-registrar ">
-                  <i class="lni lni-plus" id="button"></i> Registrar
-                </button>
-           
-          </div>
+
     </div>
-   
+      <div class="p-5 ">
+        <div class="display:flex">
+          <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="width: 15%;">
+            <i class="lni lni-plus" id="button" ></i> Registrar
+          </button>
+        </div>
+  <table id="example" class="table table-striped mb-3 text-center" style="width:100%">
+    <thead>
+        <tr>
+            <th class=" text-center">Area</th>
+            <th class=" text-center">Titulado</th>
+            <th class=" text-center">encargado</th>
+            <th class=" text-center">ID ficha</th>
+            <th class=" text-center">Material</th>
+            <th class=" text-center">Cantidad</th>
+            <th class=" text-center">Fecha de entrega</th>
+            <th class=" text-center">hora de entrega</th>
+            <th class=" text-center">material en  stock</th>
+       </tr>
+             
+      </thead>
+      <tr>
+        <td>tic</td>
+        <td>ADSO</td>
+        <td>diego armando</td>
+         <td>2977491</td>
+        <td>portastiles dell</td>
+        <td>12</td>
+        <td>12/02/2024</td>
+        <td>12:30 pm</td>
+        <td>12</td>
+     </tr>
+           <tr>
+             <td>tic</td>
+             <td>multimedia</td>
+             <td>daniela scalante</td>
+             <td>01010101</td>
+             <td>tableta</td>
+             <td>11</td>
+             <td>01/02/2022</td>
+             <td>2:30 pm</td>
+             <td>2</td>
+         </tr>
+           <tr>
+             <td>pae</td>
+             <td>agropecuaria</td>
+             <td>maikel fabian</td>
+             <td>02020202</td>
+             <td>palas</td>
+             <td>30</td>
+             <td>01/09/2022</td>
+             <td>1:30 pm</td>
+             <td>10</td>
+         </tr>
+      </table>
 </body>
 </html>
+

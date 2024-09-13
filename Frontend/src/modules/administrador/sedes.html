@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sedes</title>
+    <!-- CSS de Bootstrap 5 -->
+    <link
+      href="../../../src/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4">Sedes</h1>
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary mb-4"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+      >
+        <i class="bi bi-plus-lg"></i>Sede
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Registrar Sede
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <div>
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input
+                    type="text"
+                    name="nombre"
+                    id="nombre"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="slcCentro" class="form-label">Centro</label>
+                  <select
+                    id="slcCentro"
+                    name="slcCentro"
+                    class="form-select"
+                    aria-label="Default select example"
+                    required
+                  >
+                    <option selected>Selecciona una opcion</option>
+                    <option value="1">CGDSS</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary" onclick="alertaSede()">
+                Registrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <table
+        id="example"
+        class="table table-striped text-center"
+        style="width: 100%"
+      >
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Sede</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Yamboro</td>
+            <td>CGDSS</td>
+          </tr>
+          <tr>
+            <td>Comercio y Servicios</td>
+            <td>CGDSS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
