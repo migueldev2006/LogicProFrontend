@@ -48,7 +48,7 @@
              style="width: 450px; background-color: #f8f9fa"
            >
              <div class="card-body">
-               <form action="">
+               <form id="formulario" >
                  <div class="mb-4">
                    <label class="form-label" for="nombre">Area</label>
                    <input
@@ -119,19 +119,23 @@
            </div>
          </div>
              <div class="botones-contenedor">
-                 <button type="button" class="btn btn-primary" id="verificacion" onclick="SCANER()" >verificacion por medio de escaner</button>
-                 <!-- <input type="sudmit" class="form-control" onclick="return"> -->
+                 <button type="button" class="btn btn-primary" id="re" onclick="SCANER()" >verificacion por medio de escaner</button>
+          
              </div>
              <div class="botones-contenedor">
-               <button type="button" class="btn btn-primary" id="registrar" onclick="SCANER()">Registrar</button>
-               <!-- <input type="sudmit" class="form-control" onclick="return"> -->
+               <button type="button" class="btn btn-primary" id="re" onclick="showalert()">Registrar</button>
+              
              </div>
-      
-       </div>
-     </div>
-   </div>
-<div class="p-5 ">
- <table id="example" class="table table-striped" style="width:100%">
+          </div>
+        </div>
+      </div>
+        <div class="p-5 ">
+          <div class="display:flex ">
+            <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="width: 15%;">
+              <i class="lni lni-plus" id="button"  ></i> Registrar
+            </button>
+        </div>
+ <table id="example" class="table table-striped mb-3 text-center" style="width:100%">
      <thead>
          <tr>
              <th>Area</th>
@@ -180,21 +184,8 @@
         <td>10</td>
     </tr>
  </table>
- <div class="p-5 mt-2">
-  <button
-    type="button"
-    class="btn btn-primary offset-md-10"
-    data-bs-toggle="modal"
-    data-bs-target="#staticBackdrop"
-    style="width: 15%;"
-    
-  >
-    <i class="lni lni-plus" id="button"  ></i> Registrar
-  </button>
-</div>
+ 
  
 </div>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>  -->
-  
 </body>
 </html>
