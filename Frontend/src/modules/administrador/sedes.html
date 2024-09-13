@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Usuarios</title>
+    <title>Sedes</title>
     <!-- CSS de Bootstrap 5 -->
     <link
       href="../../../src/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
@@ -12,15 +12,15 @@
   </head>
   <body>
     <div class="container mt-5">
-      <h1>Bodegas</h1>
+      <h1 class="mb-4">Sedes</h1>
       <!-- Button trigger modal -->
       <button
         type="button"
-        class="btn btn-primary"
+        class="btn btn-primary mb-4"
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
       >
-      <i class="bi bi-plus-lg"></i>Bodega
+        <i class="bi bi-plus-lg"></i>Sede
       </button>
 
       <!-- Modal -->
@@ -37,7 +37,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                Añadir Bodega
+                Registrar Sede
               </h1>
               <button
                 type="button"
@@ -47,113 +47,59 @@
               ></button>
             </div>
             <div class="modal-body">
-                <form action="">
-                    <div>
-                        <label for="nombre" class="form-label">Nombre Completo</label>
-                        <input type="text" name="nombre" id="nombre" class="form-control">
-                    </div>
-                    <div>
-                        <label for="identificacion" class="form-label">Documento</label>
-                        <input type="text" name="identificacion" id="identificacion" class="form-control">
-                    </div>
-                    <div>
-                        <label for="correo" class="form-label">Correo Electronico</label>
-                        <input type="text" name="correo" id="correo" class="form-control">
-                    </div>
-                    <div>
-                        <label for="celular" class="form-label">Telefono</label>
-                        <input type="text" name="celular" id="celular" class="form-control">
-                    </div>
-                    <div>
-                        <label for="slcRol" class="form-label">Rol</label>
-                        <select id="slcRol" name="slcRol" class="form-select" aria-label="Default select example">
-                            <option selected>Selecciona una opcion</option>
-                            <option value="1">Instructor</option>
-                            <option value="2">Lider</option>
-                            <option value="3">Coordinador</option>
-                            <option value="4">Vocero</option>
-                            <option value="5">Vigilante</option>
-                          </select>
-                    </div>
-                    <div>
-                        <label for="slcCargo" class="form-label">Cargo</label>
-                        <select id="slcCargo" name="slcCargo" class="form-select" aria-label="Default select example">
-                            <option selected>Selecciona una opcion</option>
-                            <option value="1">Instructor</option>
-                            <option value="2">Lider</option>
-                            <option value="3">Coordinador</option>
-                            <option value="4">Aprendiz</option>
-                            <option value="5">Vigilante</option>
-                            <option value="6">Operario</option>
-                          </select>
-                    </div>
-                </form>
+              <form action="">
+                <div>
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input
+                    type="text"
+                    name="nombre"
+                    id="nombre"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="slcCentro" class="form-label">Centro</label>
+                  <select
+                    id="slcCentro"
+                    name="slcCentro"
+                    class="form-select"
+                    aria-label="Default select example"
+                    required
+                  >
+                    <option selected>Selecciona una opcion</option>
+                    <option value="1">CGDSS</option>
+                  </select>
+                </div>
+              </form>
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-primary" onclick="showAlert()">Registrar</button>
+              <button type="submit" class="btn btn-primary" onclick="alertaSede()">
+                Registrar
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <table id="example" class="table table-striped" style="width: 100%">
+      <table
+        id="example"
+        class="table table-striped text-center"
+        style="width: 100%"
+      >
         <thead>
           <tr>
-            <th>Nombre Completo</th>
-            <th>Documento</th>
-            <th>Correo Electronico</th>
-            <th>Telefono</th>
-            <th>Rol</th>
-            <th>Cargo</th>
+            <th>Nombre</th>
+            <th>Sede</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
-            <td>61</td>
-            <td>2011-04-25</td>
-            <td>$320,800</td>
+            <td>Yamboro</td>
+            <td>CGDSS</td>
           </tr>
           <tr>
-            <td>Garrett Winters</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
-            <td>63</td>
-            <td>2011-07-25</td>
-            <td>$170,750</td>
-          </tr>
-          <tr>
-            <td>Ashton Cox</td>
-            <td>Junior Technical Author</td>
-            <td>San Francisco</td>
-            <td>66</td>
-            <td>2009-01-12</td>
-            <td>$86,000</td>
-          </tr>
-          <tr>
-            <td>Cedric Kelly</td>
-            <td>Senior Javascript Developer</td>
-            <td>Edinburgh</td>
-            <td>22</td>
-            <td>2012-03-29</td>
-            <td>$433,060</td>
-          </tr>
-          <tr>
-            <td>Airi Satou</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
-            <td>33</td>
-            <td>2008-11-28</td>
-            <td>$162,700</td>
-          </tr>
-          <tr>
-            <td>Brielle Williamson</td>
-            <td>Integration Specialist</td>
-            <td>New York</td>
-            <td>61</td>
-            <td>2012-12-02</td>
-            <td>$372,000</td>
+            <td>Comercio y Servicios</td>
+            <td>CGDSS</td>
           </tr>
         </tbody>
       </table>
