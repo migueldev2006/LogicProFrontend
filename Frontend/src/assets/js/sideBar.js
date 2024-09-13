@@ -29,7 +29,11 @@ function loadModule(modulePath) {
       if (modulePath.includes('verificacion.html')) {
         // Inicializa después de que el contenido ha sido agregado al DOM
         setTimeout(initializeDataTable, 100);  // Espera para asegurarse de que el DOM esté listo
-=======
+      }
+      if (modulePath.includes('peticiones.html')) {
+        // Inicializa después de que el contenido ha sido agregado al DOM
+        setTimeout(initializeDataTable, 100);  // Espera para asegurarse de que el DOM esté listo
+      }
       if (modulePath.includes('usuarios.html')) {
         // Inicializa después de que el contenido ha sido agregado al DOM
         setTimeout(initializeDataTable, 100);
