@@ -1,8 +1,8 @@
 
-function SCANER (){
+function scanner(){
   // Obtén los elementos de los botones
-  const botonVerificacion = document.getElementById('formulario');
-  const campos = formulario.elements;
+  const botonVerificacion = document.getElementById('frmFormulario');
+  const campos = botonVerificacion.elements;
   let isValid = true;
   for (let i = 0; i < campos.length; i++) {
     if (campos[i].value === '') {
@@ -31,10 +31,8 @@ function SCANER (){
   }
   };
 
-
-
-function showalert(){
-  const formulario = document.getElementById('formulario');
+function showAlert(){
+  const formulario = document.getElementById('frmFormulario');
   const campos = formulario.elements;
   let isValid = true;
 
