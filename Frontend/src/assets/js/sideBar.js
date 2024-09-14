@@ -16,26 +16,7 @@ function loadModule(modulePath) {
     .then((html) => {
       document.getElementById("moduleContainer").innerHTML = html;
 
-      // Inicializa DataTables si estamos cargando el módulo de usuarios
-<<<<<<< HEAD
-      if (modulePath.includes('entradaBodega.html')) {
-        // Inicializa después de que el contenido ha sido agregado al DOM
-        setTimeout(initializeDataTable, 100);
-        }  // Espera para asegurarse de que el DOM esté listo
-      if (modulePath.includes('salidaBodega.html')) {
-        // Inicializa después de que el contenido ha sido agregado al DOM
-        setTimeout(initializeDataTable, 100);  // Espera para asegurarse de que el DOM esté listo
-      }
-      if (modulePath.includes('verificacion.html')) {
-        // Inicializa después de que el contenido ha sido agregado al DOM
-        setTimeout(initializeDataTable, 100);  // Espera para asegurarse de que el DOM esté listo
-      }
-      if (modulePath.includes('peticiones.html')) {
-        // Inicializa después de que el contenido ha sido agregado al DOM
-        setTimeout(initializeDataTable, 100);  // Espera para asegurarse de que el DOM esté listo
-      }
       if (modulePath.includes('usuarios.html')) {
-        // Inicializa después de que el contenido ha sido agregado al DOM
         setTimeout(initializeDataTable, 100);
       }
       if (modulePath.includes('centros.html')) {
@@ -61,7 +42,18 @@ function loadModule(modulePath) {
       }
       if (modulePath.includes('municipio.html')) {
         setTimeout(initializeDataTable, 100);  
->>>>>>> 3e464f28227f369a1f9052636a4e2b4fad1195ac
+      }
+      if (modulePath.includes('entradaBodega.html')) {
+        setTimeout(initializeDataTable, 100);
+        }  
+      if (modulePath.includes('salidaBodega.html')) {
+        setTimeout(initializeDataTable, 100);  
+      }
+      if (modulePath.includes('verificacion.html')) {
+        setTimeout(initializeDataTable, 100);  
+      }
+      if (modulePath.includes('peticiones.html')) {
+        setTimeout(initializeDataTable, 100);
       }
     })
     .catch((err) => console.warn("Algo salió mal al cargar el módulo.", err));
@@ -72,12 +64,9 @@ function initializeDataTable() {
   const dataTable = new simpleDatatables.DataTable("#example", {
     searchable: true,
     fixedHeight: true,
-<<<<<<< HEAD
-    perPage: 5,
-=======
-    perPage: 4,
+    perpage:4,
     sortable: false,
->>>>>>> 3e464f28227f369a1f9052636a4e2b4fad1195ac
+
   });
 }
 

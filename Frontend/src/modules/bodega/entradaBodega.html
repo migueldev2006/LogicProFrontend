@@ -1,55 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>entradaBodega</title>
-    <link rel="stylesheet" href="/Frontend/src/assets/css/formulario.css"> 
-    
-</head>
-<body>
-        <div class="container">
-            <h2 style="text-align:center; margin-top:100px">Registro entrada de material formativo</h2>
-        </div>
-
-      <!-- Button trigger modal -->
-      
-
+    <link rel="stylesheet" href="/Frontend/src/assets/css/formulario.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 style="text-align: center; margin-top: 100px">
+        Registro entrada de material formativo
+      </h2>
       <!-- Modal -->
       <div
-      class="modal fade"
-      id="staticBackdrop"
-      data-bs-backdrop="static"
-      data-bs-keyboard="false"
-      tabindex="-1"
-      aria-labelledby="staticBackdropLabel"
-      aria-hidden="true"
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
       >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1
-              class="modal-title fs-5 text-center"
-              id="staticBackdropLabel"
-              
-            >
-              Registro entrada de material 
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body" style="background-color: #f8f9fa">
-            <div
-              class="card"
-              style="width: 450px; background-color: #f8f9fa"
-            >
-              <div class="card-body">
-                <form action="" id="formulario">
-                  <div class="mb-4">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 text-center" id="staticBackdropLabel">
+                Registro entrada de material
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" style="background-color: #f8f9fa">
+              <div class="card" style="width: 450px; background-color: #f8f9fa">
+                <div class="card-body">
+                  <form id="frmFormulario" action="" id="formulario">
+                    <div class="mb-4">
                       <label class="form-label" for="nombre">Codigo_Sena</label>
                       <input
                         class="form-control"
@@ -77,7 +66,9 @@
                       />
                     </div>
                     <div class="mb-4">
-                      <label class="form-label" for="municipio">Descripcion</label>
+                      <label class="form-label" for="municipio"
+                        >Descripcion</label
+                      >
                       <input
                         class="form-control"
                         type="text"
@@ -87,98 +78,112 @@
                     </div>
                     <div class="mb-4">
                       <label class="form-label" for="municipio">Cantidad</label>
-                      <input 
+                      <input
                         class="form-control"
-                        type="text"
+                        type="number"
                         name="Cantidad"
                         id="Cantidad"
                       />
                     </div>
                     <div class="mb-4">
-                      <label class="form-label" for="municipio">Unidad_de_medida</label>
-                      <select class="form-select" aria-label="Default select example">
+                      <label class="form-label" for="municipio"
+                        >Unidad_de_medida</label
+                      >
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
                         <option value="">Seleccione una opción</option>
                         <option value="opcion1">Gr</option>
                         <option value="opcion2">Kg</option>
                         <option value="opcion3">Lb</option>
                       </select>
                     </div>
-                </form>
+                  </form>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" id="re" onclick="showalert()">Registrar</button>
-       
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="re"
+                onclick="showAlert()"
+              >
+                Registrar
+              </button>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
-    
-      <div class="p-5 ">
-        <div class="display:flex">
-          <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="width: 15%;">
-            <i class="lni lni-plus" id="button" ></i> Registrar
-          </button>
-        </div>
-      <table id="example" class="table table-striped  text-center" style="width:100%" >
-          <thead>
-              <tr>
-              <th class="text-center">Codigo Sena</th>
-              <th class="text-center">Codigo UNPSC</th>
-              <th class="text-center">Nombre</th>
-              <th class="text-center">Descripcion</th>
-              <th class="text-center">Cantidad</th>
-              <th class="text-center">Unidad Medida</th>
-              <th class="text-center">material en  stock</th>
-      
-          </tr>
+    <div class="p-5">
+      <div class="display:flex">
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+          style="width: 15%"
+        >
+          <i class="lni lni-plus" id="button"></i> Registrar
+        </button>
+      </div>
+    </div>
+    <table
+      id="example"
+      class="table table-striped text-center"
+      style="width: 100%"
+    >
+      <thead>
+        <tr>
+          <th class="text-center">Codigo Sena</th>
+          <th class="text-center">Codigo UNPSC</th>
+          <th class="text-center">Nombre</th>
+          <th class="text-center">Descripcion</th>
+          <th class="text-center">Cantidad</th>
+          <th class="text-center">Unidad Medida</th>
+          <th class="text-center">material en stock</th>
+        </tr>
       </thead>
       <tbody>
-          <tr>
-              <td>121212</td>
-              <td>9292929</td>
-              <td>equipo de mesa</td>
-              <td>equipo asus todo en uno + mouse</td>
-              <td>10</td>
-              <td>kg</td>
-              <td>12</td>
-          </tr>
-          <tr>
-              <td>121212</td>
-              <td>1209412</td>
-              <td>palas</td>
-              <td>10 palas junto con su cabo</td>
-              <td>10</td>
-              <td>kg</td>
-              <td>11</td>
- 
-          </tr>
-          <tr>
-              <td>121212</td>
-              <td>989898</td>
-              <td>implementos de electricidad</td>
-              <td>guantes alicates cables 4.2</td>
-              <td>3</td>
-              <td>kg</td>
-              <td>1</td>
-            
-          </tr>
-          <tr>
-              <td>121212</td>
-              <td>00000</td>
-              <td>escritorios</td>
-              <td>esritorios mas cillas</td>
-              <td>12</td>
-              <td>kg</td>
-              <td>1</td>
-            
-          </tr>
-        </table>
-    
-    
-
-  
-</body>
+        <tr>
+          <td>121212</td>
+          <td>9292929</td>
+          <td>equipo de mesa</td>
+          <td>equipo asus todo en uno + mouse</td>
+          <td>10</td>
+          <td>kg</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>121212</td>
+          <td>1209412</td>
+          <td>palas</td>
+          <td>10 palas junto con su cabo</td>
+          <td>10</td>
+          <td>kg</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>121212</td>
+          <td>989898</td>
+          <td>implementos de electricidad</td>
+          <td>guantes alicates cables 4.2</td>
+          <td>3</td>
+          <td>kg</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>121212</td>
+          <td>00000</td>
+          <td>escritorios</td>
+          <td>esritorios mas cillas</td>
+          <td>12</td>
+          <td>kg</td>
+          <td>1</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
