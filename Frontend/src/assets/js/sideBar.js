@@ -55,6 +55,8 @@ function loadModule(modulePath) {
       if (modulePath.includes('peticiones.html')) {
         setTimeout(initializeDataTable, 100);
       }
+      if (modulePath.includes('inicio.html')) {
+      }
     })
     .catch((err) => console.warn("Algo salió mal al cargar el módulo.", err));
 }
@@ -66,7 +68,7 @@ function initializeDataTable() {
     fixedHeight: true,
     perpage:4,
     sortable: false,
-
+    paging: true,
   });
 }
 
@@ -75,7 +77,6 @@ document.getElementById("menu-toggle").addEventListener("click", function () {
   document.getElementById("sidebar").classList.toggle("collapsed");
   document.getElementById("mainContent").classList.toggle("collapsed");
 });
-
 // Inicializar el navbar al cargar la página
 document.addEventListener("DOMContentLoaded", loadNavbar);
 
@@ -88,3 +89,5 @@ document.querySelectorAll(".collapse").forEach((collapse) => {
     this.classList.remove("show");
   });
 });
+
+
