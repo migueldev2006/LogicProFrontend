@@ -32,7 +32,7 @@
     <!-- Contenedor para el navbar -->
     <div id="navbarContainer"></div>
     <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
+    <div class="sidebar bg-dark" id="sidebar">
       <!-- Botón de menú hamburguesa -->
       <div class="sidebar-header">
         <div class="hamburger-icon" id="menu-toggle">
@@ -180,6 +180,38 @@
             </li>
           </ul>
         </li>
+        <!-- Menú Reportes -->
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#reporteSubmenu"
+            data-bs-toggle="collapse"
+            aria-expanded="false"
+          >
+            <i class="bi bi-file-earmark-bar-graph"></i>
+            <span class="text">Reportes</span>
+          </a>
+          <ul class="collapse list-unstyled" id="reporteSubmenu">
+            <li>
+              <a
+                class="nav-link"
+                href="#"
+                onclick="loadModule('src/modules/reportes/entrada.html')"
+                ><i class="bi bi-box-arrow-in-down"></i
+                ><span class="text">Entradas</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-link"
+                href="#"
+                onclick="loadModule('src/modules/reportes/salida.html')"
+                ><i class="bi bi-box-arrow-in-up"></i
+                ><span class="text">Salidas</span></a
+              >
+            </li>
+          </ul>
+        </li>
         <!-- Menu peticion -->
         <li class="nav-item">
           <a
@@ -187,7 +219,7 @@
             href="#verificacionSubmenu"
             data-bs-toggle="collapse"
             aria-expanded="false"
-            onclick="loadModule('src/modules/peticion/index.html')"
+            onclick="loadModule('src/modules/peticion/peticion.html')"
           >
             <i class="lni lni-clipboard"></i>
             <span class="text">Peticion</span>
@@ -202,7 +234,7 @@
             aria-expanded="false"
             onclick="loadModule('src/modules/verificacion/verificacion.html')"
           >
-            <i class="bi bi-box-seam"></i>
+            <i class="bi bi-check2-square"></i>
             <span class="text">Verificacion</span>
           </a>
         </li>
@@ -215,7 +247,7 @@
             aria-expanded="false"
             onclick="loadModule('src/modules/documentacion/index.html')"
           >
-            <i class="bi bi-box-seam"></i>
+            <i class="bi bi-file-earmark-text"></i>
             <span class="text">Documentacion</span>
           </a>
           <ul class="collapse list-unstyled" id="documentacionSubmenu">
@@ -257,10 +289,36 @@
     <div class="content" id="mainContent">
       <div class="container" id="moduleContainer">
         <!-- Aquí se cargará el contenido del módulo -->
-         <h1>Graficas</h1>
-          <canvas id="graficas" width="300px" height="300px"></canvas>
+        <div class="cardBox">
+          <div class="card">
+            <div class="numbers">12346+</div>
+            <div class="cardName">hola</div>
+            <div class="iconBx"></div>
+          </div>
+          <div class="card">
+            <div class="numbers">12346+</div>
+            <div class="cardName">hola</div>
+            <div class="iconBx"></div>
+          </div>
+          <div class="card">
+            <div class="numbers">12346+</div>
+            <div class="cardName">hola</div>
+            <div class="iconBx"></div>
+          </div>
+          <div class="card">
+            <div class="numbers">12346+</div>
+            <div class="cardName">hola</div>
+            <div class="iconBx"></div>
+          </div>
+        </div>
+        <div>
+          <canvas id="barras" width="50px" height="50px"></canvas>
+          <canvas id="circular" width="50px" height="50px"></canvas>
+          <canvas id="lineas" width="50px" height="50px"></canvas>
+        </div>
       </div>
     </div>
+
     <!-- SweatAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- JavaScript de Bootstrap 5 -->
@@ -268,9 +326,14 @@
     <!-- JavaScript de Simple DataTables -->
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.1.0/dist/umd/simple-datatables.js"></script>
     <script src="../Frontend/src/assets/js/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
     <!-- Script personalizado -->
     <script src="../Frontend/src/assets/js/inicio.js"></script>
     <script src="../Frontend/src/assets/js/sideBar.js"></script>
     <script src="../Frontend/src/assets/js/alertas.js"></script>
+    <script src="../Frontend/src/assets/js/repor_entra.js"></script>
+    <script src="../Frontend/src/assets/js/repor_salida.js"></script>
   </body>
 </html>

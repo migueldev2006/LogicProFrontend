@@ -1,162 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-
-  <!--Si sirve jajajaja-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+  <head>
+    <!--Si sirve jajajaja-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>entradaBodega</title>
-    <link rel="stylesheet" href="../../../src/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../src/assets/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../../assets/css/repor_entra.css">
-</head>
-<body>
-  <!-- <div class="container"> -->
-          <!-- <div> -->
-            <h2 style="text-align:center; margin-top:100px">Registro entrada de material formativo</h2>
-          <!-- </div> -->
+    <link
+      rel="stylesheet"
+      href="../../../../Frontend/src/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../../Frontend/src/assets/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../../../../Frontend/src/assets/css/repor_entra.css" />
+  </head>
+  <body>
+    <!-- <div class="container"> -->
+    <!-- <div> -->
+    <h2 style="text-align: center; margin-top: 100px">
+      Registro entrada de material formativo
+    </h2>
+    <!-- </div> -->
 
-        <!--Modal-->
-      <div
-        class="modal fade"
-        id="staticBackdrop"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabindex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-        >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1
-                class="modal-title fs-5 text-center"
-                id="staticBackdropLabel"
-                
-              >
-                Descargar registro de entrada
-              </h1>
+    <!--Modal-->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-center" id="staticBackdropLabel">
+              Descargar registro de entrada
+            </h1>
 
-              <button
+            <button
               type="button"
-              class="btn-close "
+              class="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
+          </div>
 
-            </div>
-
-            <div class="modal-footer" style="background-color: #f8f9fa">
-
-                <button  type="button" class=" btn btn-primary " onclick="downloadPDF()" id="descargaPdf" >Descargar como PDF</button>
-                <button type="button" class="btn btn-primary " onclick="downloadExcel()" id="descargaExcel">Descargar como EXCEL</button>
-         
-            </div>
+          <div class="modal-footer" style="background-color: #f8f9fa">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="downloadPDF(), mostrarAlerta()"
+              id="descargaPdf"
+            >
+              Descargar como PDF
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="downloadExcel(), mostrarAlerta()"
+              id="descargaExcel"
+            >
+              Descargar como EXCEL
+            </button>
           </div>
         </div>
       </div>
+    </div>
 
-      <button
+    <button
       type="button"
       class="btn btn-primary offset-md-10"
       data-bs-toggle="modal"
       data-bs-target="#staticBackdrop"
-      >
-        <i class="bi bi-file-earmark-arrow-down-fill"></i>
-      </button>
-        <!--Modal-->
-
+    >
+      <i class="bi bi-file-earmark-arrow-down-fill"></i>
+    </button>
+    <!--Modal-->
 
     <div class="table-responsive">
-      <table id="example" class="table table-striped mb-3" style="width:100%">
+      <table id="example" class="table table-striped mb-3" style="width: 100%">
         <thead>
-            <tr>
-              <th>Codigo</th>
-              <th>UNPSC</th>
-              <th>Nombre</th>
-              <th>Descripcion</th>
-              <th>Cantidad</th>
-              <th>Unidad Medida</th>
-              <th>Encargado</th>
-              <th>Fecha Entrada</th>
-              <th>Material Stock</th>
-  
-            </tr>
-            <tr>
-              <th><input type="text" id="filterCodigo" onkeyup="filterTable(0)" placeholder="Buscar Código"></th>
-              <th><input type="text" id="filterUNPSC" onkeyup="filterTable(1)" placeholder="Buscar UNPSC"></th>
-              <th><input type="text" id="filterNombre" onkeyup="filterTable(2)" placeholder="Buscar Nombre"></th>
-              <th><input type="text" id="filterDescripcion" onkeyup="filterTable(3)" placeholder="Buscar Descripción"></th>
-              <th><input type="text" id="filterCantidad" onkeyup="filterTable(4)" placeholder="Buscar Cantidad"></th>
-              <th><input type="text" id="filterUnidad" onkeyup="filterTable(5)" placeholder="Buscar Unidad"></th>
-              <th><input type="text" id="filterFecha" onkeyup="filterTable(6)" placeholder="Buscar Encargado"></th>
-              <th><input type="text" id="filterFecha" onkeyup="filterTable(7)" placeholder="Buscar Fecha"></th>
-              <th><input type="text" id="filterFecha" onkeyup="filterTable(8)" placeholder="Buscar Fecha"></th>
-            </tr>
-          </thead>
-          
-      <tbody class="datos">
           <tr>
-              <td>121212</td>
-              <td>9292929</td>
-              <td>equipo de mesa</td>
-              <td>equipo asus todo en uno + mouse</td>
-              <td>10</td>
-              <td>kg</td>
-              <td>Julio Cesar</td>
-              <td>2024-07-30</td>
-              <td>50</td>
+            <th>Codigo</th>
+            <th>UNPSC</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Cantidad</th>
+            <th>Unidad Medida</th>
+            <th>Encargado</th>
+            <th>Fecha Entrada</th>
+            <th>Material Stock</th>
           </tr>
           <tr>
-              <td>121212</td>
-              <td >9292929</td>
-              <td>equipo de mesa</td>
-              <td>equipo asus todo en uno + mouse</td>
-              <td>9</td>
-              <td>kg</td>
-              <td>Pepito Perez</td>
-              <td>2024-10-27</td>
-              <td>20</td>
-
+            <th>
+              <input
+                type="text"
+                id="filterCodigo"
+                onkeyup="filterTable(0)"
+                placeholder="Buscar Código"
+              />
+            </th>
+            <th>
+              <input
+                type="text"
+                id="filterUNPSC"
+                onkeyup="filterTable(1)"
+                placeholder="Buscar UNPSC"
+              />
+            </th>
+            <th>
+              <input
+                type="text"
+                id="filterNombre"
+                onkeyup="filterTable(2)"
+                placeholder="Buscar Nombre"
+              />
+            </th>
+            <th>
+              <input
+                type="text"
+                id="filterDescripcion"
+                onkeyup="filterTable(3)"
+                placeholder="Buscar Descripción"
+              />
+            </th>
+            <th>
+              <input
+                type="text"
+                id="filterCantidad"
+                onkeyup="filterTable(4)"
+                placeholder="Buscar Cantidad"
+              />
+            </th>
+            <th>
+              <input
+                type="text"
+                id="filterUnidad"
+                onkeyup="filterTable(5)"
+                placeholder="Buscar Unidad"
+              />
+            </th>
+            <th>
+              <input
+                type="text"
+                id="filterFecha"
+                onkeyup="filterTable(6)"
+                placeholder="Buscar Encargado"
+              />
+            </th>
+            <th>
+              <input
+                type="text"
+                id="filterFecha"
+                onkeyup="filterTable(7)"
+                placeholder="Buscar Fecha"
+              />
+            </th>
+            <th>
+              <input
+                type="text"
+                id="filterFecha"
+                onkeyup="filterTable(8)"
+                placeholder="Buscar Fecha"
+              />
+            </th>
           </tr>
+        </thead>
 
+        <tbody class="datos">
+          <tr>
+            <td>121212</td>
+            <td>9292929</td>
+            <td>equipo de mesa</td>
+            <td>equipo asus todo en uno + mouse</td>
+            <td>10</td>
+            <td>kg</td>
+            <td>Julio Cesar</td>
+            <td>2024-07-30</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>121212</td>
+            <td>9292929</td>
+            <td>equipo de mesa</td>
+            <td>equipo asus todo en uno + mouse</td>
+            <td>9</td>
+            <td>kg</td>
+            <td>Pepito Perez</td>
+            <td>2024-10-27</td>
+            <td>20</td>
+          </tr>
 
           <tr>
-              <td>1111111</td>
-              <td>989898</td>
-              <td>portatil</td>
-              <td>equipo dell todo en uno + mouse</td>
-              <td>3</td>
-              <td>kg</td>
-              <td>Martin Suarez</td>
-              <td>2020-08-25</td>
-              <td>15</td>
-
+            <td>1111111</td>
+            <td>989898</td>
+            <td>portatil</td>
+            <td>equipo dell todo en uno + mouse</td>
+            <td>3</td>
+            <td>kg</td>
+            <td>Martin Suarez</td>
+            <td>2020-08-25</td>
+            <td>15</td>
           </tr>
           <tr>
-              <td>13131313</td>
-              <td>00000</td>
-              <td>equipo de mesa</td>
-              <td>equipo hp todo en uno + mouse</td>
-              <td>1</td>
-              <td>kg</td>
-              <td>Maria Losada</td>
-              <td>2022-06-11</td>
-              <td>8</td>
+            <td>13131313</td>
+            <td>00000</td>
+            <td>equipo de mesa</td>
+            <td>equipo hp todo en uno + mouse</td>
+            <td>1</td>
+            <td>kg</td>
+            <td>Maria Losada</td>
+            <td>2022-06-11</td>
+            <td>8</td>
           </tr>
+        </tbody>
       </table>
+
       <!-- </div> -->
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script> 
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
-    <script src="../../assets/js/repor_entra.js"></script>
-    <script src="../../../src/assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
-
-</body>
+  </body>
 </html>

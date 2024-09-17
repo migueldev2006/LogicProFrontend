@@ -1,220 +1,237 @@
 /* Estilo del sidebar */
 .sidebar {
-    height: 100vh;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #00304D; 
-    padding-top: 10px;
-    overflow-y: auto;
-    transition: width 0.3s;
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* background-color: #00304d; */
+  padding-top: 10px;
+  overflow-y: auto;
+  transition: width 0.3s;
 }
 
 /* Espacio superior para el botón */
 .sidebar .sidebar-header {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
 }
 
 /* Estilo del contenido cuando el sidebar está colapsado */
 .content {
-    margin-left: 250px;
-    transition: margin-left 0.3s;
+  margin-left: 250px;
+  transition: margin-left 0.3s;
 }
 
 /* Estilo del sidebar colapsado */
 .sidebar.collapsed {
-    width: 60px; /* Mantiene el ancho para mostrar los iconos */
+  width: 60px; /* Mantiene el ancho para mostrar los iconos */
 }
 
 .sidebar .collapse:not(.show) {
-    max-height: 0;
+  max-height: 0;
 }
 .sidebar .collapse.show {
-    max-height: 10  00px;
+  max-height: 10 00px;
 }
 .sidebar img {
-    max-width: 60%; 
-    height: auto; 
-    display: block;
-    margin: 0 auto; 
-    padding: 10px; 
+  max-width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
 }
 .sidebar .nav-link i {
-    font-size: 1.5rem; /* Ajusta el tamaño según sea necesario */
+  font-size: 1.5rem; /* Ajusta el tamaño según sea necesario */
 }
 /* Estilo del contenido cuando el sidebar está colapsado */
 .content.collapsed {
-    margin-left: 40px;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
+  margin-left: 40px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
 }
 
 /* Estilo para los enlaces del sidebar */
 .sidebar .nav-link {
-    color: #ffffff;
-    display: flex;
-    align-items: center;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
 }
 
 .sidebar .nav-link:hover {
-    background-color: #007bff;
+  background-color: #007bff;
 }
 
 /* Sangría constante para los elementos hijos */
 .sidebar .nav .collapse .nav-link {
-    padding-left: 40px; /* Tabulación constante para los hijos */
+  padding-left: 40px; /* Tabulación constante para los hijos */
 }
 
 /* Iconos */
 .sidebar .nav-item > .nav-link i {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 /* Iconos de los hijos */
 .sidebar .nav-item .collapse .nav-link i {
-    font-size: 0.9rem; /* Tamaño del icono de los hijos */
-    margin-right: 8px;
+  font-size: 0.9rem; /* Tamaño del icono de los hijos */
+  margin-right: 8px;
 }
 
 /* Estilo del icono de menú hamburguesa */
 .hamburger-icon {
-    display: inline-block;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
+  display: inline-block;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
 }
 
 .hamburger-icon span {
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: white;
-    margin-bottom: 5px;
-    transition: 0.4s;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  margin-bottom: 5px;
+  transition: 0.4s;
 }
 
 /* Ocultar texto cuando el sidebar está colapsado */
 .sidebar.collapsed .nav-link span.text {
-    display: none;
+  display: none;
 }
 
 /* Alinear iconos a la izquierda */
 .sidebar .nav-link i {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1030; /* Asegura que el navbar esté por encima de otros elementos */
-    background-color: #D9D9D9;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030; /* Asegura que el navbar esté por encima de otros elementos */
+  background-color: #d9d9d9;
 }
 
 /* Ajustes del sidebar */
 .sidebar {
-    margin-top: 56px; /* Espacio para el navbar */
-    height: calc(100vh - 56px); /* Ajusta la altura del sidebar para tener en cuenta el navbar */
+  margin-top: 56px; /* Espacio para el navbar */
+  height: calc(
+    100vh - 56px
+  ); /* Ajusta la altura del sidebar para tener en cuenta el navbar */
 }
 
 /* Ajuste del contenedor principal */
 .content {
-    margin-left: 250px;
-    margin-top: 106px; /* Espacio para el navbar */
-    transition: margin-left 0.3s;
+  margin-left: 250px;
+  margin-top: 106px; /* Espacio para el navbar */
+  transition: margin-left 0.3s;
 }
 
 /* Estilo del sidebar colapsado */
 .sidebar.collapsed {
-    width: 60px; /* Mantiene el ancho para mostrar los iconos */
+  width: 60px; /* Mantiene el ancho para mostrar los iconos */
 }
 
 /* Estilo del contenido cuando el sidebar está colapsado */
 .content.collapsed {
-    margin-left: 60px;
+  margin-left: 60px;
+}
+/* Estilo de las cards */
+.cardBox {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+.cardBox .card {
+  position: relative;
+  background: var(--white);
+  padding: 30px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
 }
 
 /* Responsividad */
 /* Estilo para pantallas pequeñas (móviles) */
 @media (max-width: 576px) {
-    .sidebar {
-        width: 100%; 
-        position: fixed; 
-        top: 0;
-        left: 0;
-        height: 100%; 
-        overflow: hidden; 
-        transition: height 0.3s; 
-    }
+  .sidebar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+    transition: height 0.3s;
+  }
 
-    .sidebar.collapsed {
-        height: 60px; 
-        overflow: hidden; 
-    }
+  .sidebar.collapsed {
+    height: 60px;
+    overflow: hidden;
+  }
 
-    .content {
-        margin-left: 0; 
-        margin-top: 60px; 
-    
+  .content {
+    margin-left: 0;
+    margin-top: 60px;
+
     .module-content {
-        padding: 10px; 
+      padding: 10px;
     }
     .sidebar .nav-link {
-        font-size: 16px;
-        padding: 10px 15px;
+      font-size: 16px;
+      padding: 10px 15px;
     }
-    
+
     .sidebar.collapsed .nav-link span.text {
-        display: none; 
+      display: none;
     }
     .sidebar.collapsed .collapse {
-        display: none; 
+      display: none;
     }
-    
+
     .sidebar.collapsed .nav-link i {
-        font-size: 24px;
+      font-size: 24px;
     }
-}
+  }
 }
 
 /* Estilo para pantallas medianas (tabletas) */
 @media (min-width: 577px) and (max-width: 768px) {
-    .sidebar {
-        width: 20%; 
-        height: 100%;
-    }
+  .sidebar {
+    width: 20%;
+    height: 100%;
+  }
 
-    .sidebar.collapsed {
-        height: 100%; 
-    }
+  .sidebar.collapsed {
+    height: 100%;
+  }
 
-    .content {
-        margin-left: 40%; 
-    }
-    
-    .module-content {
-        padding: 15px;
-    }
+  .content {
+    margin-left: 40%;
+  }
+
+  .module-content {
+    padding: 15px;
+  }
 }
 
 /* Estilo para pantallas grandes (escritorios) */
 @media (min-width: 769px) {
-    .sidebar {
-        width: 16%; 
-    }
+  .sidebar {
+    width: 16%;
+  }
 
-    .sidebar.collapsed {
-        width: 60px; 
-    }
+  .sidebar.collapsed {
+    width: 60px;
+  }
 
-    .content {
-        margin-left: 250px;
-    }
-    
-    .module-content {
-        padding: 20px; 
-    }
+  .content {
+    margin-left: 250px;
+  }
+
+  .module-content {
+    padding: 20px;
+  }
 }

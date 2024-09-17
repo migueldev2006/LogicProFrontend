@@ -25,7 +25,7 @@ function loadModule(modulePath) {
       if (modulePath.includes('sedes.html')) {
         setTimeout(initializeDataTable, 100);  
       }
-      if (modulePath.includes('programasFormacion.html')) {
+      if (modulePath.includes('programaFormacion.html')) {
         setTimeout(initializeDataTable, 100);  
       }
       if (modulePath.includes('fichas.html')) {
@@ -52,10 +52,11 @@ function loadModule(modulePath) {
       if (modulePath.includes('verificacion.html')) {
         setTimeout(initializeDataTable, 100);  
       }
-      if (modulePath.includes('peticiones.html')) {
+      if (modulePath.includes('peticion.html')) {
         setTimeout(initializeDataTable, 100);
       }
       if (modulePath.includes('inicio.html')) {
+        setTimeout(initializeDataTable, 100);
       }
     })
     .catch((err) => console.warn("Algo salió mal al cargar el módulo.", err));

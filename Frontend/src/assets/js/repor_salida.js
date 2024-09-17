@@ -57,7 +57,7 @@ function downloadExcel(){
 const botonPdf = document.getElementById('descargaPdf');
 const botonExcel = document.getElementById('descargaExcel');
 
-function mostrarAlerta(tipoArchivo) {
+function mostrarAlerta() {
   Swal.fire({
     title: "¡Descarga Exitosa!",
     // text: `El reporte de entrada de materiales en ${tipoArchivo} se realizo correctamente`,
@@ -65,10 +65,10 @@ function mostrarAlerta(tipoArchivo) {
   });
 }
 
-botonPdf.addEventListener('click', function() {
-  mostrarAlerta('pdf');
-});
+// botonPdf.addEventListener('click', function() {
+//   mostrarAlerta('pdf');
+// });
 
-botonExcel.addEventListener('click', function() {
-  mostrarAlerta('excel');
-});
+// botonExcel.addEventListener('click', function() {
+//   mostrarAlerta('excel');
+// });
