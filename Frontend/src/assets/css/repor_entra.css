@@ -1,0 +1,14 @@
+.modal{
+    margin-left: 500px;
+}
+
+.table td, .table th{
+    padding: 0.2rem;
+    font-size: 0.8rem;
+}
+
+.button{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
