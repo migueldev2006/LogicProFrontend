@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="position-relative">
+      <div
+        class="card position-absolute bottom-10 start-50 translate-middle-x"
+        style="width: 1000px; height: 600px"
+      >
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              id="profilePictureImage"
+              src="../../../../Frontend/public/perfil.png"
+              class="img-fluid rounded-center"
+              alt="User"
+            />
+            <input
+              type="file"
+              id="profilePicture"
+              name="profilePicture"
+              accept="image/*"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <div class="card" style="max-width: 600px">
+                <div class="card-body">
+                  <h5 class="card-title">Perfil</h5>
+                  <form action="" class="mb-3">
+                    <div>
+                      <label for="nombre" class="form-label">Nombres</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        name="nombre"
+                        id="nombre"
+                        value="Luis Miguel"
+                        readonly
+                      />
+                    </div>
+                    <div>
+                      <label for="apellido" class="form-label">Apellidos</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        name="apellido"
+                        id="apellido"
+                        value="Giron Orozco"
+                        readonly
+                      />
+                    </div>
+                    <div>
+                      <label for="identificacion" class="form-label"
+                        >Documento</label
+                      >
+                      <input
+                        class="form-control"
+                        type="text"
+                        name="identificacion"
+                        id="identificacion"
+                        value="25365489"
+                        readonly
+                      />
+                    </div>
+                    <div>
+                      <label for="correo" class="form-label"
+                        >Correo Electrónico</label
+                      >
+                      <input
+                        class="form-control"
+                        type="text"
+                        name="correo"
+                        id="correo"
+                        value="gironor@logicpro.com"
+                        readonly
+                      />
+                    </div>
+                    <div>
+                      <label for="celular" class="form-label">Telefono</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        name="celular"
+                        id="celular"
+                        value="3125642568"
+                        readonly
+                      />
+                    </div>
+                  </form>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="button" class="btn btn-primary"><i class="lni lni-pencil"></i>
+                      Editar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../../../Frontend/src/assets/js/perfil.js"></script>
+  </body>
+</html>

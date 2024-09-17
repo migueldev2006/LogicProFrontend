@@ -7,6 +7,7 @@
     left: 0;
     background-color: #00304D; 
     padding-top: 10px;
+    overflow-y: auto;
     transition: width 0.3s;
 }
 
@@ -28,9 +29,27 @@
     width: 60px; /* Mantiene el ancho para mostrar los iconos */
 }
 
+.sidebar .collapse:not(.show) {
+    max-height: 0;
+}
+.sidebar .collapse.show {
+    max-height: 10  00px;
+}
+.sidebar img {
+    max-width: 60%; 
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
+    padding: 10px; 
+}
+.sidebar .nav-link i {
+    font-size: 1.5rem; /* Ajusta el tamaño según sea necesario */
+}
 /* Estilo del contenido cuando el sidebar está colapsado */
 .content.collapsed {
-    margin-left: 60px;
+    margin-left: 40px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
 }
 
 /* Estilo para los enlaces del sidebar */
@@ -118,3 +137,84 @@
     margin-left: 60px;
 }
 
+/* Responsividad */
+/* Estilo para pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
+    .sidebar {
+        width: 100%; 
+        position: fixed; 
+        top: 0;
+        left: 0;
+        height: 100%; 
+        overflow: hidden; 
+        transition: height 0.3s; 
+    }
+
+    .sidebar.collapsed {
+        height: 60px; 
+        overflow: hidden; 
+    }
+
+    .content {
+        margin-left: 0; 
+        margin-top: 60px; 
+    
+    .module-content {
+        padding: 10px; 
+    }
+    .sidebar .nav-link {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+    
+    .sidebar.collapsed .nav-link span.text {
+        display: none; 
+    }
+    .sidebar.collapsed .collapse {
+        display: none; 
+    }
+    
+    .sidebar.collapsed .nav-link i {
+        font-size: 24px;
+    }
+}
+}
+
+/* Estilo para pantallas medianas (tabletas) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .sidebar {
+        width: 20%; 
+        height: 100%;
+    }
+
+    .sidebar.collapsed {
+        height: 100%; 
+    }
+
+    .content {
+        margin-left: 40%; 
+    }
+    
+    .module-content {
+        padding: 15px;
+    }
+}
+
+/* Estilo para pantallas grandes (escritorios) */
+@media (min-width: 769px) {
+    .sidebar {
+        width: 16%; 
+    }
+
+    .sidebar.collapsed {
+        width: 60px; 
+    }
+
+    .content {
+        margin-left: 250px;
+    }
+    
+    .module-content {
+        padding: 20px; 
+    }
+}
