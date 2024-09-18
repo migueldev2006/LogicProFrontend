@@ -1,0 +1,69 @@
+
+
+/* Ajusta el tamaño de el carrusel en general*/
+.carousel-inner img {
+    height: 600px;
+    object-fit: cover;
+}
+
+
+.agroindustria-container {
+    display: flex;
+    justify-content: space-between;
+    height: 600px;
+
+    object-fit: cover;
+    background-image: url("/Frontend/src/assets/imagenes/fondo-logic.png");
+    
+}
+
+/* Ajusta el tamaño de las imágenes */
+.agroindustria-container img {
+    width: 310px; 
+    height: 210px;
+    object-fit: cover; 
+    margin: 190px 48px;
+    margin-right: 50px;
+    border-radius: 5px;
+    
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+  }
+
+
+
+  .imagen-texto {
+    display: inline-block; /* para que las imágenes y textos se muestren en línea */
+    vertical-align: top; /* para que las imágenes y textos se alineen verticalmente */
+    margin-right: 20px; /* espacio entre imágenes */
+    text-align: center; /* para centrar el texto */
+  
+  }
+  
+  .imagen-texto img {
+    display: block; /* para que la imagen se muestre como bloque */
+    margin-bottom: 10px; /* espacio entre la imagen y el texto */
+  }
+  
+  .imagen-texto h1 {
+    font-size: 30px; /* tamaño del texto */
+    margin-bottom: 20px; /* espacio entre textos */
+    color: blanchedalmond;
+  }
+
+.titulo{
+    text-align: center;
+    position: relative;
+    padding-left: 500px;
+}
+
+
