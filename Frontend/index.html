@@ -290,31 +290,194 @@
       <div class="container" id="moduleContainer">
         <!-- Aquí se cargará el contenido del módulo -->
         <div class="cardBox">
-          <div class="card">
-            <div class="numbers">12346+</div>
-            <div class="cardName">hola</div>
-            <div class="iconBx"></div>
+          <div
+            class="card"
+            onclick="loadModule('src/modules/administrador/usuarios.html')"
+          >
+            <div class="numbers">Usuarios Registrados</div>
+            <div class="cardName">15</div>
+            <div class="iconBx"><i class="bi bi-person"></i></div>
           </div>
-          <div class="card">
-            <div class="numbers">12346+</div>
-            <div class="cardName">hola</div>
-            <div class="iconBx"></div>
+          <div
+            class="card"
+            onclick="loadModule('src/modules/bodega/salidaBodega.html')"
+          >
+            <div class="numbers">Ultima salida de material</div>
+            <div class="cardName">Realizado el 12-02-2024</div>
+            <div class="iconBx"><i class="lni lni-exit"></i></div>
           </div>
-          <div class="card">
-            <div class="numbers">12346+</div>
-            <div class="cardName">hola</div>
-            <div class="iconBx"></div>
+          <div
+            class="card"
+            onclick="loadModule('src/modules/administrador/sedes.html')"
+          >
+            <div class="numbers">Sedes Registradas Actualmente</div>
+            <div class="cardName">2</div>
+            <div class="iconBx"><i class="lni lni-apartment"></i></div>
           </div>
-          <div class="card">
-            <div class="numbers">12346+</div>
-            <div class="cardName">hola</div>
-            <div class="iconBx"></div>
+          <div
+            class="card"
+            onclick="loadModule('src/modules/peticion/peticion.html')"
+          >
+            <div class="numbers">Solicitudes Realizadas</div>
+            <div class="cardName">7</div>
+            <div class="iconBx"><i class="bi bi-envelope-paper"></i></div>
+          </div>
+          <div class="details">
+            <!-- Tabla -->
+            <div class="recentOrders">
+              <div class="cardHeader">
+                <h2>Nuevo Material</h2>
+                <a href="#" class="btnn" onclick="loadModule('src/modules/bodega/entradaBodega.html')">Ver todos</a>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Codigo Sena</th>
+                    <th>Codigo UNPSC</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Cantidad</th>
+                    <th>Unidad Medida</th>
+                    <th>material en stock</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>121212</td>
+                    <td>9292929</td>
+                    <td>equipo de mesa</td>
+                    <td>equipo asus todo en uno + mouse</td>
+                    <td>10</td>
+                    <td>kg</td>
+                    <td>12</td>
+                  </tr>
+                  <tr>
+                    <td>121212</td>
+                    <td>1209412</td>
+                    <td>palas</td>
+                    <td>10 palas junto con su cabo</td>
+                    <td>10</td>
+                    <td>kg</td>
+                    <td>11</td>
+                  </tr>
+                  <tr>
+                    <td>121212</td>
+                    <td>989898</td>
+                    <td>implementos de electricidad</td>
+                    <td>guantes alicates cables 4.2</td>
+                    <td>3</td>
+                    <td>kg</td>
+                    <td>1</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="details2">
+            <div class="recentOrders">
+              <div class="cardHeader">
+                <h2>Reporte Nuevo Material</h2>
+                <a href="#" class="btnn" onclick="loadModule('src/modules/reportes/entrada.html')">Ver todos</a>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Codigo</th>
+                    <th>UNPSC</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Cantidad</th>
+                    <th>Unidad Medida</th>
+                    <th>Encargado</th>
+                    <th>Fecha Entrada</th>
+                    <th>Material Stock</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>121212</td>
+                    <td>9292929</td>
+                    <td>equipo de mesa</td>
+                    <td>equipo asus todo en uno + mouse</td>
+                    <td>10</td>
+                    <td>kg</td>
+                    <td>Julio Cesar</td>
+                    <td>2024-07-30</td>
+                    <td>50</td>
+                  </tr>
+                  <tr>
+                    <td>121212</td>
+                    <td>9292929</td>
+                    <td>equipo de mesa</td>
+                    <td>equipo asus todo en uno + mouse</td>
+                    <td>9</td>
+                    <td>kg</td>
+                    <td>Pepito Perez</td>
+                    <td>2024-10-27</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>1111111</td>
+                    <td>989898</td>
+                    <td>portatil</td>
+                    <td>equipo dell todo en uno + mouse</td>
+                    <td>3</td>
+                    <td>kg</td>
+                    <td>Martin Suarez</td>
+                    <td>2020-08-25</td>
+                    <td>15</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="details3">
+            <div class="recentOrders">
+              <div class="cardHeader">
+                <h2>Sitios Registrados</h2>
+                <a href="#" class="btnn" onclick="loadModule('src/modules/administrador/sitios.html')">Ver todos</a>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Persona Encargada</th>
+                    <th>Nombre del Sitio</th>
+                    <th>Tipo de Sitio</th>
+                    <th>Ubicacion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Carlos</td>
+                    <td>Y12</td>
+                    <td>Ambiente</td>
+                    <td>Al lado del ambiente de multimedia</td>
+                  </tr>
+                  <tr>
+                    <td>Magda</td>
+                    <td>Y19</td>
+                    <td>Laboratorio</td>
+                    <td>Al lado de biblioteca</td>
+                  </tr>
+                  <tr>
+                    <td>Wilson</td>
+                    <td>Y14</td>
+                    <td>Ambiente</td>
+                    <td>En Biotic</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-        <div>
-          <canvas id="barras" width="50px" height="50px"></canvas>
-          <canvas id="circular" width="50px" height="50px"></canvas>
-          <canvas id="lineas" width="50px" height="50px"></canvas>
+        <div class="card grafica">
+          <canvas id="barras"></canvas>
+        </div>
+        <div class="card grafica">
+          <canvas id="circular"></canvas>
+        </div>
+        <div class="card grafica">
+          <canvas id="lineas"></canvas>
         </div>
       </div>
     </div>

@@ -57,8 +57,8 @@ function downloadExcel(){
 }
 
 
-const botonPdf = document.getElementById('descargaPdf');
-const botonExcel = document.getElementById('descargaExcel');
+// const botonPdf = document.getElementById('descargaPdf');
+// const botonExcel = document.getElementById('descargaExcel');
 
 function mostrarAlerta() {
   Swal.fire({
