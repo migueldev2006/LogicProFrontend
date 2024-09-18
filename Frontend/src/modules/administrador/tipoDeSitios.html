@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tipo de Sitios</title>
     <!-- CSS de Bootstrap 5 -->
     <link
-      href="../../../src/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+      href="../../../../Frontend/src/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- formulario estilo -->
+    <link rel="stylesheet" href="/Frontend/src/assets/css/formulario.css" />
   </head>
   <body>
     <div class="container mt-5">
@@ -49,7 +51,7 @@
               ></button>
             </div>
             <div class="modal-body">
-              <form action="">
+              <form id="frmFormulario" action="">
                 <div>
                   <label for="nombre" class="form-label">Nombre</label>
                   <input
@@ -63,7 +65,11 @@
               </form>
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-primary" onclick="alertaTipos()">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                onclick="showAlert()"
+              >
                 Registrar
               </button>
             </div>

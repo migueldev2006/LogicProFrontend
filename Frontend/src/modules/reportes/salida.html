@@ -1,11 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>esto es salida</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salida</title>
+    <link rel="stylesheet" href="../../../../Frontend/src/assets/css/repor_sali.css" />
+    <link
+      rel="stylesheet"
+      href="../../../../Frontend/src/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../../Frontend/src/assets/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body>
+    <h2 class="titulo text-center">Reporte de salida de material formativo</h2>
+
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 text-center" id="staticBackdropLabel">
+              Descargar registro de entrada
+            </h1>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-footer" style="background-color: #f8f9fa">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="downloadPDF(), mostrarAlerta()"
+              id="descargaPdf"
+            >
+              Descargar como PDF
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="downloadExcel(), mostrarAlerta()"
+              id="descargaExcel"
+            >
+              Descargar como EXCEL
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-5">
+      <div>
+        <button
+          type="button"
+          class="btn btn-primary offset-md-10"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+        >
+          <i class="bi bi-file-earmark-arrow-down-fill"></i>
+        </button>
+      </div>
+
+      <table id="tabla2" class="table table-striped" style="width: 100%">
+        <thead>
+          <tr>
+            <th>Area</th>
+            <th>Titulado</th>
+            <th>encargado</th>
+            <th>ID ficha</th>
+            <th>Material</th>
+            <th>Cantidad</th>
+            <th>Fecha de entrega</th>
+            <th>hora de entrega</th>
+          </tr>
+
+          <tr>
+            <th>
+              <input
+                type="text"
+                id="filterCodigo"
+                onkeyup="filterTable(0)"
+                placeholder="Buscar Area"
+              />
+            </th>
+            <th>
+              <input
+                type="text"
+                id="filterUNPSC"
+                onkeyup="filterTable(1)"
+                placeholder="Buscar Titulado"
+              />
+            </th>
+            <th>
+              <input
+                type="text"
+                id="filterNombre"
+                onkeyup="filterTable(2)"
+                placeholder="Buscar Encargado"
+              />
+            </th>
+            <th>
+              <input
+                type="text"
+                id="filterDescripcion"
+                onkeyup="filterTable(3)"
+                placeholder="Buscar Id ficha"
+              />
+            </th>
+            <th>
+              <input
+                type="text"
+                id="filterCantidad"
+                onkeyup="filterTable(4)"
+                placeholder="Buscar Material"
+              />
+            </th>
+            <th>
+              <input
+                type="text"
+                id="filterUnidad"
+                onkeyup="filterTable(5)"
+                placeholder="Buscar Cantidad"
+              />
+            </th>
+            <th>
+              <input
+                type="text"
+                id="filterFecha"
+                onkeyup="filterTable(6)"
+                placeholder="Buscar Fecha"
+              />
+            </th>
+            <th>
+              <input
+                type="text"
+                id="filterFecha"
+                onkeyup="filterTable(7)"
+                placeholder="Buscar Hora"
+              />
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tic</td>
+            <td>adso</td>
+            <td>marcos perdomo</td>
+            <td>838383</td>
+            <td>portatil hp</td>
+            <td>12</td>
+            <td>29/02/2024</td>
+            <td>2:30 am</td>
+          </tr>
+          <tr>
+            <td>tic</td>
+            <td>multimedia</td>
+            <td>weimar perdomo</td>
+            <td>9201746</td>
+            <td>tableta dell</td>
+            <td>2</td>
+            <td>29/05/2024</td>
+            <td>3:30 am</td>
+          </tr>
+
+          <tr>
+            <td>Agropecuaria</td>
+            <td>pae</td>
+            <td>darla esterling</td>
+            <td>6489236</td>
+            <td>pala</td>
+            <td>2</td>
+            <td>01/05/2024</td>
+            <td>12:30 pm</td>
+          </tr>
+
+          <tr>
+            <td>Gastronomia</td>
+            <td>cocina</td>
+            <td>laura vargas</td>
+            <td>238238</td>
+            <td>cubiertos</td>
+            <td>30</td>
+            <td>01/08/2024</td>
+            <td>1:30 pm</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
 </html>

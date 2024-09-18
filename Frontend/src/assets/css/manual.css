@@ -1,0 +1,111 @@
+.inicio{
+    background-image: linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)),
+    url(../../../public/fondo2.png);
+    background-repeat: no-repeat;
+    background-size: cover; /*cubre todo el fondo*/
+    background-attachment: fixed;
+    height: 800px;
+    width: 100%;
+}
+
+.inicio{
+    
+    padding: 100px 0;
+    color: white;
+    padding: 200px 500px;
+    font-size: 500px;
+}
+
+.contenedor{
+    display: flex;
+}
+
+.side{
+    margin-left: 200px;
+}
+
+.uno{
+    margin-left: 300px;
+
+}
+
+.uno img{
+    width: 600px;
+}
+
+.uno p{
+    margin-top: 200px;
+    position: absolute;
+    width: 300px;
+    margin-left: 150px;
+    font-size: larger;
+    color: white;
+}
+.dos{
+    margin-top: 40px;
+    background-color: aquamarine;
+    display: flex;
+}
+.dos img{
+    margin-right: 200px;
+    margin-top: 50px;
+    width: 700px;
+    height: 300px;
+}
+
+.dos p{
+    margin-top: 50px;
+    width: 100px;
+}
+
+/* .uno{
+    background-image: url(../../../public/fondo_azul.png);
+    background-repeat: no-repeat;
+    margin-left: 300px;
+    width: 3000px;
+} */
+
+
+
+/* .contenedor .uno p{
+    margin-left: 500px;
+    width: 500px;
+    margin-top: 200px;
+} */
+
+
+
+/* .uno{
+    background-image: url(../../../public/fondo_azul.png);
+    background-repeat: no-repeat;
+} */
+/* 
+.imagen{
+    margin-left: 200px;
+} */
+/* .titulos{
+    color: white;
+    font
+} */
+
+/* .img2{
+    width: 100%;
+    margin-left: 750px;
+} */
+
+
+/*.col1{
+    border-width: 20px;
+    margin-left: 200px;
+    margin-bottom: 100px;
+    display: flex;
+    margin-right: 200pc;
+}
+.dos{
+    margin-left: 200px;
+}
+.dos img{
+    width: 100vh; 
+}*/

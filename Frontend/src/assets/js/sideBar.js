@@ -16,6 +16,7 @@ function loadModule(modulePath) {
     .then((html) => {
       document.getElementById("moduleContainer").innerHTML = html;
 
+<<<<<<< HEAD
       // Inicializa DataTables si estamos cargando el módulo de usuarios
 
       if (modulePath.includes('entradaBodega.html')) {
@@ -39,8 +40,9 @@ function loadModule(modulePath) {
         setTimeout(initializeDataTable, 100);  // Espera para asegurarse de que el DOM esté listo
       }
      
+=======
+>>>>>>> 6bcaf326221f14d388587637d787d0b226174102
       if (modulePath.includes('usuarios.html')) {
-        // Inicializa después de que el contenido ha sido agregado al DOM
         setTimeout(initializeDataTable, 100);
       }
       if (modulePath.includes('centros.html')) {
@@ -49,7 +51,7 @@ function loadModule(modulePath) {
       if (modulePath.includes('sedes.html')) {
         setTimeout(initializeDataTable, 100);  
       }
-      if (modulePath.includes('programasFormacion.html')) {
+      if (modulePath.includes('programaFormacion.html')) {
         setTimeout(initializeDataTable, 100);  
       }
       if (modulePath.includes('fichas.html')) {
@@ -66,6 +68,24 @@ function loadModule(modulePath) {
       }
       if (modulePath.includes('municipio.html')) {
         setTimeout(initializeDataTable, 100);  
+<<<<<<< HEAD
+=======
+      }
+      if (modulePath.includes('entradaBodega.html')) {
+        setTimeout(initializeDataTable, 100);
+        }  
+      if (modulePath.includes('salidaBodega.html')) {
+        setTimeout(initializeDataTable, 100);  
+      }
+      if (modulePath.includes('verificacion.html')) {
+        setTimeout(initializeDataTable, 100);  
+      }
+      if (modulePath.includes('peticion.html')) {
+        setTimeout(initializeDataTable, 100);
+      }
+      if (modulePath.includes('inicio.html')) {
+        setTimeout(initializeDataTable, 100);
+>>>>>>> 6bcaf326221f14d388587637d787d0b226174102
       }
     })
     .catch((err) => console.warn("Algo salió mal al cargar el módulo.", err));
@@ -76,8 +96,14 @@ function initializeDataTable() {
   const dataTable = new simpleDatatables.DataTable("#example", {
     searchable: true,
     fixedHeight: true,
+<<<<<<< HEAD
     perPage: 4,
     sortable: false,
+=======
+    perpage:4,
+    sortable: false,
+    paging: true,
+>>>>>>> 6bcaf326221f14d388587637d787d0b226174102
   });
 }
 
@@ -86,7 +112,6 @@ document.getElementById("menu-toggle").addEventListener("click", function () {
   document.getElementById("sidebar").classList.toggle("collapsed");
   document.getElementById("mainContent").classList.toggle("collapsed");
 });
-
 // Inicializar el navbar al cargar la página
 document.addEventListener("DOMContentLoaded", loadNavbar);
 
@@ -99,3 +124,5 @@ document.querySelectorAll(".collapse").forEach((collapse) => {
     this.classList.remove("show");
   });
 });
+
+
