@@ -34,6 +34,11 @@ function loadModule(modulePath) {
         // Inicializa después de que el contenido ha sido agregado al DOM
         setTimeout(initializeDataTable, 100);  // Espera para asegurarse de que el DOM esté listo
       }
+      if (modulePath.includes('acerca_de.html')) {
+        // Inicializa después de que el contenido ha sido agregado al DOM
+        setTimeout(initializeDataTable, 100);  // Espera para asegurarse de que el DOM esté listo
+      }
+     
       if (modulePath.includes('usuarios.html')) {
         // Inicializa después de que el contenido ha sido agregado al DOM
         setTimeout(initializeDataTable, 100);

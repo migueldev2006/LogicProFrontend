@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LogicPro</title>
-    <link rel="icon" href="./public/login.png" />
+    <link rel="icon" href="./public/login.png"/>
     <!-- SweatAlert -->
     <link
       rel="stylesheet"
@@ -30,6 +30,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css">
+    <!-- css carrusel -->
+  <!-- <link rel="stylesheet" href="../../LogicProFrontend/Frontend/src/assets/css/acerca_de.css"> -->
+
   </head>
   <body>
     <!-- Contenedor para el navbar -->
@@ -181,6 +184,15 @@
                 ><span class="text">Salidas</span></a
               >
             </li>
+            <li>
+              <a
+                class="nav-link"
+                href="#"
+                onclick="loadModule('src/modules/bodega/salidaBodega.html')"
+                ><i class="bi bi-box-arrow-in-up"></i
+                ><span class="text">Salidas</span></a
+              >
+            </li>
           </ul>
         </li>
         <!-- Menú Materiales -->
@@ -227,6 +239,18 @@
             <span class="text">Verificacion</span>
           </a>
         </li>
+        <!-- <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#verificacionSubmenu"
+            data-bs-toggle="collapse"
+            aria-expanded="false"
+             onclick="loadModule('src/modules/acercaDe/index.html')"
+          >
+            <i class="bi bi-box-seam"></i>
+            <span class="text">acerca de </span>
+          </a>
+        </li> -->
       </ul>
     </div>
 
