@@ -33,10 +33,10 @@
   max-height: 0;
 }
 .sidebar .collapse.show {
-  max-height: 10 00px;
+  max-height: 1000px;
 }
 .sidebar img {
-  max-width: 60%;
+  max-width: 50%;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -145,15 +145,134 @@
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
+  grid-gap: 50px;
 }
 .cardBox .card {
   position: relative;
   background: var(--white);
   padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+}
+.cardBox .card .numbers {
+  position: relative;
+  font-weight: 500;
+  font-size: 30px;
+  color: #007bff;
+}
+.cardBox .card .cardName {
+  color: #000000;
+  font-size: 20px;
+  margin-top: 5px;
+}
+.cardBox .card .iconBx {
+  font-size: 60px;
+  color: #676464;
+}
+.cardBox .card:hover {
+  background: #e0dff5;
+}
+.grafica {
+  position: relative;
+  width: 40%;
+  padding: 30px;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
 }
-
+.details {
+  top: 100%;
+  width: 100vh;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 41%;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #dedcdc;
+  border-radius: 20px;
+  padding: 10px;
+}
+.details2{
+    top: 700px;
+    width: 100vh;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 41%;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid #dedcdc;
+    border-radius: 20px;
+    padding: 10px;
+}
+.details3{
+    top: 1100px;
+    width: 100vh;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 41%;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid #dedcdc;
+    border-radius: 20px;
+    padding: 10px;
+}
+.details .recentOrders,
+.details2 .recentOrders,
+.details3 .recentOrders{
+    position: relative;
+    display: grid;
+    min-height: 300px;
+    background:#ffffff;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cardHeader h1{
+    font-weight: 600;
+    color: #ffffff;
+}
+.btnn{
+    position: relative;
+    padding: 5px 10px;
+    background: #007bff;
+    color: #ffffff;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.details table,
+.details2 table,
+.details3 table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border: 1px solid #000000;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+.details .recentOrders table td,
+.details2 .recentOrders table td,
+.details3 .recentOrders table td{
+    font-weight: 600;
+    border: 1px solid #000000;
+    text-align: center;
+}
+.details table thead tr,
+.details2 table thead tr,
+.details3 table thead tr{
+    color: #000000;
+    border-bottom:  1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid #000000;
+    text-align: center;
+}
+.details .recentOrders table th,
+.details2 .recentOrders table th,
+.details3 .recentOrders table th{
+    border: 1px solid #000000;
+    text-align: center;
+}
 /* Responsividad */
 /* Estilo para pantallas pequeñas (móviles) */
 @media (max-width: 576px) {
@@ -175,25 +294,24 @@
   .content {
     margin-left: 0;
     margin-top: 60px;
+  }
+  .module-content {
+    padding: 10px;
+  }
+  .sidebar .nav-link {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
 
-    .module-content {
-      padding: 10px;
-    }
-    .sidebar .nav-link {
-      font-size: 16px;
-      padding: 10px 15px;
-    }
+  .sidebar.collapsed .nav-link span.text {
+    display: none;
+  }
+  .sidebar.collapsed .collapse {
+    display: none;
+  }
 
-    .sidebar.collapsed .nav-link span.text {
-      display: none;
-    }
-    .sidebar.collapsed .collapse {
-      display: none;
-    }
-
-    .sidebar.collapsed .nav-link i {
-      font-size: 24px;
-    }
+  .sidebar.collapsed .nav-link i {
+    font-size: 24px;
   }
 }
 
@@ -220,11 +338,11 @@
 /* Estilo para pantallas grandes (escritorios) */
 @media (min-width: 769px) {
   .sidebar {
-    width: 16%;
+    width: 15%;
   }
 
   .sidebar.collapsed {
-    width: 60px;
+    width: 80px;
   }
 
   .content {
