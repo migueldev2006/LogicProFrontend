@@ -1,18 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LogicPro</title>
-    <link rel="icon" href="./public/login.png"/>
-    <!-- SweatAlert -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css"
-    />
+    <link rel="icon" href="./public/login.png" />
     <!-- CSS de Bootstrap 5 -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      href="./src/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
     <!-- Bootstrap Icons -->
@@ -21,25 +16,23 @@
       rel="stylesheet"
     />
     <!-- lineIcons -->
-    <link rel="stylesheet" href="./src/assets/lineicons/lineicons.css">
+    <link
+      rel="stylesheet"
+      href="../Frontend/src/assets/lineicons/lineicons.css"
+    />
     <!-- Estilos personalizados -->
-    <link href="./src/assets/css/sideBar.css" rel="stylesheet" />
+    <link href="../Frontend/src/assets/css/sideBar.css" rel="stylesheet" />
     <!-- CSS de Simple DataTables -->
     <link
       href="https://cdn.jsdelivr.net/npm/simple-datatables@9.1.0/dist/style.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css">
-    <!-- css carrusel -->
-  <!-- <link rel="stylesheet" href="../../LogicProFrontend/Frontend/src/assets/css/acerca_de.css"> -->
-
   </head>
   <body>
     <!-- Contenedor para el navbar -->
     <div id="navbarContainer"></div>
-
     <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
+    <div class="sidebar bg-dark" id="sidebar">
       <!-- Botón de menú hamburguesa -->
       <div class="sidebar-header">
         <div class="hamburger-icon" id="menu-toggle">
@@ -49,13 +42,14 @@
         </div>
       </div>
       <ul class="nav flex-column">
-        <!-- Menú Administrador -->
+        <!-- Menú inicio -->
         <li class="nav-item">
           <a
             class="nav-link"
             href="#inicioSubmenu"
             data-bs-toggle="collapse"
             aria-expanded="false"
+            onclick="loadModule('./index.html')"
           >
             <i class="bi bi-house-door"></i>
             <span class="text">Inicio</span>
@@ -86,7 +80,7 @@
                 class="nav-link"
                 href="#"
                 onclick="loadModule('src/modules/administrador/centros.html')"
-                ><i class="bi bi-building"></i
+                ><i class="lni lni-apartment"></i
                 ><span class="text">Centros</span></a
               >
             </li>
@@ -184,34 +178,25 @@
                 ><span class="text">Salidas</span></a
               >
             </li>
-            <li>
-              <a
-                class="nav-link"
-                href="#"
-                onclick="loadModule('src/modules/bodega/salidaBodega.html')"
-                ><i class="bi bi-box-arrow-in-up"></i
-                ><span class="text">Salidas</span></a
-              >
-            </li>
           </ul>
         </li>
-        <!-- Menú Materiales -->
+        <!-- Menú Reportes -->
         <li class="nav-item">
           <a
             class="nav-link"
-            href="#materialesSubmenu"
+            href="#reporteSubmenu"
             data-bs-toggle="collapse"
             aria-expanded="false"
           >
-            <i class="bi bi-box-seam"></i>
-            <span class="text">Materiales</span>
+            <i class="bi bi-file-earmark-bar-graph"></i>
+            <span class="text">Reportes</span>
           </a>
-          <ul class="collapse list-unstyled" id="materialesSubmenu">
+          <ul class="collapse list-unstyled" id="reporteSubmenu">
             <li>
               <a
                 class="nav-link"
                 href="#"
-                onclick="loadModule('src/modules/materiales/index.html')"
+                onclick="loadModule('src/modules/reportes/entrada.html')"
                 ><i class="bi bi-box-arrow-in-down"></i
                 ><span class="text">Entradas</span></a
               >
@@ -220,61 +205,135 @@
               <a
                 class="nav-link"
                 href="#"
-                onclick="loadModule('src/modules/materiales/index.html')"
+                onclick="loadModule('src/modules/reportes/salida.html')"
                 ><i class="bi bi-box-arrow-in-up"></i
                 ><span class="text">Salidas</span></a
               >
             </li>
           </ul>
         </li>
+        <!-- Menu peticion -->
         <li class="nav-item">
           <a
             class="nav-link"
             href="#verificacionSubmenu"
             data-bs-toggle="collapse"
             aria-expanded="false"
-             onclick="loadModule('src/modules/verificacion/verificacion.html')"
+            onclick="loadModule('src/modules/peticion/peticion.html')"
           >
-            <i class="bi bi-box-seam"></i>
-            <span class="text">Verificacion</span>
+            <i class="lni lni-clipboard"></i>
+            <span class="text">Peticion</span>
           </a>
         </li>
-        <!-- <li class="nav-item">
+        <!-- Menu Verificacion -->
+        <li class="nav-item">
           <a
             class="nav-link"
             href="#verificacionSubmenu"
             data-bs-toggle="collapse"
             aria-expanded="false"
-             onclick="loadModule('src/modules/acercaDe/index.html')"
+            onclick="loadModule('src/modules/verificacion/verificacion.html')"
           >
-            <i class="bi bi-box-seam"></i>
-            <span class="text">acerca de </span>
+            <i class="bi bi-check2-square"></i>
+            <span class="text">Verificacion</span>
           </a>
-        </li> -->
+        </li>
+        <!-- Menu verificacion -->
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#documentacionSubmenu"
+            data-bs-toggle="collapse"
+            aria-expanded="false"
+            onclick="loadModule('src/modules/documentacion/index.html')"
+          >
+            <i class="bi bi-file-earmark-text"></i>
+            <span class="text">Documentacion</span>
+          </a>
+          <ul class="collapse list-unstyled" id="documentacionSubmenu">
+            <li>
+              <a
+                class="nav-link"
+                href="#"
+                onclick="loadModule('src/modules/bodega/index.html')"
+                ><i class="bi bi-box-arrow-in-down"></i
+                ><span class="text">Documentacion Tecnica</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-link"
+                href="#"
+                onclick="loadModule('src/modules/bodega/index.html')"
+                ><i class="bi bi-box-arrow-in-down"></i
+                ><span class="text">Manual de Usuario</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-link"
+                href="#"
+                onclick="loadModule('src/modules/bodega/index.html')"
+                ><i class="bi bi-box-arrow-in-down"></i
+                ><span class="text">Acerca de</span></a
+              >
+            </li>
+          </ul>
+        </li>
       </ul>
+      <div class="text-center mt-5 mb-5">
+        <img src="./public/sena.png" class="rounded" alt="Logo del Sena" />
+      </div>
     </div>
-
     <!-- Contenido principal -->
     <div class="content" id="mainContent">
       <div class="container" id="moduleContainer">
         <!-- Aquí se cargará el contenido del módulo -->
+        <div class="cardBox">
+          <div class="card">
+            <div class="numbers">12346+</div>
+            <div class="cardName">hola</div>
+            <div class="iconBx"></div>
+          </div>
+          <div class="card">
+            <div class="numbers">12346+</div>
+            <div class="cardName">hola</div>
+            <div class="iconBx"></div>
+          </div>
+          <div class="card">
+            <div class="numbers">12346+</div>
+            <div class="cardName">hola</div>
+            <div class="iconBx"></div>
+          </div>
+          <div class="card">
+            <div class="numbers">12346+</div>
+            <div class="cardName">hola</div>
+            <div class="iconBx"></div>
+          </div>
+        </div>
+        <div>
+          <canvas id="barras" width="50px" height="50px"></canvas>
+          <canvas id="circular" width="50px" height="50px"></canvas>
+          <canvas id="lineas" width="50px" height="50px"></canvas>
+        </div>
       </div>
     </div>
-<<<<<<< HEAD
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
-    <!-- JavaScript de Bootstrap 5 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-=======
     <!-- SweatAlert -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- JavaScript de Bootstrap 5 -->
-    <script src="./src/assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
->>>>>>> 3e464f28227f369a1f9052636a4e2b4fad1195ac
+    <script src="../Frontend/src/assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <!-- JavaScript de Simple DataTables -->
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.1.0/dist/umd/simple-datatables.js"></script>
+    <script src="../Frontend/src/assets/js/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
     <!-- Script personalizado -->
-    <script src="./src/assets/js/sideBar.js"></script>
-    <script src="./src/assets/js/alertas.js"></script>
+    <script src="../Frontend/src/assets/js/inicio.js"></script>
+    <script src="../Frontend/src/assets/js/sideBar.js"></script>
+    <script src="../Frontend/src/assets/js/alertas.js"></script>
+    <script src="../Frontend/src/assets/js/repor_entra.js"></script>
+    <script src="../Frontend/src/assets/js/repor_salida.js"></script>
   </body>
 </html>
