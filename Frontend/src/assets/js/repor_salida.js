@@ -54,10 +54,10 @@ function downloadExcel(){
 
 
 
-const botonPdf = document.getElementById('descargaPdf');
-const botonExcel = document.getElementById('descargaExcel');
+// const botonPdf = document.getElementById('descargaPdf');
+// const botonExcel = document.getElementById('descargaExcel');
 
-function mostrarAlerta() {
+function mostrarAlert() {
   Swal.fire({
     title: "¡Descarga Exitosa!",
     // text: `El reporte de entrada de materiales en ${tipoArchivo} se realizo correctamente`,
