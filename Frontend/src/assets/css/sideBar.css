@@ -125,7 +125,7 @@
 /* Ajuste del contenedor principal */
 .content {
   margin-left: 250px;
-  margin-top: 106px; /* Espacio para el navbar */
+  margin-top: 30px; /* Espacio para el navbar */
   transition: margin-left 0.3s;
 }
 
@@ -247,7 +247,6 @@
 .details2 table,
 .details3 table{
     width: 100%;
-    border-collapse: collapse;
     margin-top: 10px;
     border: 1px solid #000000;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
