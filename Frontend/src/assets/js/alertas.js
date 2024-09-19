@@ -48,7 +48,10 @@ function showAlert(){
       title: "¡Registro exitoso!",
       icon: "success"
     }).then(() => {
-      formulario.reset(); // Add this line to reset the form fields
+      formulario.reset();
+      const modalElement = document.getElementById('staticBackdrop');
+      const modalInstance = bootstrap.Modal.getInstance(modalElement); 
+      modalInstance.hide();
     });
   } else {
     Swal.fire({
