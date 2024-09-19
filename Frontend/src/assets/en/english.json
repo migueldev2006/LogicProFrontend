@@ -1,0 +1,34 @@
+{
+    "Inicio":"Dashboard",
+    "Administrador":"Admin",
+    "Admin":{
+        "Usuarios":"Users",
+        "Centros": "Centers",
+        "Áreas": "Area",
+        "Programa Formacion":"Training Program",
+        "Fichas": "Chips",
+        "Sedes":"Headquarters",
+        "Sitios":"Sites",
+        "Tipo de Sitios":"Type Sities",
+        "Municipio":"Municipality"
+    },
+    "Bodega":"Store",
+    "Store":{
+        "Entrada":"Entrance",
+        "Salida":"Exit"
+    },
+    "Reportes":"Reports",
+    "Reports":{
+        "Entrada":"Entrance",
+        "Salida":"Exit"
+    },
+    "Peticion": "Request",
+    "Verificacion":"Verificaction",
+    "Documentacion":"Documentation",
+    "Documentation":{
+        "Documentacion Tecnica":"Tecnic Documentation",
+        "Manual de Usuario": "User Manual",
+        "Acerca de": "About us"
+    }
+
+}

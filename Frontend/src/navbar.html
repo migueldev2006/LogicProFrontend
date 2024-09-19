@@ -4,13 +4,18 @@
     <a href="../index.html" class="navbar-brand">
       <h3>LogicPro</h3>
     </a>
+    <!-- Idioma de la pagina -->
+    <div class="d-flex">
+      <span class="es me-2" data-tranlate="Spanish">Spanish</span>
+      <input type="checkbox" class="check" />
+      <span class="en ms-2" data-tranlate="English">English</span>
+    </div>
     <form action="" class="d-flex">
       <div class="dropdown">
         <button
-          class="btn dropdown 
+          class="btn dropdown boton"
           type="button"
           data-bs-toggle="dropdown"
-          style="border: none"
         >
           <img
             src="../../Frontend/public/sidebar.png"
@@ -25,7 +30,7 @@
       </div>
       <div class="dropdown">
         <button
-          class="btn dropdown "
+          class="btn dropdown boton"
           type="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
@@ -48,7 +53,7 @@
             >
           </li>
           <li>
-              <a
+            <a
               class="dropdown-item"
               href="../../Frontend/login.html"
               onclick="alert('Cerrando Sesion... ')"

@@ -16,46 +16,43 @@ function loadModule(modulePath) {
     .then((html) => {
       document.getElementById("moduleContainer").innerHTML = html;
 
-      if (modulePath.includes('usuarios.html')) {
+      if (modulePath.includes("usuarios.html")) {
         setTimeout(initializeDataTable, 100);
       }
-      if (modulePath.includes('centros.html')) {
-        setTimeout(initializeDataTable, 100); 
-      }
-      if (modulePath.includes('sedes.html')) {
-        setTimeout(initializeDataTable, 100);  
-      }
-      if (modulePath.includes('programaFormacion.html')) {
-        setTimeout(initializeDataTable, 100);  
-      }
-      if (modulePath.includes('fichas.html')) {
-        setTimeout(initializeDataTable, 100);  
-      }
-      if (modulePath.includes('areas.html')) {
-        setTimeout(initializeDataTable, 100);  
-      }
-      if (modulePath.includes('sitios.html')) {
-        setTimeout(initializeDataTable, 100); 
-      }
-      if (modulePath.includes('tipoDeSitios.html')) {
-        setTimeout(initializeDataTable, 100);  
-      }
-      if (modulePath.includes('municipio.html')) {
-        setTimeout(initializeDataTable, 100);  
-      }
-      if (modulePath.includes('entradaBodega.html')) {
-        setTimeout(initializeDataTable, 100);
-        }  
-      if (modulePath.includes('salidaBodega.html')) {
-        setTimeout(initializeDataTable, 100);  
-      }
-      if (modulePath.includes('verificacion.html')) {
-        setTimeout(initializeDataTable, 100);  
-      }
-      if (modulePath.includes('peticion.html')) {
+      if (modulePath.includes("centros.html")) {
         setTimeout(initializeDataTable, 100);
       }
-      if (modulePath.includes('inicio.html')) {
+      if (modulePath.includes("sedes.html")) {
+        setTimeout(initializeDataTable, 100);
+      }
+      if (modulePath.includes("programaFormacion.html")) {
+        setTimeout(initializeDataTable, 100);
+      }
+      if (modulePath.includes("fichas.html")) {
+        setTimeout(initializeDataTable, 100);
+      }
+      if (modulePath.includes("areas.html")) {
+        setTimeout(initializeDataTable, 100);
+      }
+      if (modulePath.includes("sitios.html")) {
+        setTimeout(initializeDataTable, 100);
+      }
+      if (modulePath.includes("tipoDeSitios.html")) {
+        setTimeout(initializeDataTable, 100);
+      }
+      if (modulePath.includes("municipio.html")) {
+        setTimeout(initializeDataTable, 100);
+      }
+      if (modulePath.includes("entradaBodega.html")) {
+        setTimeout(initializeDataTable, 100);
+      }
+      if (modulePath.includes("salidaBodega.html")) {
+        setTimeout(initializeDataTable, 100);
+      }
+      if (modulePath.includes("verificacion.html")) {
+        setTimeout(initializeDataTable, 100);
+      }
+      if (modulePath.includes("peticion.html")) {
         setTimeout(initializeDataTable, 100);
       }
     })
@@ -67,11 +64,24 @@ function initializeDataTable() {
   const dataTable = new simpleDatatables.DataTable("#example", {
     searchable: true,
     fixedHeight: true,
-    perpage:4,
+    perPage: 4, 
     sortable: false,
     paging: true,
+    labels: {
+      placeholder: "Buscar...", // Placeholder en el campo de búsqueda
+      perPage: "Mostrar resultados por página", // Selección de resultados por página
+      noRows: "No se encontraron registros", // Mensaje cuando no hay registros
+      info: "Mostrando del {start} al {end} de {rows} registros", // Información sobre los registros
+      previous: "Anterior", // Botón "Anterior"
+      next: "Siguiente", // Botón "Siguiente"
+      loading: "Cargando...", // Mensaje de carga
+      infoFiltered: " (filtrado de {rows} registros en total)", // Información cuando se filtran resultados
+      first: "Primero", // Botón "Primero"
+      last: "Último", // Botón "Último"
+    }
   });
 }
+
 
 // Manejo del botón de menú hamburguesa
 document.getElementById("menu-toggle").addEventListener("click", function () {
@@ -91,4 +101,30 @@ document.querySelectorAll(".collapse").forEach((collapse) => {
   });
 });
 
+document.querySelector('.nav-link').addEventListener('click', function () {
+  location.reload();
+});
 
+let translations;
+
+// Cargar traducciones desde el archivo JSON
+fetch('Frontend/src/assets/en/english.json')
+  .then(response => response.json())
+  .then(data => {
+    translations = data;
+    // Cargar el idioma predeterminado
+    updateLanguage('es');
+  });
+
+function updateLanguage(lang) {
+  document.querySelectorAll('[data-translate]').forEach(element => {
+    const key = element.getAttribute('data-translate');
+    element.textContent = translations[lang][key] || element.textContent;
+  });
+}
+
+// Cambiar idioma según el estado del checkbox
+document.querySelector('.check').addEventListener('change', function() {
+  const lang = this.checked ? 'en' : 'es';
+  updateLanguage(lang);
+});

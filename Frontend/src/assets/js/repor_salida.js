@@ -3,7 +3,7 @@ function filterTable(columnIndex) {
 
     input = document.querySelectorAll("thead input")[columnIndex];
     filter = input.value.toUpperCase();
-    table = document.getElementById("tabla2");
+    table = document.getElementById("example");
     tr = table.getElementsByTagName("tr"); //  filas
 
 
@@ -30,7 +30,7 @@ function downloadPDF() {
 
 
     doc.autoTable({
-        html: '#tabla2', 
+        html: '#example', 
         startY: 22, 
         theme: 'striped',
         headStyles: { fillColor: [52, 73, 94] }, 
@@ -39,13 +39,13 @@ function downloadPDF() {
     });
 
 
-    doc.save('reporte_salida.pdf');
+    doc.save('Reporte_salida.pdf');
 }
 
 
 function downloadExcel(){
     
-    let table = document.getElementById("tabla2");
+    let table = document.getElementById("example");
 
     let wb = XLSX.utils.table_to_book(table,{hoja:"hoja1"});
 
@@ -57,7 +57,7 @@ function downloadExcel(){
 // const botonPdf = document.getElementById('descargaPdf');
 // const botonExcel = document.getElementById('descargaExcel');
 
-function mostrarAlert() {
+function mostrarAlerta() {
   Swal.fire({
     title: "¡Descarga Exitosa!",
     // text: `El reporte de entrada de materiales en ${tipoArchivo} se realizo correctamente`,
