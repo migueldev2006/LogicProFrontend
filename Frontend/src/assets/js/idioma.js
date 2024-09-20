@@ -11,23 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.addEventListener('DOMContentLoaded', () => {
-    fetch('/Frontend/src/assets/es/español.json')
-      .then(response => response.json())
-      .then(data => {
-        // Usa los datos del JSON aquí
-        console.log(data);
-        // Por ejemplo, podrías ajustar el valor del select según el idioma
-        const languageSelect = document.getElementById('language-select');
-        if (languageSelect) {
-          languageSelect.value = 'es'; // Ajusta según el idioma cargado
-        }
-      })
-      .catch(error => {
-        console.error('Error loading JSON:', error);
-      });
-  });
-  document.addEventListener('DOMContentLoaded', () => {
-    fetch('/Frontend/src/assets/es/english.json')
+    fetch('/Frontend/src/assets/en/english.json')
       .then(response => response.json())
       .then(data => {
         // Usa los datos del JSON aquí
