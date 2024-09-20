@@ -105,26 +105,3 @@ document.querySelector('.nav-link').addEventListener('click', function () {
   location.reload();
 });
 
-let translations;
-
-// Cargar traducciones desde el archivo JSON
-fetch('Frontend/src/assets/en/english.json')
-  .then(response => response.json())
-  .then(data => {
-    translations = data;
-    // Cargar el idioma predeterminado
-    updateLanguage('es');
-  });
-
-function updateLanguage(lang) {
-  document.querySelectorAll('[data-translate]').forEach(element => {
-    const key = element.getAttribute('data-translate');
-    element.textContent = translations[lang][key] || element.textContent;
-  });
-}
-
-// Cambiar idioma según el estado del checkbox
-document.querySelector('.check').addEventListener('change', function() {
-  const lang = this.checked ? 'en' : 'es';
-  updateLanguage(lang);
-});
