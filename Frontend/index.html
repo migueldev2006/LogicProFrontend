@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,7 +33,15 @@
     <div id="navbarContainer"></div>
     <!-- Sidebar -->
     <div class="sidebar bg-dark" id="sidebar">
-      <!-- Botón de menú hamburguesa -->
+      <!-- Idioma de la pagina -->
+      <div class="language-switcher">
+        <label for="language-select">Idioma:</label>
+        <select id="language-select">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+            <!-- Botón de menú hamburguesa -->
       <div class="sidebar-header">
         <div class="hamburger-icon" id="menu-toggle">
           <span></span>
@@ -52,7 +60,7 @@
             onclick="location.reload()"
           >
             <i class="bi bi-house-door"></i>
-            <span class="text">Inicio</span>
+            <span class="text" data-translate="Inicio">Inicio</span>
           </a>
         </li>
         <li class="nav-item">
@@ -63,7 +71,9 @@
             aria-expanded="false"
           >
             <i class="bi bi-person-circle"></i>
-            <span class="text">Administrador</span>
+            <span class="text" data-translate="Admin"
+              >Administrador</span
+            >
           </a>
           <ul class="collapse list-unstyled" id="adminSubmenu">
             <li>
@@ -326,7 +336,12 @@
             <div class="recentOrders">
               <div class="cardHeader">
                 <h2>Nuevo Material</h2>
-                <a href="#" class="btnn" onclick="loadModule('src/modules/bodega/entradaBodega.html')">Ver todos</a>
+                <a
+                  href="#"
+                  class="btnn"
+                  onclick="loadModule('src/modules/bodega/entradaBodega.html')"
+                  >Ver todos</a
+                >
               </div>
               <table>
                 <thead>
@@ -376,7 +391,12 @@
             <div class="recentOrders">
               <div class="cardHeader">
                 <h2>Reporte Nuevo Material</h2>
-                <a href="#" class="btnn" onclick="loadModule('src/modules/reportes/entrada.html')">Ver todos</a>
+                <a
+                  href="#"
+                  class="btnn"
+                  onclick="loadModule('src/modules/reportes/entrada.html')"
+                  >Ver todos</a
+                >
               </div>
               <table>
                 <thead>
@@ -434,7 +454,12 @@
             <div class="recentOrders">
               <div class="cardHeader">
                 <h2>Sitios Registrados</h2>
-                <a href="#" class="btnn" onclick="loadModule('src/modules/administrador/sitios.html')">Ver todos</a>
+                <a
+                  href="#"
+                  class="btnn"
+                  onclick="loadModule('src/modules/administrador/sitios.html')"
+                  >Ver todos</a
+                >
               </div>
               <table>
                 <thead>
@@ -497,5 +522,6 @@
     <script src="../Frontend/src/assets/js/alertas.js"></script>
     <script src="../Frontend/src/assets/js/repor_entra.js"></script>
     <script src="../Frontend/src/assets/js/repor_salida.js"></script>
+    <script src="../Frontend/src/assets/js/idioma.js"></script>
   </body>
 </html>

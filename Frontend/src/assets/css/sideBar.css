@@ -279,7 +279,7 @@
 }
 
 /* boton toggle */
-.btnToggle{
+.btnToggle {
   border: none;
   background: none;
 }
@@ -296,8 +296,8 @@
     position: relative;
     display: block;
     background: red;
-    width: 70px;
-    height: 30px;
+    width: 55px;
+    height: 14px;
     cursor: pointer;
     border-radius: 30px;
     transition: 0.5s;
@@ -325,31 +325,28 @@
 }
 
 /* Idioma  */
-.en{
+.en {
   color: #333;
 }
-.es{
+.es {
   color: #00a1ff;
 }
 
-.check{
+.check {
   position: relative;
   width: 50px;
-
 }
-.check:before{
-  content:'' ;
+.check:before {
+  content: "";
   position: absolute;
   width: 50px;
   height: 25px;
   background: #333;
   border-radius: 25px;
-
 }
 
-
-.check:after{
-  content: '';
+.check:after {
+  content: "";
   position: absolute;
   width: 25px;
   height: 25px;
@@ -360,12 +357,12 @@
   box-sizing: border-box;
 }
 
-.check:checked:after{
+.check:checked:after {
   left: 25px;
   border: 2px solid #00a1ff;
 }
 
-.check:checked:before{
+.check:checked:before {
   background: #00a1ff;
 }
 /* Responsividad */
