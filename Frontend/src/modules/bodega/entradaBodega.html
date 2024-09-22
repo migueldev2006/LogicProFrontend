@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>entradaBodega</title>
+    <link
+      href="../../../../Frontend/src/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/Frontend/src/assets/css/formulario.css" />
   </head>
   <body>
@@ -117,25 +121,25 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="p-5">
-      <div class="display:flex">
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop"
-          style="width: 15%"
-        >
-          <i class="lni lni-plus" id="button"></i> Registrar
-        </button>
       </div>
-    </div>
-    <table
-      id="example"
-      class="table table-striped text-center"
-      style="width: 100%"
-    >
+      <div class="p-5">
+        <div class="display:flex">
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+            style="width: 15%"
+          >
+            <i class="lni lni-plus" id="button"></i> Registrar
+          </button>
+        </div>
+      </div>
+      <table
+        id="example"
+        class="table table-striped text-center"
+        style="width: 100%"
+      >
       <thead>
         <tr>
           <th class="text-center">Codigo Sena</th>
@@ -145,6 +149,7 @@
           <th class="text-center">Cantidad</th>
           <th class="text-center">Unidad Medida</th>
           <th class="text-center">material en stock</th>
+          <th class="text-center"></th>
         </tr>
       </thead>
       <tbody>
@@ -156,7 +161,23 @@
           <td>10</td>
           <td>kg</td>
           <td>12</td>
+
+          <td>
+            <button class="btn btn-primary">
+              <i class="lni lni-pencil-alt"></i>
+            </button>
+            <button class="btn btn-danger">
+              <i class="lni lni-trash-can"></i>
+            </button>
+            <button class="btnToggle">
+              <div class="toggleContainer">
+                <input type="checkbox" id="switch" class="toggle" />
+                <label for="switch" class="switch"></label>
+              </div>
+            </button>
+          </td>
         </tr>
+
         <tr>
           <td>121212</td>
           <td>1209412</td>
@@ -203,6 +224,7 @@
           <td>50</td>
         </tr>
       </tbody>
-    </table>
+      </table>
+    </div>
   </body>
 </html>
