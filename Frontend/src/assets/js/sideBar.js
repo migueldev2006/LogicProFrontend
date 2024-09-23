@@ -64,7 +64,7 @@ function initializeDataTable() {
   const dataTable = new simpleDatatables.DataTable("#example", {
     searchable: true,
     fixedHeight: true,
-    perPage: 4, 
+    perPage: 10, 
     sortable: false,
     paging: true,
     labels: {
@@ -81,7 +81,6 @@ function initializeDataTable() {
     }
   });
 }
-
 
 // Manejo del botón de menú hamburguesa
 document.getElementById("menu-toggle").addEventListener("click", function () {
