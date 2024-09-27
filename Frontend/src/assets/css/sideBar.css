@@ -117,6 +117,9 @@
 .boton {
   border: none;
 }
+.boton:hover{
+  background-color: #e1e1ea;
+}
 
 /* Ajustes del sidebar */
 .sidebar {
@@ -142,6 +145,14 @@
 /* Estilo del contenido cuando el sidebar está colapsado */
 .content.collapsed {
   margin-left: 60px;
+}
+/* Idioma */
+.menu{
+  display: flex;
+  align-items: center;
+}
+.menu img{
+  margin-right: 10px;
 }
 /* Estilo de las cards */
 .cardBox {

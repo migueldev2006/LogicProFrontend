@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,15 +33,7 @@
     <div id="navbarContainer"></div>
     <!-- Sidebar -->
     <div class="sidebar bg-dark" id="sidebar">
-      <!-- Idioma de la pagina -->
-      <div class="language-switcher">
-        <label for="language-select">Idioma:</label>
-        <select id="language-select">
-          <option value="es">Español</option>
-          <option value="en">English</option>
-        </select>
-      </div>
-            <!-- Botón de menú hamburguesa -->
+      <!-- Botón de menú hamburguesa -->
       <div class="sidebar-header">
         <div class="hamburger-icon" id="menu-toggle">
           <span></span>
@@ -60,7 +52,7 @@
             onclick="location.reload()"
           >
             <i class="bi bi-house-door"></i>
-            <span class="text" data-translate="Inicio">Inicio</span>
+            <span class="text" data-translate="Inicio" id="Inicio">Inicio</span>
           </a>
         </li>
         <li class="nav-item">
@@ -71,9 +63,7 @@
             aria-expanded="false"
           >
             <i class="bi bi-person-circle"></i>
-            <span class="text" data-translate="Admin"
-              >Administrador</span
-            >
+            <span class="text" data-translate="Administrador">Administrador</span>
           </a>
           <ul class="collapse list-unstyled" id="adminSubmenu">
             <li>
@@ -82,7 +72,7 @@
                 href="#"
                 onclick="loadModule('src/modules/administrador/usuarios.html')"
                 ><i class="bi bi-people"></i
-                ><span class="text">Usuarios</span></a
+                ><span class="text" data-translate="Usuarios">Usuarios</span></a
               >
             </li>
             <li>
@@ -91,7 +81,7 @@
                 href="#"
                 onclick="loadModule('src/modules/administrador/centros.html')"
                 ><i class="lni lni-apartment"></i
-                ><span class="text">Centros</span></a
+                ><span class="text" data-translate="Centros">Centros</span></a
               >
             </li>
             <li>
@@ -100,7 +90,7 @@
                 href="#"
                 onclick="loadModule('src/modules/administrador/areas.html')"
                 ><i class="bi bi-diagram-3"></i
-                ><span class="text">Áreas</span></a
+                ><span class="text" data-translate="Áreas">Áreas</span></a
               >
             </li>
             <li>
@@ -109,7 +99,7 @@
                 href="#"
                 onclick="loadModule('src/modules/administrador/programaFormacion.html')"
                 ><i class="bi bi-file-earmark-medical"></i
-                ><span class="text">Programa Formacion</span></a
+                ><span class="text" data-translate="Programa Formacion">Programa Formacion</span></a
               >
             </li>
             <li>
@@ -118,7 +108,7 @@
                 href="#"
                 onclick="loadModule('src/modules/administrador/fichas.html')"
                 ><i class="bi bi-file-earmark-medical"></i
-                ><span class="text">Fichas</span></a
+                ><span class="text" data-translate="Fichas">Fichas</span></a
               >
             </li>
             <li>
@@ -126,7 +116,7 @@
                 class="nav-link"
                 href="#"
                 onclick="loadModule('src/modules/administrador/sedes.html')"
-                ><i class="bi bi-geo"></i><span class="text">Sedes</span></a
+                ><i class="bi bi-geo"></i><span class="text" data-translate="Sedes">Sedes</span></a
               >
             </li>
             <li>
@@ -135,7 +125,7 @@
                 href="#"
                 onclick="loadModule('src/modules/administrador/sitios.html')"
                 ><i class="bi bi-buildings"></i
-                ><span class="text">Sitios</span></a
+                ><span class="text" data-translate="Sitios">Sitios</span></a
               >
             </li>
             <li>
@@ -144,7 +134,7 @@
                 href="#"
                 onclick="loadModule('src/modules/administrador/tipoDeSitios.html')"
                 ><i class="bi bi-box-seam"></i
-                ><span class="text">Tipo de Sitios</span></a
+                ><span class="text" data-translate="Tipo de Sitios">Tipo de Sitios</span></a
               >
             </li>
             <li>
@@ -153,7 +143,7 @@
                 href="#"
                 onclick="loadModule('src/modules/administrador/municipio.html')"
                 ><i class="bi bi-pin-map"></i
-                ><span class="text">Municipios</span></a
+                ><span class="text" data-translate="Municipios">Municipios</span></a
               >
             </li>
           </ul>
@@ -167,7 +157,7 @@
             aria-expanded="false"
           >
             <i class="bi bi-archive"></i>
-            <span class="text">Bodega</span>
+            <span class="text" data-translate="Bodega">Bodega</span>
           </a>
           <ul class="collapse list-unstyled" id="bodegaSubmenu">
             <li>
@@ -176,7 +166,7 @@
                 href="#"
                 onclick="loadModule('src/modules/bodega/entradaBodega.html')"
                 ><i class="bi bi-box-arrow-in-down"></i
-                ><span class="text">Entradas</span></a
+                ><span class="text" data-translate="Entrada">Entradas</span></a
               >
             </li>
             <li>
@@ -185,7 +175,7 @@
                 href="#"
                 onclick="loadModule('src/modules/bodega/salidaBodega.html')"
                 ><i class="bi bi-box-arrow-in-up"></i
-                ><span class="text">Salidas</span></a
+                ><span class="text" data-translate="Salida">Salidas</span></a
               >
             </li>
           </ul>
@@ -199,7 +189,7 @@
             aria-expanded="false"
           >
             <i class="bi bi-file-earmark-bar-graph"></i>
-            <span class="text">Reportes</span>
+            <span class="text" data-translate="Reportes">Reportes</span>
           </a>
           <ul class="collapse list-unstyled" id="reporteSubmenu">
             <li>
@@ -208,7 +198,7 @@
                 href="#"
                 onclick="loadModule('src/modules/reportes/entrada.html')"
                 ><i class="bi bi-box-arrow-in-down"></i
-                ><span class="text">Entradas</span></a
+                ><span class="text" data-translate="Entrada">Entradas</span></a
               >
             </li>
             <li>
@@ -217,7 +207,7 @@
                 href="#"
                 onclick="loadModule('src/modules/reportes/salida.html')"
                 ><i class="bi bi-box-arrow-in-up"></i
-                ><span class="text">Salidas</span></a
+                ><span class="text" data-translate="Salida">Salidas</span></a
               >
             </li>
           </ul>
@@ -232,7 +222,7 @@
             onclick="loadModule('src/modules/peticion/peticion.html')"
           >
             <i class="lni lni-clipboard"></i>
-            <span class="text">Peticion</span>
+            <span class="text" data-translate="Peticion">Peticion</span>
           </a>
         </li>
         <!-- Menu Verificacion -->
@@ -245,7 +235,7 @@
             onclick="loadModule('src/modules/verificacion/verificacion.html')"
           >
             <i class="bi bi-check2-square"></i>
-            <span class="text">Verificacion</span>
+            <span class="text" data-translate="Verificacion">Verificacion</span>
           </a>
         </li>
         <!-- Menu verificacion -->
@@ -257,7 +247,7 @@
             aria-expanded="false"
           >
             <i class="bi bi-file-earmark-text"></i>
-            <span class="text">Documentacion</span>
+            <span class="text" data-translate="Documentacion">Documentacion</span>
           </a>
           <ul class="collapse list-unstyled" id="documentacionSubmenu">
             <li>
@@ -266,7 +256,7 @@
                 href="#"
                 onclick="loadModule('src/modules/documentacion/index.html')"
                 ><i class="bi bi-box-arrow-in-down"></i
-                ><span class="text">Documentacion Tecnica</span></a
+                ><span class="text" data-translate="Documentacion Tecnica">Documentacion Tecnica</span></a
               >
             </li>
             <li>
@@ -275,7 +265,7 @@
                 href="#"
                 onclick="loadModule('src/modules/documentacion/manual.html')"
                 ><i class="bi bi-box-arrow-in-down"></i
-                ><span class="text">Manual de Usuario</span></a
+                ><span class="text" data-translate="Manual de Usuario">Manual de Usuario</span></a
               >
             </li>
             <li>
@@ -284,7 +274,7 @@
                 href="#"
                 onclick="loadModule('src/modules/documentacion/acercaDe.html')"
                 ><i class="bi bi-box-arrow-in-down"></i
-                ><span class="text">Acerca de</span></a
+                ><span class="text" data-translate="Acerca de">Acerca de</span></a
               >
             </li>
           </ul>
@@ -303,7 +293,7 @@
             class="card"
             onclick="loadModule('src/modules/administrador/usuarios.html')"
           >
-            <div class="numbers">Usuarios Registrados</div>
+            <div class="numbers" data-translate="Usuarios Registrados">Usuarios Registrados</div>
             <div class="cardName">15</div>
             <div class="iconBx"><i class="bi bi-person"></i></div>
           </div>
@@ -311,15 +301,15 @@
             class="card"
             onclick="loadModule('src/modules/bodega/salidaBodega.html')"
           >
-            <div class="numbers">Ultima salida de material</div>
-            <div class="cardName">Realizado el 12-02-2024</div>
+            <div class="numbers" data-translate="Ultima salida de material">Ultima salida de material</div>
+            <div class="cardName" data-translate="Realizado el 12-02-2024">Realizado el 12-02-2024</div>
             <div class="iconBx"><i class="lni lni-exit"></i></div>
           </div>
           <div
             class="card"
             onclick="loadModule('src/modules/administrador/sedes.html')"
           >
-            <div class="numbers">Sedes Registradas Actualmente</div>
+            <div class="numbers" data-translate="Sedes Registradas Actualmente">Sedes Registradas Actualmente</div>
             <div class="cardName">2</div>
             <div class="iconBx"><i class="lni lni-apartment"></i></div>
           </div>
@@ -327,7 +317,7 @@
             class="card"
             onclick="loadModule('src/modules/peticion/peticion.html')"
           >
-            <div class="numbers">Solicitudes Realizadas</div>
+            <div class="numbers" data-translate="Solicitudes Realizadas">Solicitudes Realizadas</div>
             <div class="cardName">7</div>
             <div class="iconBx"><i class="bi bi-envelope-paper"></i></div>
           </div>
@@ -335,32 +325,33 @@
             <!-- Tabla -->
             <div class="recentOrders">
               <div class="cardHeader">
-                <h2>Nuevo Material</h2>
+                <h2 data-translate="Nuevo Material">Nuevo Material</h2>
                 <a
                   href="#"
                   class="btnn"
                   onclick="loadModule('src/modules/bodega/entradaBodega.html')"
+                  data-translate="Ver todos"
                   >Ver todos</a
                 >
               </div>
               <table>
                 <thead>
                   <tr>
-                    <th>Codigo Sena</th>
-                    <th>Codigo UNPSC</th>
-                    <th>Nombre</th>
-                    <th>Descripcion</th>
-                    <th>Cantidad</th>
-                    <th>Unidad Medida</th>
-                    <th>material en stock</th>
+                    <th data-translate="Codigo Sena">Codigo Sena</th>
+                    <th data-translate="Codigo UNPSC">Codigo UNPSC</th>
+                    <th data-translate="Nombre">Nombre</th>
+                    <th data-translate="Descripcion">Descripcion</th>
+                    <th data-translate="Cantidad">Cantidad</th>
+                    <th data-translate="Unidad Medida">Unidad Medida</th>
+                    <th data-translate="Material en stock">Material en stock</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>121212</td>
                     <td>9292929</td>
-                    <td>equipo de mesa</td>
-                    <td>equipo asus todo en uno + mouse</td>
+                    <td data-translate="equipo de mesa">equipo de mesa</td>
+                    <td data-translate="equipo asus todo en uno + mouse">equipo asus todo en uno + mouse</td>
                     <td>10</td>
                     <td>kg</td>
                     <td>12</td>
@@ -368,8 +359,8 @@
                   <tr>
                     <td>121212</td>
                     <td>1209412</td>
-                    <td>palas</td>
-                    <td>10 palas junto con su cabo</td>
+                    <td data-translate="palas">palas</td>
+                    <td data-translate="10 palas junto con su cabo">10 palas junto con su cabo</td>
                     <td>10</td>
                     <td>kg</td>
                     <td>11</td>
@@ -377,8 +368,8 @@
                   <tr>
                     <td>121212</td>
                     <td>989898</td>
-                    <td>implementos de electricidad</td>
-                    <td>guantes alicates cables 4.2</td>
+                    <td data-translate="implementos de electricidad">implementos de electricidad</td>
+                    <td data-translate="guantes alicates cables 4.2">guantes alicates cables 4.2</td>
                     <td>3</td>
                     <td>kg</td>
                     <td>1</td>
@@ -390,34 +381,35 @@
           <div class="details2">
             <div class="recentOrders">
               <div class="cardHeader">
-                <h2>Reporte Nuevo Material</h2>
+                <h2 data-translate="Reporte Nuevo Material">Reporte Nuevo Material</h2>
                 <a
                   href="#"
                   class="btnn"
                   onclick="loadModule('src/modules/reportes/entrada.html')"
+                  data-translate="Ver todos"
                   >Ver todos</a
                 >
               </div>
               <table>
                 <thead>
                   <tr>
-                    <th>Codigo</th>
-                    <th>UNPSC</th>
-                    <th>Nombre</th>
-                    <th>Descripcion</th>
-                    <th>Cantidad</th>
-                    <th>Unidad Medida</th>
-                    <th>Encargado</th>
-                    <th>Fecha Entrada</th>
-                    <th>Material Stock</th>
+                    <th data-translate="Codigo">Codigo</th>
+                    <th data-translate="UNPSC">UNPSC</th>
+                    <th data-translate="Nombre">Nombre</th>
+                    <th data-translate="Descripcion">Descripcion</th>
+                    <th data-translate="Cantidad">Cantidad</th>
+                    <th data-translate="Unidad Medida">Unidad Medida</th>
+                    <th data-translate="Encargado">Encargado</th>
+                    <th data-translate="Fecha Entrada">Fecha Entrada</th>
+                    <th data-translate="Material Stock">Material Stock</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>121212</td>
                     <td>9292929</td>
-                    <td>equipo de mesa</td>
-                    <td>equipo asus todo en uno + mouse</td>
+                    <td data-translate="equipo de mesa">equipo de mesa</td>
+                    <td data-translate="equipo asus todo en uno + mouse">equipo asus todo en uno + mouse</td>
                     <td>10</td>
                     <td>kg</td>
                     <td>Julio Cesar</td>
@@ -427,8 +419,8 @@
                   <tr>
                     <td>121212</td>
                     <td>9292929</td>
-                    <td>equipo de mesa</td>
-                    <td>equipo asus todo en uno + mouse</td>
+                    <td data-translate="equipo de mesa">equipo de mesa</td>
+                    <td data-translate="equipo asus todo en uno + mouse">equipo asus todo en uno + mouse</td>
                     <td>9</td>
                     <td>kg</td>
                     <td>Pepito Perez</td>
@@ -438,8 +430,8 @@
                   <tr>
                     <td>1111111</td>
                     <td>989898</td>
-                    <td>portatil</td>
-                    <td>equipo dell todo en uno + mouse</td>
+                    <td data-translate="portatil">portatil</td>
+                    <td data-translate="equipo dell todo en uno + mouse">equipo dell todo en uno + mouse</td>
                     <td>3</td>
                     <td>kg</td>
                     <td>Martin Suarez</td>
@@ -453,41 +445,42 @@
           <div class="details3">
             <div class="recentOrders">
               <div class="cardHeader">
-                <h2>Sitios Registrados</h2>
+                <h2 data-translate="Sitios Registrados">Sitios Registrados</h2>
                 <a
                   href="#"
                   class="btnn"
                   onclick="loadModule('src/modules/administrador/sitios.html')"
+                  data-translate="Ver todos"
                   >Ver todos</a
                 >
               </div>
               <table>
                 <thead>
                   <tr>
-                    <th>Persona Encargada</th>
-                    <th>Nombre del Sitio</th>
-                    <th>Tipo de Sitio</th>
-                    <th>Ubicacion</th>
+                    <th data-translate="Persona Encargada">Persona Encargada</th>
+                    <th data-translate="Nombre del Sitio">Nombre del Sitio</th>
+                    <th data-translate="Tipo de Sitio">Tipo de Sitio</th>
+                    <th data-translate="Ubicacion">Ubicacion</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>Carlos</td>
                     <td>Y12</td>
-                    <td>Ambiente</td>
-                    <td>Al lado del ambiente de multimedia</td>
+                    <td data-translate="Ambiente">Ambiente</td>
+                    <td data-translate="Al lado del ambiente de multimedia">Al lado del ambiente de multimedia</td>
                   </tr>
                   <tr>
                     <td>Magda</td>
                     <td>Y19</td>
-                    <td>Laboratorio</td>
-                    <td>Al lado de biblioteca</td>
+                    <td data-translate="Laboratorio">Laboratorio</td>
+                    <td data-translate="Al lado de biblioteca">Al lado de biblioteca</td>
                   </tr>
                   <tr>
                     <td>Wilson</td>
                     <td>Y14</td>
-                    <td>Ambiente</td>
-                    <td>En Biotic</td>
+                    <td data-translate="Ambiente">Ambiente</td>
+                    <td data-translate="En Biotic">En Biotic</td>
                   </tr>
                 </tbody>
               </table>
