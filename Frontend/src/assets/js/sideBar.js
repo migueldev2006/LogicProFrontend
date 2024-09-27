@@ -103,4 +103,3 @@ document.querySelectorAll(".collapse").forEach((collapse) => {
 document.querySelector('.nav-link').addEventListener('click', function () {
   location.reload();
 });
-
