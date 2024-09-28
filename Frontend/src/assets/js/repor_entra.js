@@ -28,9 +28,6 @@ function downloadExel() {
   XLSX.writeFile(wb, "Reporte_entrada.xlsx");
 }
 
-// const botonPdf = document.getElementById('descargaPdf');
-// const botonExcel = document.getElementById('descargaExcel');
-
 function mostrarAlerta() {
   Swal.fire({
     title: "¡Descarga Exitosa!",
@@ -38,11 +35,3 @@ function mostrarAlerta() {
     icon: "success",
   });
 }
-
-// botonPdf.addEventListener('click', function() {
-//   mostrarAlerta('pdf');
-// });
-
-// botonExcel.addEventListener('click', function() {
-//   mostrarAlerta('excel');
-// });
