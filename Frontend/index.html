@@ -280,6 +280,19 @@
           </ul>
         </li>
       </ul>
+      <div class="lang-menu">
+        <div class="selected-lang" data-translate="Idioma">
+          Idioma
+        </div>
+        <ul>
+          <li>
+            <a href="#" class="menu-item es" data-lang="es" data-translate="Español">Español</a>
+          </li>
+          <li>
+            <a href="#" class="menu-item en" data-lang="en" data-translate="Ingles">Inglés</a>
+          </li>
+        </ul>
+      </div>
       <div class="text-center mt-5 mb-5">
         <img src="./public/sena.png" class="rounded" alt="Logo del Sena" />
       </div>
@@ -445,7 +458,7 @@
           <div class="details3">
             <div class="recentOrders">
               <div class="cardHeader">
-                <h2 data-translate="Sitios Registrados">Sitios Registrados</h2>
+                <h2 class="tittle" data-translate="Sitios Registrados">Sitios Registrados</h2>
                 <a
                   href="#"
                   class="btnn"
@@ -496,9 +509,11 @@
         <div class="card grafica">
           <canvas id="lineas"></canvas>
         </div>
+        <div class="card grafica">
+          <canvas id="polarArea"></canvas>
+        </div>
       </div>
     </div>
-
     <!-- SweatAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- JavaScript de Bootstrap 5 -->

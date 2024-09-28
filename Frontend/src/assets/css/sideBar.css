@@ -113,6 +113,67 @@
   z-index: 1030; /* Asegura que el navbar esté por encima de otros elementos */
   background-color: #d9d9d9;
 }
+/* Menu desplegable idioma */
+.selected-lang{
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  width: 90px;
+  color: #fff;
+}
+.selected-lang:before{
+  content: '';
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+.lang-menu{
+  margin-left:20px;
+  margin-top: 30px;
+}
+.lang-menu ul{
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #cbcaca;
+  box-shadow: 0px 1px 10px #cfcfcf;
+  border-radius: 5px;
+  display: none;
+  position: absolute;
+}
+.lang-menu ul li{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.lang-menu ul li a{
+  width: 125px;
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #000000;
+}
+.lang-menu ul li a:before{
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+}
+.lang-menu ul li a:hover{
+  background-color: #e0dff5;
+}
+.es:before{
+  background-image: url(../../../../Frontend/public/es.svg)
+}
+.en:before{
+  background-image: url(../../../../Frontend/public/us.svg)
+}
+.lang-menu:hover ul{
+  display: block;
+}
 /* navbar boton */
 .boton {
   border: none;
@@ -161,7 +222,7 @@
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 50px;
+  grid-gap: 40px;
 }
 .cardBox .card {
   position: relative;
@@ -195,8 +256,9 @@
 }
 .grafica {
   position: relative;
-  width: 40%;
-  padding: 30px;
+  width: 39%;
+  margin-bottom: 20px;
+  padding: 10px;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
 }
 .details {
@@ -204,29 +266,29 @@
   width: 100vh;
   background-color: rgb(255, 255, 255);
   position: absolute;
-  left: 41%;
+  left: 40%;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border: 1px solid #dedcdc;
   border-radius: 20px;
   padding: 10px;
 }
 .details2 {
-  top: 700px;
+  top: 770px;
   width: 100vh;
   background-color: rgb(255, 255, 255);
   position: absolute;
-  left: 41%;
+  left: 40%;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border: 1px solid #dedcdc;
   border-radius: 20px;
   padding: 10px;
 }
 .details3 {
-  top: 1100px;
+  top: 1250px;
   width: 100vh;
   background-color: rgb(255, 255, 255);
   position: absolute;
-  left: 41%;
+  left: 40%;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border: 1px solid #dedcdc;
   border-radius: 20px;
@@ -247,9 +309,9 @@
   justify-content: space-between;
   align-items: flex-start;
 }
-.cardHeader h1 {
+.cardHeader h2 {
   font-weight: 600;
-  color: #ffffff;
+  color: #000000;
 }
 .btnn {
   position: relative;
@@ -263,7 +325,6 @@
 .details2 table,
 .details3 table {
   width: 100%;
-  margin-top: 10px;
   border: 1px solid #000000;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
 }

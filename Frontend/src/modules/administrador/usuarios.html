@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="container mt-5">
-      <h1 class="mb-4">Usuarios</h1>
+      <h1 class="mb-4" data-translate="Usuarios">Usuarios</h1>
       <!-- Button trigger modal -->
       <div>
         <button
@@ -22,6 +22,7 @@
           class="btn btn-primary mb-4"
           data-bs-toggle="modal"
           data-bs-target="#staticBackdrop"
+          data-translate="Usuario"
         >
           <i class="bi bi-plus-lg"></i>Usuario
         </button>
@@ -39,7 +40,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel" data-translate="Registar Usuario">
                 Registar Usuario
               </h1>
               <button
@@ -52,7 +53,7 @@
             <div class="modal-body">
               <form id="frmFormulario" action="">
                 <div>
-                  <label for="nombre" class="form-label">Nombre Completo</label>
+                  <label for="nombre" class="form-label" data-translate="Nombre Completo">Nombre Completo</label>
                   <input
                     type="text"
                     name="nombre"
@@ -62,7 +63,7 @@
                   />
                 </div>
                 <div>
-                  <label for="identificacion" class="form-label"
+                  <label for="identificacion" class="form-label" data-translate="Documento"
                     >Documento</label
                   >
                   <input
@@ -74,7 +75,7 @@
                   />
                 </div>
                 <div>
-                  <label for="correo" class="form-label"
+                  <label for="correo" class="form-label" data-translate="Correo Electronico"
                     >Correo Electronico</label
                   >
                   <input
@@ -86,7 +87,7 @@
                   />
                 </div>
                 <div>
-                  <label for="celular" class="form-label">Telefono</label>
+                  <label for="celular" class="form-label" data-translate="Telefono">Telefono</label>
                   <input
                     type="text"
                     name="celular"
@@ -96,7 +97,7 @@
                   />
                 </div>
                 <div>
-                  <label for="slcRol" class="form-label">Rol</label>
+                  <label for="slcRol" class="form-label" data-translate="Rol">Rol</label>
                   <select
                     id="slcRol"
                     name="slcRol"
@@ -104,16 +105,16 @@
                     aria-label="Default select example"
                     required
                   >
-                    <option selected>Selecciona una opcion</option>
-                    <option value="Instructor">Instructor</option>
-                    <option value="Lider">Lider</option>
-                    <option value="Coordinador">Coordinador</option>
-                    <option value="Vocero">Vocero</option>
-                    <option value="Vigilante">Vigilante</option>
+                    <option selected data-translate="Selecciona una opcion">Selecciona una opcion</option>
+                    <option value="Instructor" data-translate="Instructor">Instructor</option>
+                    <option value="Lider" data-translate="Lider">Lider</option>
+                    <option value="Coordinador" data-translate="Coordinador">Coordinador</option>
+                    <option value="Vocero" data-translate="Vocero">Vocero</option>
+                    <option value="Vigilante" data-translate="Vigilante">Vigilante</option>
                   </select>
                 </div>
                 <div>
-                  <label for="slcCargo" class="form-label">Cargo</label>
+                  <label for="slcCargo" class="form-label" data-translate="Cargo">Cargo</label>
                   <select
                     id="slcCargo"
                     name="slcCargo"
@@ -122,12 +123,12 @@
                     required
                   >
                     <option selected>Selecciona una opcion</option>
-                    <option value="Instructor">Instructor</option>
-                    <option value="Lider">Lider</option>
-                    <option value="Coordinador">Coordinador</option>
-                    <option value="Aprendiz">Aprendiz</option>
-                    <option value="Vigilante">Vigilante</option>
-                    <option value="Operario">Operario</option>
+                    <option value="Instructor" data-translate="Instructor">Instructor</option>
+                    <option value="Lider" data-translate="Lider">Lider</option>
+                    <option value="Coordinador" data-translate="Coordinador">Coordinador</option>
+                    <option value="Aprendiz" data-translate="Aprendiz">Aprendiz</option>
+                    <option value="Vigilante" data-translate="Vigilante">Vigilante</option>
+                    <option value="Operario" data-translate="Operario">Operario</option>
                   </select>
                 </div>
               </form>
@@ -137,6 +138,7 @@
                 type="submit"
                 class="btn btn-primary"
                 onclick="showAlert()"
+                data-translate="Registar "
               >
                 Registrar
               </button>
@@ -151,12 +153,12 @@
       >
         <thead>
           <tr>
-            <th class="text-center">Nombre Completo</th>
-            <th class="text-center">Documento</th>
-            <th class="text-center">Correo Electronico</th>
-            <th class="text-center">Telefono</th>
-            <th class="text-center">Rol</th>
-            <th class="text-center">Cargo</th>
+            <th class="text-center" data-translate="Nombre Completo">Nombre Completo</th>
+            <th class="text-center" data-translate="Documento">Documento</th>
+            <th class="text-center" data-translate="Correo Electronico">Correo Electronico</th>
+            <th class="text-center" data-translate="Telefono">Telefono</th>
+            <th class="text-center" data-translate="Rol">Rol</th>
+            <th class="text-center" data-translate="Cargo">Cargo</th>
             <th class="text-center"></th>
           </tr>
         </thead>
@@ -166,8 +168,8 @@
             <td>25689520</td>
             <td>mk@outlok.co</td>
             <td>32014567895</td>
-            <td>Vocero</td>
-            <td>Aprendiz</td>
+            <td data-translate="Vocero">Vocero</td>
+            <td data-translate="Aprendiz">Aprendiz</td>
             <td>
               <button class="btn btn-primary">
                 <i class="lni lni-pencil-alt"></i>
@@ -188,8 +190,8 @@
             <td>1256458</td>
             <td>diego@gail.com</td>
             <td>3502156980</td>
-            <td>Instructor</td>
-            <td>Lider</td>
+            <td data-translate="Instructor">Instructor</td>
+            <td data-translate="Lider">Lider</td>
             <td>
               <button class="btn btn-primary">
                 <i class="lni lni-pencil-alt"></i>
@@ -210,8 +212,8 @@
             <td>25648759</td>
             <td>cabravo@gmail.com</td>
             <td>312564892</td>
-            <td>Instructor</td>
-            <td>Instructor</td>
+            <td data-translate="Instructor">Instructor</td>
+            <td data-translate="Instructor">Instructor</td>
             <td>
               <button class="btn btn-primary">
                 <i class="lni lni-pencil-alt"></i>
@@ -232,8 +234,8 @@
             <td>1081756230</td>
             <td>Joro@gmail.com</td>
             <td>320456879</td>
-            <td>Vocero</td>
-            <td>Aprendiz</td>
+            <td data-translate="Vocero">Vocero</td>
+            <td data-translate="Aprendiz">Aprendiz</td>
             <td>
               <button class="btn btn-primary">
                 <i class="lni lni-pencil-alt"></i>
@@ -254,8 +256,8 @@
             <td>12145820</td>
             <td>wilm@gmail.com</td>
             <td>3152645223</td>
-            <td>Instructor</td>
-            <td>Instructor</td>
+            <td data-translate="Instructor">Instructor</td>
+            <td data-translate="Instructor">Instructor</td>
             <td>
               <button class="btn btn-primary">
                 <i class="lni lni-pencil-alt"></i>
@@ -276,8 +278,8 @@
             <td>14235648</td>
             <td>ruiz@gmail.com</td>
             <td>3165897562</td>
-            <td>Instructor</td>
-            <td>Instructor</td>
+            <td data-translate="Instructor">Instructor</td>
+            <td data-translate="Instructor">Instructor</td>
             <td>
               <button class="btn btn-primary">
                 <i class="lni lni-pencil-alt"></i>
