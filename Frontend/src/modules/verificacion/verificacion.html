@@ -3,14 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>salidaBodega</title>
-    <link rel="stylesheet" href="../../../../Frontend/src/assets/css/formulario.css" />
-    <link rel="stylesheet" href="../../../../Frontend/src/assets/css/verificacion.css" />
+    <title>Verificacion</title>
+    <link
+      rel="stylesheet"
+      href="../../../../Frontend/src/assets/css/formulario.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../../Frontend/src/assets/css/verificacion.css"
+    />
   </head>
   <body>
     <div class="container">
-      <h2 style="text-align: center; margin-top: 100px">
-        verificacion de material formativo
+      <h2
+        style="text-align: center; margin-top: 100px"
+        data-translate="Verificacion de material formativo"
+      >
+        Verificacion de material formativo
       </h2>
     </div>
     <!-- Modal -->
@@ -26,7 +35,11 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5 text-center" id="staticBackdropLabel">
+            <h1
+              class="modal-title fs-5 text-center"
+              id="staticBackdropLabel"
+              data-translate="Registro de verificacion de material"
+            >
               Registro de verificacion de material
             </h1>
             <button
@@ -41,70 +54,98 @@
               <div class="card-body">
                 <form id="frmFormulario" action="">
                   <div class="mb-4">
-                    <label class="form-label" for="nombre">Area</label>
+                    <label class="form-label" for="area" data-translate="Areas"
+                      >Area</label
+                    >
                     <input
                       class="form-control"
                       type="text"
-                      name="Area"
-                      id="Area"
+                      name="area"
+                      id="area"
                     />
                   </div>
                   <div class="mb-4">
-                    <label class="form-label" for="sede">Titulado</label>
+                    <label
+                      class="form-label"
+                      for="titulado"
+                      data-translate="Titulado"
+                      >Titulado</label
+                    >
                     <input
                       class="form-control"
                       type="text"
-                      name="Titulado"
-                      id="Titulado"
+                      name="titulado"
+                      id="titulado"
                     />
                   </div>
                   <div class="mb-4">
-                    <label class="form-label" for="municipio">ID ficha</label>
+                    <label
+                      class="form-label"
+                      for="idFicha"
+                      data-translate="ID fiha"
+                      >ID ficha</label
+                    >
                     <input
                       class="form-control"
                       type="text"
-                      name="ID ficha"
-                      id="ID ficha"
+                      name="idFicha"
+                      id="idFicha"
                     />
                   </div>
                   <div class="mb-4">
-                    <label class="form-label" for="municipio">Material</label>
+                    <label
+                      class="form-label"
+                      for="material"
+                      data-translate="Material"
+                      >Material</label
+                    >
                     <input
                       class="form-control"
                       type="text"
-                      name="Material"
-                      id="Material"
+                      name="material"
+                      id="material"
                     />
                   </div>
                   <div class="mb-4">
-                    <label class="form-label" for="municipio">Cantidad</label>
+                    <label
+                      class="form-label"
+                      for="cantidad"
+                      data-translate="Cantidad"
+                      >Cantidad</label
+                    >
                     <input
                       class="form-control"
                       type="text"
-                      name="Cantidad"
-                      id="Cantidad"
+                      name="cantidad"
+                      id="cantidad"
                     />
                   </div>
                   <div class="mb-4">
-                    <label class="form-label" for="municipio"
+                    <label
+                      class="form-label"
+                      for="fecha"
+                      data-translate="Fecha de entrega"
                       >Fecha de entrega</label
                     >
                     <input
                       class="form-control"
                       type="date"
-                      name="Fecha"
-                      id="Fecha"
+                      name="fecha"
+                      id="fecha"
                     />
                   </div>
                   <div class="mb-4">
-                    <label class="form-label" for="municipio"
-                      >hora de entrega</label
+                    <label
+                      class="form-label"
+                      for="horaEntrega"
+                      data-translate="Hora de entrega"
+                      >Hora de entrega</label
                     >
                     <input
                       class="form-control"
                       type="time"
-                      name="hora de entrega"
-                      id="hora de entrega"
+                      name="horaEntrega"
+                      id="horaEntrega"
                     />
                   </div>
                 </form>
@@ -117,8 +158,9 @@
               class="btn btn-primary"
               id="re"
               onclick="scanner()"
+              data-translate="Verificacion por medio de escaner"
             >
-              verificacion por medio de escaner
+              Verificacion por medio de escaner
             </button>
           </div>
           <div class="botones-contenedor">
@@ -127,6 +169,7 @@
               class="btn btn-primary"
               id="re"
               onclick="showAlert()"
+              data-translate="Registrar"
             >
               Registrar
             </button>
@@ -142,8 +185,10 @@
           data-bs-toggle="modal"
           data-bs-target="#staticBackdrop"
           style="width: 15%"
+          data-translate="Registro"
         >
-          <i class="lni lni-plus" id="button"></i> Registrar
+          <i class="lni lni-plus" id="button"></i>
+          Registro
         </button>
       </div>
       <table
@@ -153,45 +198,51 @@
       >
         <thead>
           <tr>
-            <th>Area</th>
-            <th>Titulado</th>
-            <th>encargado</th>
-            <th>ID ficha</th>
-            <th>Material</th>
-            <th>Cantidad</th>
-            <th>Fecha de entrega</th>
-            <th>hora de entrega</th>
-            <th>material en stock</th>
+            <th class="text-center" data-translate="Areas">Area</th>
+            <th class="text-center" data-translate="Titulado">Titulado</th>
+            <th class="text-center" data-translate="Encargado">Encargado</th>
+            <th class="text-center" data-translate="ID ficha">ID ficha</th>
+            <th class="text-center" data-translate="Material">Material</th>
+            <th class="text-center" data-translate="Cantidad">Cantidad</th>
+            <th class="text-center" data-translate="Fecha de entrega">
+              Fecha de entrega
+            </th>
+            <th class="text-center" data-translate="Hora de entrega">
+              Hora de entrega
+            </th>
+            <th class="text-center" data-translate="Material en stock">
+              Material en stock
+            </th>
           </tr>
         </thead>
         <tr>
-          <td>tic</td>
-          <td>ADSO</td>
-          <td>diego armando</td>
+          <td data-translate="TIC">TIC</td>
+          <td data-translate="ADSO">ADSO</td>
+          <td>Diego Armando</td>
           <td>2977491</td>
-          <td>portastiles dell</td>
+          <td data-translate="Portatiles dell">Portatiles dell</td>
           <td>12</td>
           <td>12/02/2024</td>
           <td>12:30 pm</td>
           <td>12</td>
         </tr>
         <tr>
-          <td>tic</td>
-          <td>multimedia</td>
-          <td>daniela scalante</td>
+          <td data-translate="TIC">TIC</td>
+          <td data-translate="Multimedia">Multimedia</td>
+          <td>Daniela Escalante</td>
           <td>01010101</td>
-          <td>tableta</td>
+          <td data-translate="Tableta">Tableta</td>
           <td>11</td>
           <td>01/02/2022</td>
           <td>2:30 pm</td>
           <td>2</td>
         </tr>
         <tr>
-          <td>pae</td>
-          <td>agropecuaria</td>
-          <td>maikel fabian</td>
+          <td data-translate="PAE">PAE</td>
+          <td data-translate="Agropecuaria">Agropecuaria</td>
+          <td>Maikel Fabian</td>
           <td>02020202</td>
-          <td>palas</td>
+          <td data-translate="Palas">Palas</td>
           <td>30</td>
           <td>01/09/2022</td>
           <td>1:30 pm</td>
