@@ -1,5 +1,4 @@
 {
-  
   "LogicPro": "LogicPro",
   "Idioma": "Idiom",
   "Español": "Spanish",
@@ -127,5 +126,29 @@
   "Gigante": "Gigante",
   "Neiva": "Neiva",
   "Garzon": "Garzon",
-  "Timana": "Timana"
+  "Timana": "Timana",
+
+  "Registro de peticiones salida material":"Registration of material output requests",
+  "Registro de peticiones":"Request registration",
+  "Entregado a":"Delivered to",
+  "Entregado por":"Delivered by",
+  "Fecha de entrega":"Delivery date",
+  "Estado de peticion":"Request status",
+  "Seleccione una opcion":"Select an option",
+  "Pendiente":"Earring",
+  "Aceptado":"Accepted",
+  "Rechazado":"Refused",
+  "Registro":"New Register",
+  "Verificacion de material formativo":"Verification of training material",
+  "Registro de verificacion de material":"Material Verification Register",
+  "Titulado":"Graduates",
+  "ID ficha":"ID Number",
+  "Material":"Material",
+  "Portatiles":"Portables",
+  "Multimedia":"Multimedia",
+  "Tableta":"Tablet",
+  "Palas":"Pallas",
+  "Verificacion por medio de escaner":"Verification by scanner",
+  "Hora de entrega":"Delivery time",
+  "Portatiles dell":"Dell Portables"
 }
