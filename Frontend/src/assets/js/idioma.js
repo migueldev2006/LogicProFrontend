@@ -1,62 +1,33 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const languageSelect = document.getElementById('language-select');
-    if (languageSelect) {
-      languageSelect.addEventListener('change', function() {
-        // Tu código para manejar el cambio de idioma
-        console.log(`Selected language: ${this.value}`);
-      });
-    } else {
-      console.error('Element with ID "languageSelect" not found');
-    }
-  });
-
-  document.addEventListener('DOMContentLoaded', () => {
-    fetch('/Frontend/src/assets/en/english.json')
-      .then(response => response.json())
-      .then(data => {
-        // Usa los datos del JSON aquí
-        console.log(data);
-        // Por ejemplo, podrías ajustar el valor del select según el idioma
-        const languageSelect = document.getElementById('language-select');
-        if (languageSelect) {
-          languageSelect.value = 'es'; // Ajusta según el idioma cargado
+// Función para cargar el archivo de idioma
+function loadLanguage(lang) {
+  console.log(`Cargando idioma: ${lang}`); 
+  fetch(`../../Frontend/src/assets/${lang}.json`)
+    .then((response) => response.json())
+    .then((data) => {
+      // Seleccionamos todos los elementos que tienen el atributo data-translate
+      document.querySelectorAll("[data-translate]").forEach((element) => {
+        const translateKey = element.getAttribute("data-translate"); // Obtenemos la clave de data-translate
+        if (data[translateKey]) {
+          element.textContent = data[translateKey]; // Reemplazamos el texto con la traducción correspondiente
         }
-      })
-      .catch(error => {
-        console.error('Error loading JSON:', error);
       });
+    })
+    .catch((error) =>
+      console.error("Error al cargar el archivo de idioma:", error)
+    );
+}
+
+// Detectar el clic en el selector de idioma y cambiar el idioma
+document.querySelectorAll(".dropdown-item.menu").forEach((item) => {
+  item.addEventListener("click", function (event) {
+    event.preventDefault(); // Evitar que el enlace haga la recarga de página
+    const selectedLang = item.getAttribute("data-lang");
+    console.log(`Idioma seleccionado: ${selectedLang}`);
+    loadLanguage(selectedLang); // Cargar el idioma correspondiente
   });
-  
+});
 
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     let translations;
-//     const languageSelect = document.getElementById('language-select');
-  
-//     // Cargar traducciones desde el archivo JSON
-//     fetch('/Frontend/src/assets/en/english.json')
-//         .then(response => response.json())
-//         .then(data => {
-//             translations = data;
-//             // Configurar idioma predeterminado
-//             const defaultLang = 'es'; // Cambiar si quieres otro idioma por defecto
-//             languageSelect.value = defaultLang;
-//             updateLanguage(defaultLang);
-//         });
-  
-//     function updateLanguage(lang) {
-//         document.querySelectorAll('[data-translate]').forEach(element => {
-//             const key = element.getAttribute('data-translate');
-//             if (translations[lang] && translations[lang][key]) {
-//                 element.textContent = translations[lang][key];
-//             }
-//         });
-//     }
-  
-//     // Cambiar idioma según la selección del usuario
-//     languageSelect.addEventListener('change', function() {
-//         const lang = this.value;
-//         updateLanguage(lang);
-//     });
-//   });
-  
+// Cargar idioma por defecto (español en este caso)
+window.addEventListener("DOMContentLoaded", () => {
+  loadLanguage("en"); // Cargar español al inicio
+});
