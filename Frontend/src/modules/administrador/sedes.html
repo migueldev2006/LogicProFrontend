@@ -14,13 +14,14 @@
   </head>
   <body>
     <div class="container mt-5">
-      <h1 class="mb-4">Sedes</h1>
+      <h1 class="mb-4" data-translate="Sedes">Sedes</h1>
       <!-- Button trigger modal -->
       <button
         type="button"
         class="btn btn-primary mb-4"
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
+        data-translate="Sede"
       >
         <i class="bi bi-plus-lg"></i>Sede
       </button>
@@ -38,7 +39,11 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              <h1
+                class="modal-title fs-5"
+                id="staticBackdropLabel"
+                data-translate="Registrar Sede"
+              >
                 Registrar Sede
               </h1>
               <button
@@ -51,7 +56,9 @@
             <div class="modal-body">
               <form id="frmFormulario" action="">
                 <div>
-                  <label for="nombre" class="form-label">Nombre</label>
+                  <label for="nombre" class="form-label" data-translate="Nombre"
+                    >Nombre</label
+                  >
                   <input
                     type="text"
                     name="nombre"
@@ -61,7 +68,12 @@
                   />
                 </div>
                 <div>
-                  <label for="slcCentro" class="form-label">Centro</label>
+                  <label
+                    for="slcCentro"
+                    class="form-label"
+                    data-translate="Centros"
+                    >Centro</label
+                  >
                   <select
                     id="slcCentro"
                     name="slcCentro"
@@ -69,7 +81,9 @@
                     aria-label="Default select example"
                     required
                   >
-                    <option selected>Selecciona una opcion</option>
+                    <option selected data-translate="Selecciona una opcion">
+                      Selecciona una opcion
+                    </option>
                     <option value="1">CGDSS</option>
                   </select>
                 </div>
@@ -80,6 +94,7 @@
                 type="submit"
                 class="btn btn-primary"
                 onclick="showAlert()"
+                data-translate="Registrar"
               >
                 Registrar
               </button>
@@ -94,14 +109,14 @@
       >
         <thead>
           <tr>
-            <th class="text-center">Nombre</th>
-            <th class="text-center">Centro</th>
+            <th class="text-center" data-translate="Nombre">Nombre</th>
+            <th class="text-center" data-translate="Centros">Centro</th>
             <th class="text-center"></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Yamboro</td>
+            <td data-translate="Yamboro">Yamboro</td>
             <td>CGDSS</td>
             <td>
               <button class="btn btn-primary">
@@ -116,7 +131,7 @@
             </td>
           </tr>
           <tr>
-            <td>Comercio y Servicios</td>
+            <td data-translate="Comercio y Servicios">Comercio y Servicios</td>
             <td>CGDSS</td>
             <td>
               <button class="btn btn-primary">

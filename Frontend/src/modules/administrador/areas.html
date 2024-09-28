@@ -14,13 +14,14 @@
   </head>
   <body>
     <div class="container mt-5">
-      <h1 class="mb-4">Areas</h1>
+      <h1 class="mb-4" data-translate="Areas">Areas</h1>
       <!-- Button trigger modal -->
       <button
         type="button"
         class="btn btn-primary mb-4"
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
+        data-translate="Area"
       >
         <i class="bi bi-plus-lg"></i>Area
       </button>
@@ -38,7 +39,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel" data-translate="Registrar Area">
                 Registrar Area
               </h1>
               <button
@@ -51,7 +52,7 @@
             <div class="modal-body">
               <form id="frmFormulario" action="">
                 <div>
-                  <label for="nombre" class="form-label">Nombre</label>
+                  <label for="nombre" class="form-label" data-translate="Nombre">Nombre</label>
                   <input
                     type="text"
                     name="nombre"
@@ -61,7 +62,7 @@
                   />
                 </div>
                 <div>
-                  <label for="lider" class="form-label">Lider</label>
+                  <label for="lider" class="form-label" data-translate="Lider">Lider</label>
                   <input
                     type="text"
                     name="lider"
@@ -71,7 +72,7 @@
                   />
                 </div>
                 <div>
-                  <label for="slcSede" class="form-label">Sede</label>
+                  <label for="slcSede" class="form-label" data-translate="Sede">Sede</label>
                   <select
                     id="slcSede"
                     name="slcSede"
@@ -79,9 +80,9 @@
                     aria-label="Default select example"
                     required
                   >
-                    <option selected>Selecciona una opcion</option>
-                    <option value="Yamboro">Yamboro</option>
-                    <option value="Comercio y Servicios">
+                    <option selected data-translate="Selecciona una opcion">Selecciona una opcion</option>
+                    <option value="Yamboro" data-translate="Yamboro">Yamboro</option>
+                    <option value="Comercio y Servicios" data-translate="Comercio y Servicios">
                       Comercio y Servicios
                     </option>
                   </select>
@@ -89,7 +90,7 @@
               </form>
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-primary" onclick="showAlert()">
+              <button type="submit" class="btn btn-primary" onclick="showAlert()" data-translate="Registrar">
                 Registrar
               </button>
             </div>
@@ -103,9 +104,9 @@
       >
         <thead>
           <tr>
-            <th class="text-center">Nombre</th>
-            <th class="text-center">Lider</th>
-            <th class="text-center">Sede</th>
+            <th class="text-center" data-translate="Nombre">Nombre</th>
+            <th class="text-center" data-translate="Lider">Lider</th>
+            <th class="text-center" data-translate="Sedes">Sede</th>
             <th class="text-center"></th>
           </tr>
         </thead>
@@ -113,7 +114,7 @@
           <tr>
             <td>TIC</td>
             <td>Silvia</td>
-            <td>Yamboro</td>
+            <td data-translate="Yamboro">Yamboro</td>
             <td>
               <button class="btn btn-primary">
                 <i class="lni lni-pencil-alt"></i>
@@ -127,9 +128,9 @@
             </td>
           </tr>
           <tr>
-            <td>Agropecuaria</td>
+            <td data-translate="Agropecuaria">Agropecuaria</td>
             <td>Pedro</td>
-            <td>Yamboro</td>
+            <td data-translate="Yamboro">Yamboro</td>
             <td>
               <button class="btn btn-primary">
                 <i class="lni lni-pencil-alt"></i>
@@ -143,9 +144,9 @@
             </td>
           </tr>
           <tr>
-            <td>Administracion</td>
+            <td data-translate="Administracion">Administracion</td>
             <td>Julia</td>
-            <td>Comercio y Servicios</td>
+            <td data-translate="Comercio y Servicios">Comercio y Servicios</td>
             <td>
               <button class="btn btn-primary">
                 <i class="lni lni-pencil-alt"></i>
@@ -159,9 +160,9 @@
             </td>
           </tr>
           <tr>
-            <td>Gastronomia</td>
+            <td data-translate="Gastronomia">Gastronomia</td>
             <td>Diego</td>
-            <td>Yamboro</td>
+            <td data-translate="Yamboro">Yamboro</td>
             <td>
               <button class="btn btn-primary">
                 <i class="lni lni-pencil-alt"></i>
@@ -175,9 +176,9 @@
             </td>
           </tr>
           <tr>
-            <td>Ambiental</td>
+            <td data-translate="Ambiental">Ambiental</td>
             <td>Magda</td>
-            <td>Yamboro</td>
+            <td data-translate="Yamboro">Yamboro</td>
             <td>
               <button class="btn btn-primary">
                 <i class="lni lni-pencil-alt"></i>
@@ -191,9 +192,9 @@
             </td>
           </tr>
           <tr>
-            <td>Turismo</td>
+            <td data-translate="Turismo">Turismo</td>
             <td>Carlos Arcos</td>
-            <td>Yamboro</td>
+            <td data-translate="Yamboro">Yamboro</td>
             <td>
               <button class="btn btn-primary">
                 <i class="lni lni-pencil-alt"></i>
