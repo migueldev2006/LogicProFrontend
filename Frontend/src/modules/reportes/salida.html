@@ -18,7 +18,12 @@
     />
   </head>
   <body>
-    <h2 class="titulo text-center">Reporte de salida de material formativo</h2>
+    <h2
+      class="titulo text-center"
+      data-translate="Reporte de salida de material formativo"
+    >
+      Reporte de salida de material formativo
+    </h2>
     <div
       class="modal fade"
       id="staticBackdrop"
@@ -31,8 +36,12 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5 text-center" id="staticBackdropLabel">
-              Descargar registro de entrada
+            <h1
+              class="modal-title fs-5 text-center"
+              id="staticBackdropLabel"
+              data-translate="Descargar registro de Salida"
+            >
+              Descargar registro de Salida
             </h1>
             <button
               type="button"
@@ -47,6 +56,7 @@
               class="btn btn-primary"
               onclick="downloadPDF(), mostrarAlerta()"
               id="descargaPdf"
+              data-translate="Descargar como PDF"
             >
               Descargar como PDF
             </button>
@@ -55,6 +65,7 @@
               class="btn btn-primary"
               onclick="downloadExcel(), mostrarAlerta()"
               id="descargaExcel"
+              data-translate="Descargar como EXCEL"
             >
               Descargar como EXCEL
             </button>
@@ -73,56 +84,60 @@
           <i class="bi bi-file-earmark-arrow-down-fill"></i>
         </button>
       </div>
-      <table id="example" class="table table-striped" style="width: 100%">
+      <table id="example" class="table table-striped text-center" style="width: 100%">
         <thead>
           <tr>
-            <th>Area</th>
-            <th>Titulado</th>
-            <th>encargado</th>
-            <th>ID ficha</th>
-            <th>Material</th>
-            <th>Cantidad</th>
-            <th>Fecha de entrega</th>
-            <th>hora de entrega</th>
+            <th class="text-center" data-translate="Areas">Area</th>
+            <th class="text-center" data-translate="Titulado">Titulado</th>
+            <th class="text-center" data-translate="Encargado">Encargado</th>
+            <th class="text-center" data-translate="ID ficha">ID ficha</th>
+            <th class="text-center" data-translate="Material">Material</th>
+            <th class="text-center" data-translate="Cantidad">Cantidad</th>
+            <th class="text-center" data-translate="Fecha de entrega">
+              Fecha de entrega
+            </th>
+            <th class="text-center" data-translate="Hora de entrega">
+              Hora de entrega
+            </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>tic</td>
-            <td>adso</td>
-            <td>marcos perdomo</td>
+            <td data-translate="TIC">TIC</td>
+            <td data-translate="ADSO">ADSO</td>
+            <td>Marcos Perdomo</td>
             <td>838383</td>
-            <td>portatil hp</td>
+            <td data-translate="Portatil hp">Portatil hp</td>
             <td>12</td>
             <td>29/02/2024</td>
             <td>2:30 am</td>
           </tr>
           <tr>
-            <td>tic</td>
-            <td>multimedia</td>
-            <td>weimar perdomo</td>
+            <td data-translate="TIC">TIC</td>
+            <td data-translate="Multimedia">Multimedia</td>
+            <td>Weimar Perdomo</td>
             <td>9201746</td>
-            <td>tableta dell</td>
+            <td data-translate="Tableta dell">Tableta dell</td>
             <td>2</td>
             <td>29/05/2024</td>
             <td>3:30 am</td>
           </tr>
           <tr>
-            <td>Agropecuaria</td>
-            <td>pae</td>
-            <td>darla esterling</td>
+            <td data-translate="Agropecuaria">Agropecuaria</td>
+            <td data-translate="PAE">PAE</td>
+            <td>Darla Esterling</td>
             <td>6489236</td>
-            <td>pala</td>
+            <td data-translate="Pala">Pala</td>
             <td>2</td>
             <td>01/05/2024</td>
             <td>12:30 pm</td>
           </tr>
           <tr>
-            <td>Gastronomia</td>
-            <td>cocina</td>
-            <td>laura vargas</td>
+            <td data-translate="Gastronomia">Gastronomia</td>
+            <td data-translate="Cocina">Cocina</td>
+            <td>Laura Vargas</td>
             <td>238238</td>
-            <td>cubiertos</td>
+            <td data-translate="Cubiertos">Cubiertos</td>
             <td>30</td>
             <td>01/08/2024</td>
             <td>1:30 pm</td>
