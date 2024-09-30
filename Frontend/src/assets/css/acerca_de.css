@@ -11,9 +11,8 @@
     display: flex;
     justify-content: space-between;
     height: 600px;
-
     object-fit: cover;
-    background-image: url("/Frontend/src/assets/imagenes/fondo-logic.png");
+    background-image: url("/Frontend/public/imagenes/fondo-logic.png");
     
 }
 
@@ -22,7 +21,7 @@
     width: 310px; 
     height: 210px;
     object-fit: cover; 
-    margin: 190px 48px;
+    margin: 190px 45px;
     margin-right: 50px;
     border-radius: 5px;
     

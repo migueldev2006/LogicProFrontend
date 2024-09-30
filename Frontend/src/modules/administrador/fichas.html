@@ -14,13 +14,14 @@
   </head>
   <body>
     <div class="container mt-5">
-      <h1 class="mb-4">Fichas</h1>
+      <h1 class="mb-4" data-translate="Fichas">Fichas</h1>
       <!-- Button trigger modal -->
       <button
         type="button"
         class="btn btn-primary mb-4"
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
+        data-translate="Ficha"
       >
         <i class="bi bi-plus-lg"></i>Ficha
       </button>
@@ -37,7 +38,11 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              <h1
+                class="modal-title fs-5"
+                id="staticBackdropLabel"
+                data-translate="Registrar Ficha"
+              >
                 Registrar Ficha
               </h1>
               <button
@@ -50,7 +55,10 @@
             <div class="modal-body">
               <form id="frmFormulario" action="">
                 <div>
-                  <label for="slcPrograma" class="form-label mb-3"
+                  <label
+                    for="slcPrograma"
+                    class="form-label mb-3"
+                    data-translate="Programa de Formacion"
                     >Programa de Formacion</label
                   >
                   <select
@@ -60,14 +68,27 @@
                     aria-label="Default select example"
                     required
                   >
-                    <option selected>Selecciona una opcion</option>
-                    <option value="Instructor">ADSO</option>
-                    <option value="Lider">MULTIMEDIA</option>
-                    <option value="Coordinador">PAE</option>
+                    <option selected data-translate="Selecciona una opcion">
+                      Selecciona una opcion
+                    </option>
+                    <option value="Instructor" data-translate="ADSO">
+                      ADSO
+                    </option>
+                    <option value="Lider" data-translate="MULTIMEDIA">
+                      MULTIMEDIA
+                    </option>
+                    <option value="Coordinador" data-translate="PAE">
+                      PAE
+                    </option>
                   </select>
                 </div>
                 <div>
-                  <label for="ficha" class="form-label">Código de Ficha</label>
+                  <label
+                    for="ficha"
+                    class="form-label"
+                    data-translate="Código de Ficha"
+                    >Código de Ficha</label
+                  >
                   <input
                     type="text"
                     name="ficha"
@@ -77,7 +98,9 @@
                   />
                 </div>
                 <div>
-                  <label for="lider" class="form-label">Lider</label>
+                  <label for="lider" class="form-label" data-translate="Lider"
+                    >Lider</label
+                  >
                   <input
                     type="text"
                     name="lider"
@@ -93,6 +116,7 @@
                 type="submit"
                 class="btn btn-primary"
                 onclick="showAlert()"
+                data-translate="Registrar"
               >
                 Registrar
               </button>
@@ -107,15 +131,19 @@
       >
         <thead>
           <tr>
-            <th class="text-center">Programa de Formacion</th>
-            <th class="text-center">Código de Ficha</th>
-            <th class="text-center">Lider</th>
+            <th class="text-center" data-translate="Programa de Formacion">
+              Programa de Formacion
+            </th>
+            <th class="text-center" data-translate="Código de Ficha">
+              Código de Ficha
+            </th>
+            <th class="text-center" data-translate="Lider">Lider</th>
             <th class="text-center"></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>ADSO</td>
+            <td data-translate="ADSO">ADSO</td>
             <td>25784213</td>
             <td>Diego Calderon</td>
             <td>
@@ -131,7 +159,7 @@
             </td>
           </tr>
           <tr>
-            <td>MULTIMEDIA</td>
+            <td data-translate="MULTIMEDIA">MULTIMEDIA</td>
             <td>25684592</td>
             <td>Silvia</td>
             <td>
@@ -147,7 +175,7 @@
             </td>
           </tr>
           <tr>
-            <td>ADSO</td>
+            <td data-translate="ADSO">ADSO</td>
             <td>26572345</td>
             <td>Carlos Bravo</td>
             <td>
@@ -163,7 +191,7 @@
             </td>
           </tr>
           <tr>
-            <td>MULTIMEDIA</td>
+            <td data-translate="MULTIMEDIA">MULTIMEDIA</td>
             <td>28654932</td>
             <td>Wilmer</td>
             <td>
@@ -179,7 +207,7 @@
             </td>
           </tr>
           <tr>
-            <td>PAE</td>
+            <td data-translate="PAE">PAE</td>
             <td>2900458</td>
             <td>Henry</td>
             <td>

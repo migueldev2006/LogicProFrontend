@@ -14,13 +14,14 @@
   </head>
   <body>
     <div class="container mt-5">
-      <h1 class="mb-4">Sitios</h1>
+      <h1 class="mb-4" data-translate="Sitios">Sitios</h1>
       <!-- Button trigger modal -->
       <button
         type="button"
         class="btn btn-primary mb-4"
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
+        data-translate="Sitio"
       >
         <i class="bi bi-plus-lg"></i>Sitio
       </button>
@@ -38,7 +39,11 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              <h1
+                class="modal-title fs-5"
+                id="staticBackdropLabel"
+                data-translate="Nuevo Sitio"
+              >
                 Nuevo Sitio
               </h1>
               <button
@@ -51,7 +56,7 @@
             <div class="modal-body">
               <form id="frmFormulario" action="">
                 <div>
-                  <label for="slcEncargado" class="form-label"
+                  <label for="slcEncargado" class="form-label" data-translate="Persona Encargada"
                     >Persona Encargada</label
                   >
                   <select
@@ -61,7 +66,7 @@
                     aria-label="Default select example"
                     required
                   >
-                    <option selected>Selecciona una opcion</option>
+                    <option selected data-translate="Selecciona una opcion">Selecciona una opcion</option>
                     <option value="1">Silvia</option>
                     <option value="2">Diego</option>
                     <option value="3">Wilson</option>
@@ -71,7 +76,7 @@
                   </select>
                 </div>
                 <div>
-                  <label for="nombre" class="form-label">Nombre Sitio</label>
+                  <label for="nombre" class="form-label" data-translate="Nombre Sitio">Nombre Sitio</label>
                   <input
                     type="text"
                     name="nombre"
@@ -81,7 +86,7 @@
                   />
                 </div>
                 <div>
-                  <label for="slcTipoSitio" class="form-label"
+                  <label for="slcTipoSitio" class="form-label" data-translate="Tipo de Sitio"
                     >Tipo de Sitio</label
                   >
                   <select
@@ -91,14 +96,14 @@
                     aria-label="Default select example"
                     required
                   >
-                    <option selected>Selecciona una opcion</option>
-                    <option value="1">Ambiente</option>
-                    <option value="2">Laboratorio</option>
-                    <option value="3">Bodega</option>
+                    <option selected data-translate="Selecciona una opcion">Selecciona una opcion</option>
+                    <option value="1" data-translate="Ambiente">Ambiente</option>
+                    <option value="2" data-translate="Laboratorio">Laboratorio</option>
+                    <option value="3" data-translate="Bodega">Bodega</option>
                   </select>
                 </div>
                 <div>
-                  <label for="correo" class="form-label">Ubicacion</label>
+                  <label for="correo" class="form-label" data-translate="Ubicacion">Ubicacion</label>
                   <input
                     type="text"
                     name="correo"
@@ -114,6 +119,7 @@
                 type="submit"
                 class="btn btn-primary"
                 onclick="showAlert()"
+                data-translate="Registrar"
               >
                 Registrar
               </button>
@@ -128,10 +134,10 @@
       >
         <thead>
           <tr>
-            <th class="text-center">Persona Encargada</th>
-            <th class="text-center">Nombre Sitio</th>
-            <th class="text-center">Tipo de Sitio</th>
-            <th class="text-center">Ubicacion</th>
+            <th class="text-center" data-translate="Persona Encargada">Persona Encargada</th>
+            <th class="text-center" data-translate="Nombre Sitio">Nombre Sitio</th>
+            <th class="text-center" data-translate="Tipo de Sitio">Tipo de Sitio</th>
+            <th class="text-center" data-translate="Ubicacion">Ubicacion</th>
             <th class="text-center"></th>
           </tr>
         </thead>
@@ -139,8 +145,8 @@
           <tr>
             <td>Carlos</td>
             <td>Y12</td>
-            <td>Ambiente</td>
-            <td>Al lado del ambiente de multimedia</td>
+            <td data-translate="Ambiente">Ambiente</td>
+            <td data-translate="Al lado del ambiente de multimedia">Al lado del ambiente de multimedia</td>
             <td>
               <button class="btn btn-primary">
                 <i class="lni lni-pencil-alt"></i>
@@ -156,8 +162,8 @@
           <tr>
             <td>Magda</td>
             <td>Y19</td>
-            <td>Laboratorio</td>
-            <td>Al lado de biblioteca</td>
+            <td data-translate="Laboratorio">Laboratorio</td>
+            <td data-translate="Al lado de biblioteca">Al lado de biblioteca</td>
             <td>
               <button class="btn btn-primary">
                 <i class="lni lni-pencil-alt"></i>
@@ -173,8 +179,8 @@
           <tr>
             <td>Wilson</td>
             <td>Y14</td>
-            <td>Ambiente</td>
-            <td>En Biotic</td>
+            <td data-translate="Ambiente">Ambiente</td>
+            <td data-translate="En Biotic">En Biotic</td>
             <td>
               <button class="btn btn-primary">
                 <i class="lni lni-pencil-alt"></i>
@@ -190,8 +196,8 @@
           <tr>
             <td>Janier</td>
             <td>Y20</td>
-            <td>Laboratorio</td>
-            <td>Al lado del laboratorio Y19</td>
+            <td data-translate="Laboratorio">Laboratorio</td>
+            <td data-translate="Al lado del laboratorio Y19">Al lado del laboratorio Y19</td>
             <td>
               <button class="btn btn-primary">
                 <i class="lni lni-pencil-alt"></i>
@@ -207,8 +213,8 @@
           <tr>
             <td>Diego</td>
             <td>Y15</td>
-            <td>Ambiente</td>
-            <td>En Biotic</td>
+            <td data-translate="Ambiente">Ambiente</td>
+            <td data-translate="En Biotic">En Biotic</td>
             <td>
               <button class="btn btn-primary">
                 <i class="lni lni-pencil-alt"></i>
@@ -224,8 +230,8 @@
           <tr>
             <td>Silvia</td>
             <td>Y13</td>
-            <td>Ambiente</td>
-            <td>En Biotic</td>
+            <td data-translate="Ambiente">Ambiente</td>
+            <td data-translate="En Biotic">En Biotic</td>
             <td>
               <button class="btn btn-primary">
                 <i class="lni lni-pencil-alt"></i>

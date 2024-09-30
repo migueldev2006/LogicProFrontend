@@ -14,13 +14,14 @@
   </head>
   <body>
     <div class="container mt-5">
-      <h1 class="mb-4">Programas de Formacion</h1>
+      <h1 class="mb-4" data-translate="Programas de Formacion">Programas de Formacion</h1>
       <!-- Button trigger modal -->
       <button
         type="button"
         class="btn btn-primary mb-4"
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
+        data-translate="Programa"
       >
         <i class="bi bi-plus-lg"></i>Programa
       </button>
@@ -38,7 +39,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel" data-translate="Registar Programa">
                 Registar Programa
               </h1>
               <button
@@ -51,7 +52,7 @@
             <div class="modal-body">
               <form id="frmFormulario" action="">
                 <div>
-                  <label for="nombre" class="form-label">Nombre</label>
+                  <label for="nombre" class="form-label" data-translate="Nombre">Nombre</label>
                   <input
                     type="text"
                     name="nombre"
@@ -60,18 +61,18 @@
                   />
                 </div>
                 <div>
-                  <label for="slcArea" class="form-label">Area</label>
+                  <label for="slcArea" class="form-label" data-translate="Areas">Area</label>
                   <select
                     id="slcArea"
                     name="slcArea"
                     class="form-select"
                     aria-label="Default select example"
                   >
-                    <option selected>Selecciona una opcion</option>
-                    <option value="1">TIC</option>
-                    <option value="2">MULTIMEDIA</option>
-                    <option value="3">AMBIENTAL</option>
-                    <option value="4">AGROPECUARIA</option>
+                    <option selected data-translate="Selecciona una opcion">Selecciona una opcion</option>
+                    <option value="1" data-translate="TIC">TIC</option>
+                    <option value="2" data-translate="MULTIMEDIA">MULTIMEDIA</option>
+                    <option value="3" data-translate="AMBIENTAL">AMBIENTAL</option>
+                    <option value="4" data-translate="AGROPECUARIA">AGROPECUARIA</option>
                   </select>
                 </div>
               </form>
@@ -81,6 +82,7 @@
                 type="submit"
                 class="btn btn-primary"
                 onclick="showAlert()"
+                data-translate="Registrar"
               >
                 Registrar
               </button>
@@ -95,17 +97,17 @@
       >
         <thead>
           <tr>
-            <th class="text-center">Nombre</th>
-            <th class="text-center">Area</th>
-            <th class="text-center">Fecha de Creacion</th>
-            <th class="text-center">Fecha de Actualizacion</th>
+            <th class="text-center" data-translate="Nombre">Nombre</th>
+            <th class="text-center" data-translate="Areas">Area</th>
+            <th class="text-center" data-translate="Fecha de Creacion">Fecha de Creacion</th>
+            <th class="text-center" data-translate="Fecha de Actualizacion">Fecha de Actualizacion</th>
             <th class="text-center"></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>ADSO</td>
-            <td>TIC</td>
+            <td data-translate="ADSO">ADSO</td>
+            <td data-translate="TIC">TIC</td>
             <td>21/09/2024</td>
             <td>21/09/2024</td>
             <td>
@@ -121,8 +123,8 @@
             </td>
           </tr>
           <tr>
-            <td>MULTIMEDIA</td>
-            <td>TIC</td>
+            <td data-translate="MULTIMEDIA">MULTIMEDIA</td>
+            <td data-translate="TIC">TIC</td>
             <td>21/092024</td>
             <td>21/092024</td>
             <td>
@@ -138,8 +140,8 @@
             </td>
           </tr>
           <tr>
-            <td>PAE</td>
-            <td>Agropecuario</td>
+            <td data-translate="PAE">PAE</td>
+            <td data-translate="Agropecuaria">Agropecuario</td>
             <td>21/09/2024</td>
             <td>21/09/2024</td>
             <td>
@@ -155,8 +157,8 @@
             </td>
           </tr>
           <tr>
-            <td>AMBIENTAL</td>
-            <td>Ambiental</td>
+            <td data-translate="AMBIENTAL">AMBIENTAL</td>
+            <td data-translate="Ambiental">Ambiental</td>
             <td>21/09/2024</td>
             <td>21/09/2024</td>
             <td>

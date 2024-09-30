@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/Frontend/src/assets/css/formulario.css" />
-    <title>RegistroPeticiones</title>
+    <title>Registro Peticiones</title>
   </head>
   <body>
     <div class="container">
       <!-- agrgar style de boostrap  -->
-      <h2 style="text-align: center; margin-top: 100px">
+      <h2
+        style="text-align: center; margin-top: 100px"
+        data-translate="Registro de peticiones salida material"
+      >
         Registro de peticiones salida material
       </h2>
     </div>
@@ -26,7 +29,11 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5 text-center" id="staticBackdropLabel">
+            <h1
+              class="modal-title fs-5 text-center"
+              id="staticBackdropLabel"
+              data-translate="Registro de peticiones"
+            >
               Registro de peticiones
             </h1>
             <button
@@ -41,46 +48,70 @@
               <div class="card-body">
                 <form id="frmFormulario" action="">
                   <div class="mb-4">
-                    <label class="form-label" for="nombre">Entregado a:</label>
-                    <input
-                      class="form-control"
-                      type="text"
-                      name="Entregado a:"
-                      id="Entregado a:"
-                    />
-                  </div>
-                  <div class="mb-4">
-                    <label class="form-label" for="sede">Entregado por:</label>
-                    <input
-                      class="form-control"
-                      type="text"
-                      name="Entregado por:"
-                      id="Entregado por:"
-                    />
-                  </div>
-                  <div class="mb-4">
-                    <label class="form-label" for="municipio"
-                      >fecha de entrga</label
+                    <label
+                      class="form-label"
+                      for="entregado"
+                      data-translate="Entregado a"
+                      >Entregado a</label
                     >
                     <input
                       class="form-control"
                       type="text"
-                      name="fecha de entrga"
-                      id="fecha de entrga"
+                      name="entregado"
+                      id="entregado"
                     />
                   </div>
                   <div class="mb-4">
-                    <label class="form-label" for="municipio"
-                      >estado de peticion</label
+                    <label
+                      class="form-label"
+                      for="entregadoPor"
+                      data-translate="Entregado por"
+                      >Entregado por</label
+                    >
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="entregadoPor"
+                      id="entregadoPor"
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <label
+                      class="form-label"
+                      for="fechaEntrega"
+                      data-translate="Fecha de entrega"
+                      >Fecha de entrega</label
+                    >
+                    <input
+                      class="form-control"
+                      type="date"
+                      name="fechaEntrega"
+                      id="fechaEntrega"
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <label
+                      class="form-label"
+                      for="municipio"
+                      data-translate="Estado de peticion"
+                      >Estado de peticion</label
                     >
                     <select
                       class="form-select"
                       aria-label="Default select example"
                     >
-                      <option value="">Seleccione una opción</option>
-                      <option value="opcion1">Pendiente</option>
-                      <option value="opcion2">Aceptado</option>
-                      <option value="opcion3">Rechazado</option>
+                      <option selected data-translate="Seleccione una opcion">
+                        Seleccione una opcion
+                      </option>
+                      <option value="opcion1" data-translate="Pendiente">
+                        Pendiente
+                      </option>
+                      <option value="opcion2" data-translate="Aceptado">
+                        Aceptado
+                      </option>
+                      <option value="opcion3" data-translate="Rechazado">
+                        Rechazado
+                      </option>
                     </select>
                   </div>
                   <div class="modal-footer">
@@ -89,6 +120,7 @@
                       class="btn btn-primary"
                       id="re"
                       onclick="showAlert()"
+                      data-translate="Registrar"
                     >
                       Registrar
                     </button>
@@ -108,8 +140,9 @@
           data-bs-toggle="modal"
           data-bs-target="#staticBackdrop"
           style="width: 15%"
+          data-translate="Registro"
         >
-          <i class="lni lni-plus" id="button"></i> Registrar
+          <i class="lni lni-plus" id="button"></i> Registro
         </button>
       </div>
     </div>
@@ -120,10 +153,16 @@
     >
       <thead>
         <tr>
-          <th class="text-center">Entregado a:</th>
-          <th class="text-center">Entregado por:</th>
-          <th class="text-center">fecha de entrga</th>
-          <th class="text-center">estado de peticion</th>
+          <th class="text-center" data-translate="Entregado a">Entregado a</th>
+          <th class="text-center" data-translate="Entregado por">
+            Entregado por
+          </th>
+          <th class="text-center" data-translate="Fecha de entrega">
+            Fecha de entrega
+          </th>
+          <th class="text-center" data-translate="Estado de peticion">
+            Estado de peticion
+          </th>
           <th class="text-center"></th>
         </tr>
       </thead>
@@ -131,7 +170,7 @@
         <td>Luis Migule Giron Orozco</td>
         <td>Jader Rivera</td>
         <td>12/04/2023</td>
-        <td>Pendiente</td>
+        <td data-translate="Pendiente">Pendiente</td>
         <td>
           <button class="btn btn-primary">
             <i class="lni lni-pencil-alt"></i>
@@ -142,7 +181,7 @@
         <td>Estefany Scalante</td>
         <td>Jader Rivera</td>
         <td>10/05/2022</td>
-        <td>Rechaszado</td>
+        <td data-translate="Rechazado">Rechazado</td>
         <td>
           <button class="btn btn-primary">
             <i class="lni lni-pencil-alt"></i>
@@ -153,7 +192,7 @@
         <td>Yurgen Perdomo</td>
         <td>Jader Rivera</td>
         <td>1/04/2023</td>
-        <td>Aceptado</td>
+        <td data-translate="Aceptado">Aceptado</td>
         <td>
           <button class="btn btn-primary">
             <i class="lni lni-pencil-alt"></i>
