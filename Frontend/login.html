@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="./src/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="../Frontend/src/assets/css/sideBar.css">
   </head>
   <body>
     <div style="display: flex">
@@ -27,6 +28,19 @@
         style="background-color: #f8f9fa; width: 800px; align-content: center"
       >
         <div class="col my-auto">
+          <div class="lang-menu ">
+            <div class="selected-lang" style="color: #000000;" data-translate="Idioma">
+              Idioma
+            </div>
+            <ul>
+              <li>
+                <a href="#" class="menu-item es" data-lang="es" data-translate="Español">Español</a>
+              </li>
+              <li>
+                <a href="#" class="menu-item en" data-lang="en" data-translate="Ingles">Inglés</a>
+              </li>
+            </ul>
+          </div>
           <div
             class="mx-auto card"
             style="
@@ -40,12 +54,13 @@
               <h5
                 class="text-center mb-4"
                 style="color: #007bff; font-size: x-large"
+                data-translate="INICIO DE SESION"
               >
                 INICIO DE SESION
               </h5>
               <form class="mb-3" action="./index.html">
                 <div class="mb-4">
-                  <label class="form-label" for="id">Numero de Documento</label>
+                  <label class="form-label" for="id" data-translate="Numero de Documento">Numero de Documento</label>
                   <input
                     class="form-control"
                     type="text"
@@ -55,7 +70,7 @@
                   />
                 </div>
                 <div class="mb-4">
-                  <label class="form-label" for="pasword">Contraseña</label>
+                  <label class="form-label" for="pasword" data-translate="Contraseña">Contraseña</label>
                   <input
                     class="form-control"
                     type="password"
@@ -69,13 +84,14 @@
                   href="./recuperarContrasena.html"
                   class="text-decoration-none recuperar-pasword"
                   style="color: #000000"
-                  ><p class="text-center">He olvidado mi contraseña</p></a
+                  ><p class="text-center" data-translate="He olvidado mi contraseña">He olvidado mi contraseña</p></a
                 >
                 <div class="d-grid gap-2 col-6 mx-auto">
                   <button
                     class="btn"
                     style="background-color: #007bff; color: #ffff"
                     type="submit"
+                    data-translate="Ingresar"
                   >
                     Ingresar
                   </button>
@@ -86,6 +102,7 @@
         </div>
       </div>
     </div>
+    <script src="../Frontend/src/assets/js/idiom.js"></script>
     <script src="./src/assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
   </body>
 </html>
