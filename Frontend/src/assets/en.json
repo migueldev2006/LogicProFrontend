@@ -19,8 +19,10 @@
   "Bodega": "Warehouse",
   "Entradas": "Entry",
   "Salidas": "Exit",
+  "Inventario":"Inventory",
   "Reportes": "Reports",
   "Peticion": "Request",
+  "Solicitudes": "Requests",
   "Verificacion": "Verification",
   "Documentacion": "Documentation",
   "Documentacion Tecnica": "Technical Documentation",
@@ -183,5 +185,4 @@
   "INTEGRANTES":"MEMBERS",
   "¿Que es?":"What is it?",
   "Es un sistema para el control de trazabilidad de los elementos y materiales de formacion, el cual nos va a permitir llevar de manera ordenada sistematicamente cada uno de los movimientos (entradas, salidas, asignaciones...) que se hacen tanto dentro del centro como los que se llevan a otros lugares, su funcion inicial es sustituir todos esos registros que se solian hacer a papel y lapiz que, a decir verdad, traian muchas desventajas en cambio con nuestro software todo se reducira al alcance un par de clicks, con el podra registrar la llegada o salida de algun elemento, hacer la asignacion de algun material, descargar el listado de los materiales en bodega, hacer solicitud de elementos, entre otros; una de las ventajas que tenemos un sistema de alertas que le mostrara mensajes como: Materiales cerca a caducar, Se realizo la peticion de material, Se le dio salida a un material, entre otros, tambien para los guardas de seguridad hay un apartado especial donde les permitira hacer la verificacion de los materiales en cada ambiente con ayuda de un escaner por medio de la camara de su celular, ademas tendra la opcion de descargar listado donde podra descargar el listado, hacer busquedas y filtros segun informacion clave o de su preferencia":"It is a system for controlling the traceability of training elements and materials, which will allow us to carry out in a systematic orderly manner each of the movements (entries, exits, assignments...) that are made both within the center Like those that are taken to other places, its initial function is to replace all those records that used to be made with paper and pencil that, to tell the truth, brought many disadvantages. However, with our software everything will be reduced to the reach of a couple of clicks, with He will be able to record the arrival or departure of an item, assign some material, download the list of materials in the warehouse, make a request for items, among others. One of the advantages is that we have an alert system that will show messages such as; : Materials close to expiration, The material request was made, A material was released, among others, also for security guards there is a special section where it will allow them to verify the materials in each room with the help of a scan through your cell phone camera, you will also have the option to download a list where you can download the list, do searches and filters according to key information or your preference."
-
 }
