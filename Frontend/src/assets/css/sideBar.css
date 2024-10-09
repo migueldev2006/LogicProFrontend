@@ -118,14 +118,14 @@
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  width: 90px;
+  width: 80%;
   color: #fff;
 }
 .selected-lang:before{
   content: '';
   display: block;
   width: 32px;
-  height: 32px;
+  height: 22px;
 }
 .lang-menu{
   margin-left:20px;

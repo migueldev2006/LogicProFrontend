@@ -166,7 +166,7 @@
                 href="#"
                 onclick="loadModule('src/modules/bodega/entradaBodega.html')"
                 ><i class="bi bi-box-arrow-in-down"></i
-                ><span class="text" data-translate="Entrada">Entradas</span></a
+                ><span class="text" data-translate="Entradas">Entradas</span></a
               >
             </li>
             <li>
@@ -175,7 +175,16 @@
                 href="#"
                 onclick="loadModule('src/modules/bodega/salidaBodega.html')"
                 ><i class="bi bi-box-arrow-in-up"></i
-                ><span class="text" data-translate="Salida">Salidas</span></a
+                ><span class="text" data-translate="Salidas">Salidas</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="nav-link"
+                href="#"
+                onclick="loadModule('src/modules/bodega/inventario.html')"
+                ><i class="bi bi-box-arrow-in-up"></i
+                ><span class="text" data-translate="Inventario">Inventario</span></a
               >
             </li>
           </ul>
@@ -198,7 +207,7 @@
                 href="#"
                 onclick="loadModule('src/modules/reportes/entrada.html')"
                 ><i class="bi bi-box-arrow-in-down"></i
-                ><span class="text" data-translate="Entrada">Entradas</span></a
+                ><span class="text" data-translate="Entradas">Entradas</span></a
               >
             </li>
             <li>
@@ -207,7 +216,7 @@
                 href="#"
                 onclick="loadModule('src/modules/reportes/salida.html')"
                 ><i class="bi bi-box-arrow-in-up"></i
-                ><span class="text" data-translate="Salida">Salidas</span></a
+                ><span class="text" data-translate="Salidas">Salidas</span></a
               >
             </li>
           </ul>
@@ -223,6 +232,19 @@
           >
             <i class="lni lni-clipboard"></i>
             <span class="text" data-translate="Peticion">Peticion</span>
+          </a>
+        </li>
+        <!-- Menu solicitudes -->
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#solicitudSubmenu"
+            data-bs-toggle="collapse"
+            aria-expanded="false"
+            onclick="loadModule('src/modules/solicitudes/solicitudes.html')"
+          >
+            <i class="lni lni-clipboard"></i>
+            <span class="text" data-translate="Solicitudes">Solicitudes</span>
           </a>
         </li>
         <!-- Menu Verificacion -->
